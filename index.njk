@@ -4,10 +4,10 @@ eleventyNavigation:
   key: Home
   order: 1
 ---
-{% set maxPosts = collections.posts.length | min(3) %}
-<h1>Latest {% if maxPosts == 1 %}Post{% else %}{{ maxPosts }} Posts{% endif %}</h1>
+{% set maxPosts = collections.posts.length | min(42) %}
+<h2>Our list of {% if maxPosts == 1 %}Post{% else %}{{ maxPosts }} episodes{% endif %}</h2>
 
-{% set postslist = collections.posts | head(-3) %}
+{% set postslist = collections.posts | head(-42) %}
 {% set postslistCounter = collections.posts | length %}
 {% include "postslist.njk" %}
 

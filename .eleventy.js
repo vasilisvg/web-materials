@@ -19,7 +19,7 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addLayoutAlias("post", "layouts/post.njk");
 
   eleventyConfig.addFilter("readableDate", dateObj => {
-    return DateTime.fromJSDate(dateObj, {zone: 'utc'}).toFormat("dd LLL yyyy");
+    return DateTime.fromJSDate(dateObj, {zone: 'utc'}).toFormat("dd LLLL yyyy");
   });
 
   // https://html.spec.whatwg.org/multipage/common-microsyntaxes.html#valid-date-string
@@ -45,6 +45,14 @@ module.exports = function(eleventyConfig) {
     // should match the list in tags.njk
     return (tags || []).filter(tag => ["all", "nav", "post", "posts"].indexOf(tag) === -1);
   })
+
+  // retrun a random number
+  // {{ [10,20] | getRandom }}
+  eleventyConfig.addFilter("getRandom", function(minmax) {
+	return Math.floor(
+		Math.random() * (minmax[1] - minmax[0] + 1) + minmax[0]
+	  )
+   });
 
   // Create an array of all tags
   eleventyConfig.addCollection("tagList", function(collection) {

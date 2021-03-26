@@ -1,0 +1,10 @@
+html {
+	display: grid;
+	min-height: 100vh;
+}
+body {
+	margin: auto;
+}
+.postlist {
+	list-style-type: decimal-leading-zero;
+}

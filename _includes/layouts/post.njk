@@ -3,7 +3,9 @@ layout: layouts/base.njk
 templateClass: tmpl-post
 ---
 <h2>{{ title }}</h2>
-
+{%- if audio %}
+<div><audio src="{{audio}}" controls></audio></div>
+{%- endif %}
 	<footer>
 		<time datetime="{{ page.date | htmlDateString }}">{{ page.date | readableDate }}</time>
 {%- for tag in tags | filterTagList -%}
@@ -11,7 +13,6 @@ templateClass: tmpl-post
 <a href="{{ tagUrl | url }}">{{ tag }}</a>
 {%- endfor %}
 	</footer>
-
 
 {{ content | safe }}
 

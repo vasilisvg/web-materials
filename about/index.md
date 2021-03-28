@@ -1,6 +1,6 @@
 ---
 layout: layouts/post.njk
-title: About Me
+title: About this podcast series
 templateClass: tmpl-post
 eleventyNavigation:
   key: About Me

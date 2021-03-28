@@ -33,14 +33,10 @@ header {
 	grid-area: header;
 	position: sticky;
 	top: calc(var(--headingHeight) / 3 * -1vw);
-	/top: -8vw;
 	z-index: 0;
 }
 footer {
 	grid-area: footer;
-}
-footer {
-
 }
 h1 {
 	font-family: var(--headingFont), Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;

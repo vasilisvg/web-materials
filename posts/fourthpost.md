@@ -5,7 +5,7 @@ description: In which your hosts explain what they think this podcast will be ab
 date: 2018-09-30
 layout: layouts/post.njk
 tags: second tag
-fontcss: ['https://espen.design/webfonts/commons-min.css','https://fonts.typotheque.com/WF-023273-011456.css']
+fontcss: ['https://fonts.typotheque.com/WF-023273-011456.css']
 #episodecss: episode04.css
 #episodeClass: episode04
 audio: https://astridenvasilis.nl/praten-makkelijk/episodes/AVPM004-charlie-mulholland.mp3

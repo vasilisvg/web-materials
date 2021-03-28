@@ -1,12 +1,10 @@
 :root {
 	--bodyBackground: whitesmoke;
-	--underlineColor: hsl(329, 92%, 76%);
-	--headingBackground: yellow;
-	--bodyCopyFont: "Nara Sans 13";
+	--bodyCopyFont: "Nara Sans 13", -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 	--bodyCopySize: 1.414;
-	--headingFont: "Vita Bold";
+	--headingFont: "Vita Bold", Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 	--headingHeight: 17.8;
-	--hueRotateDuration: 1000s;
+	--headingBackground: yellow;
 }
 * {
 	box-sizing: border-box;
@@ -18,7 +16,7 @@ html {
 }
 body {
 	margin: 0;
-	font-family: var(--bodyCopyFont), -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+	font-family: var(--bodyCopyFont);
 	font-size: 1em;
 	font-size: clamp(1em, 4vw,calc(var(--bodyCopySize) * 1em));
 	display: grid;
@@ -33,70 +31,34 @@ header {
 	grid-area: header;
 	position: sticky;
 	top: calc(var(--headingHeight) / 3 * -1vw);
-	z-index: 0;
+	z-index: 1;
 }
 footer {
 	grid-area: footer;
 }
 h1 {
-	font-family: var(--headingFont), Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+	font-family: var(--headingFont);
 	font-size: 14.8vw;
 	font-weight: normal;
 	margin: 0;
 	text-align: center;
 	white-space: nowrap;
-	text-decoration-style: wavy;
-	text-decoration-color: hotpink;
-	text-decoration-color: var(--underlineColor);
-	text-decoration-line: underline;
-	text-decoration-skip-ink: all;
-	text-decoration-thickness: 1.1em;
 	background: var(--headingBackground);
-	animation-name: rotateHue;
-	animation-duration: var(--hueRotateDuration);
-	animation-iteration-count: infinite;
 }
 h1 a {
 	color: black;
 	text-decoration: none;
-	text-decoration-color: hotpink;
-	text-decoration-color: var(--underlineColor);
-	
 }
 main {
 	grid-area: center;
-	mix-blend-mode: darken;
 	max-width: 30em;
-	margin-top: calc(var(--headingHeight) * -1vw);
-}
-main::before {
-	content: '';
-	width: 100%;
-	width: calc(100% + 5vw);
-	margin-left: -5vw;
-	height: calc(var(--headingHeight) * 1vw);
-	background: var(--headingBackground);
-	display: block;
-	position: sticky;
-	top: 0;
-	top: calc(var(--headingHeight) / 3 * -1vw);
-	z-index: 2;
-	animation-name: rotateHue;
-	animation-duration: var(--hueRotateDuration);
-	animation-iteration-count: infinite;
-}
-@media (min-width: 44em) {
-	main::before {
-		width: calc(100% + 2em);
-		margin-left: -2em;
-	}
 }
 main footer {
 	font-style: italic;
 	margin: 1em 0;
 }
 h2 {
-	font-family: "Vita Bold";
+	font-family: var(--headingFont);
 	font-size: 2em;
 	font-size: clamp(2em,5vw,4em);
 }
@@ -128,6 +90,7 @@ audio:focus-within {
 }
 .postlist li {
 	position: relative;
+	z-index: 0;
 }
 .postlist p {
 	font-weight: 800;
@@ -141,7 +104,7 @@ audio:focus-within {
 .postlist time {
 	font-style: italic;
 }
-.postlist a::before {
+.postlist a::after {
 	content:'';
 	position: absolute;
 	left: 0;
@@ -150,34 +113,11 @@ audio:focus-within {
 	top: 0;
 	opacity: 0;
 	background-color: var(--headingBackground);
-	animation-name: rotateHue;
-	animation-duration: var(--hueRotateDuration);
-	animation-delay: calc(var(--hueRotateDuration) / -5);
-	animation-iteration-count: infinite;
+	filter: hue-rotate(90deg)
 }
-.postlist a:hover::before {
+.postlist a:hover::after {
 	opacity: 1;
 	z-index: 0;
 	mix-blend-mode: darken;
-	
 }
 
-
-body > footer {
-	max-width: 30em;
-	position: absolute;
-	top: 100vh;
-	left: 0;
-	right: 0;
-	height: 1000em;
-	padding-bottom: 1000vh;
-}
-body > footer * {
-	position: sticky;
-	top: 90vh;
-}
-@keyframes rotateHue {
-	100% {
-		filter: hue-rotate(360deg);
-	}
-}

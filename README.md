@@ -1,6 +1,6 @@
 # Web Materials website
 
-This is the website for the Web Materials project, a podcast hosted by [Espen Brunborg](https://espen.design/) and [Vasilis van Gemert(https://vasilis.nl/)
+This is the website for the Web Materials project, a podcast hosted by [Espen Brunborg](https://espen.design/) and [Vasilis van Gemert](https://vasilis.nl/)
 
 Based on the [Eleventy base blog](https://github.com/11ty/eleventy-base-blog)
 

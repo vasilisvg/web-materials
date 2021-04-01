@@ -121,3 +121,8 @@ audio:focus-within {
 	mix-blend-mode: darken;
 }
 
+
+abbr {
+	font-family: "Nara Sans Regular 10";
+	font-variant-caps: all-small-caps;
+}

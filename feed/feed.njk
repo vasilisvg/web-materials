@@ -23,7 +23,8 @@ eleventyExcludeFromCollections: true
 		<link href="{{ absolutePostUrl }}"/>
 		<updated>{{ post.date | rssDate }}</updated>
 		<id>{{ absolutePostUrl }}</id>
-		<content type="html">{{ post.templateContent | htmlToAbsoluteUrls(absolutePostUrl) }}</content>
+		<enclosure url="https://webmaterials.design{{post.data.audio}}" length="{{ post.data.audiolength}}" type="audio/mpeg"/>
+		<content type="html">&lt;p&gt;{{post.data.intro}}&lt;/p&gt; &lt;p&gt;&lt;audio src=&quot;https://webmaterials.design{{post.data.audio}}&quot; controls&gt;&lt;a href=&quot;{{ absolutePostUrl }}&quot;&gt;Visit our website to listen to the podcast&lt;/a&gt;&lt;/audio&gt;&lt;/p&gt; {{ post.templateContent | htmlToAbsoluteUrls(absolutePostUrl) }}</content>
 	</entry>
 	{%- endfor %}
 </feed>

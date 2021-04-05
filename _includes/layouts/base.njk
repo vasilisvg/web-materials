@@ -5,62 +5,25 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{{ title or metadata.title }}</title>
-    <meta
-      name="description"
-      content="{{ description or metadata.description }}"
-    />
+    <meta name="description" content="{{ description or metadata.description }}" />
     {%- if head %}
     {{
       head | safe
     }}
     {%- endif %} {%- for href in csslinks -%}
-    <link rel="stylesheet" href="{{ href | url }}" />
+    <link rel="stylesheet" href="{{ href | url }}?{{ [10000000,100000000] | getRandom }}" />
     {%- endfor %}
-    <link
-      rel="alternate"
-      href="{{ metadata.feed.path | url }}"
-      type="application/atom+xml"
-      title="{{ metadata.title }} RSS Feed"
-    />
-    <link
-      rel="alternate"
-      href="{{ metadata.jsonfeed.path | url }}"
-      type="application/json"
-      title="{{ metadata.title }} JSON Feed"
-    />
-
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="/img/apple-touch-icon.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="/img/favicon-32x32.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="/img/favicon-16x16.png"
-    />
+    <link rel="alternate" href="{{ metadata.feed.path | url }}" type="application/atom+xml" title="{{ metadata.title }} RSS Feed" />
+    <link rel="alternate" href="{{ metadata.jsonfeed.path | url }}" type="application/json" title="{{ metadata.title }} JSON Feed" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png" />
   </head>
   <body id="body" {% if episode %} class="episode{{ episode }}" {% endif %}>
     <header>
       <a href="{{ '/' | url }}" class="logo" id="home">
-        <svg
-          viewBox="0 0 433 206"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            fill-rule="evenodd"
-            clip-rule="evenodd"
-            d="M14.7256 3.41633C27.1984 -2.50514 42.11 2.80583 48.0315 15.2787L99.1789 123.015L152.685 14.9108C156.885 6.42402 165.52 1.03894 174.99 1.00068C184.459 0.962424 193.137 6.27755 197.406 14.7301L253.03 124.865L308.654 14.7301C312.923 6.27755 321.601 0.962424 331.07 1.00068C340.539 1.03894 349.174 6.42402 353.375 14.9108L429.755 169.23C435.88 181.605 430.814 196.601 418.439 202.726C406.065 208.851 391.068 203.784 384.944 191.41L330.743 81.9027L275.345 191.591C271.093 200.011 262.463 205.32 253.03 205.32C243.597 205.32 234.967 200.011 230.714 191.591L175.316 81.9027L121.116 191.41C116.867 199.995 108.085 205.398 98.5057 205.319C88.9265 205.241 80.2344 199.696 76.126 191.042L2.86317 36.7222C-3.0583 24.2494 2.25267 9.3378 14.7256 3.41633Z"
-            fill="black"
-          />
+        <svg viewBox="0 0 433 206" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M14.7256 3.41633C27.1984 -2.50514 42.11 2.80583 48.0315 15.2787L99.1789 123.015L152.685 14.9108C156.885 6.42402 165.52 1.03894 174.99 1.00068C184.459 0.962424 193.137 6.27755 197.406 14.7301L253.03 124.865L308.654 14.7301C312.923 6.27755 321.601 0.962424 331.07 1.00068C340.539 1.03894 349.174 6.42402 353.375 14.9108L429.755 169.23C435.88 181.605 430.814 196.601 418.439 202.726C406.065 208.851 391.068 203.784 384.944 191.41L330.743 81.9027L275.345 191.591C271.093 200.011 262.463 205.32 253.03 205.32C243.597 205.32 234.967 200.011 230.714 191.591L175.316 81.9027L121.116 191.41C116.867 199.995 108.085 205.398 98.5057 205.319C88.9265 205.241 80.2344 199.696 76.126 191.042L2.86317 36.7222C-3.0583 24.2494 2.25267 9.3378 14.7256 3.41633Z" fill="black" />
         </svg>
       </a>
       <!-- <h1><a href="{{ '/' | url }}">{{ metadata.title }}</a></h1> -->

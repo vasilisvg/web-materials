@@ -94,6 +94,11 @@ p a:hover {
   background: aquamarine;
   transition: 0.1s;
 }
+a:focus-visible {
+	background: aquamarine;
+	transition: 0.1s;
+	outline: 2px dashed black;
+}
 
 p strong {
   background: white;

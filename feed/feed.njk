@@ -4,27 +4,44 @@ permalink: "{{ metadata.feed.path }}"
 eleventyExcludeFromCollections: true
 ---
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom">
+<rss version="2.0" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd"  xmlns:content="http://purl.org/rss/1.0/modules/content/"  xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
 	<title>{{ metadata.title }}</title>
-	<subtitle>{{ metadata.feed.subtitle }}</subtitle>
+	<description>{{ metadata.feed.subtitle }}</description>
 	{% set absoluteUrl %}{{ metadata.feed.path | url | absoluteUrl(metadata.url) }}{% endset %}
-	<link href="{{ absoluteUrl }}" rel="self"/>
-	<link href="{{ metadata.url }}"/>
-	<updated>{{ collections.posts | rssLastUpdatedDate }}</updated>
-	<id>{{ metadata.feed.id }}</id>
-	<author>
-		<name>{{ metadata.author.name }}</name>
-		<email>{{ metadata.author.email }}</email>
-	</author>
+	<link>{{ metadata.url }}</link>
+	<atom:link href="{{ absoluteUrl }}" rel="self"/>
+	<atom:link href="{{ metadata.url }}"/>
+	<atom:updated>{{ collections.posts | rssLastUpdatedDate }}</atom:updated>
+	<atom:id>{{ metadata.feed.id }}/</atom:id>
+	<atom:author>
+		<atom:name>{{ metadata.author.name }}</atom:name>
+		<atom:email>{{ metadata.author.email }}</atom:email>
+	</atom:author>
+	<itunes:owner>
+		<itunes:name>{{ metadata.author.name }}</itunes:name>
+		<itunes:email>{{ metadata.author.email }}</itunes:email>
+	</itunes:owner>
+	<itunes:image href="https://webmaterials.design/img/logo.png"/>
+	<itunes:category text="Arts"><itunes:category text="Design"></itunes:category></itunes:category>
+	<itunes:explicit>no</itunes:explicit>
+	<language>en-UK</language>
+	<itunes:type>episodic</itunes:type>
+
 	{%- for post in collections.posts | reverse %}
 	{% set absolutePostUrl %}{{ post.url | url | absoluteUrl(metadata.url) }}{% endset %}
-	<entry>
+	<item>
 		<title>{{ post.data.title }}</title>
-		<link href="{{ absolutePostUrl }}"/>
-		<updated>{{ post.date | rssDate }}</updated>
-		<id>{{ absolutePostUrl }}</id>
-		<enclosure url="https://webmaterials.design{{post.data.audio}}" length="{{ post.data.audiolength}}" type="audio/mpeg"/>
-		<content type="html">&lt;p&gt;{{post.data.intro}}&lt;/p&gt; &lt;p&gt;&lt;audio src=&quot;https://webmaterials.design{{post.data.audio}}&quot; controls&gt;&lt;a href=&quot;{{ absolutePostUrl }}&quot;&gt;Visit our website to listen to the podcast&lt;/a&gt;&lt;/audio&gt;&lt;/p&gt; {{ post.templateContent | htmlToAbsoluteUrls(absolutePostUrl) }}</content>
-	</entry>
+		<link>{{ absolutePostUrl }}</link>
+		<atom:updated>{{ post.date | rssDate }}</atom:updated>
+		<itunes:duration>{{post.data.duration}}</itunes:duration>
+		<itunes:episode>{{post.data.episode}}</itunes:episode>
+		<itunes:episodeType>full</itunes:episodeType>
+		<guid isPermaLink="true">{{ absolutePostUrl }}</guid>
+		<link rel="enclosure" href="https://webmaterials.design{{post.data.audio}}"/>
+		<enclosure url="https://webmaterials.design{{post.data.audio}}" length="{{post.data.audiolength}}" type="audio/mpeg"/>
+		<atom:content type="html">&lt;p&gt;{{post.data.intro}}&lt;/p&gt; &lt;p&gt;&lt;audio src=&quot;https://webmaterials.design{{post.data.audio}}&quot; controls&gt;&lt;a href=&quot;{{ absolutePostUrl }}&quot;&gt;Visit our website to listen to the podcast&lt;/a&gt;&lt;/audio&gt;&lt;/p&gt; {{ post.templateContent | htmlToAbsoluteUrls(absolutePostUrl) }}</atom:content>
+	</item>
 	{%- endfor %}
-</feed>
+	</channel>
+</rss>

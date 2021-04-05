@@ -47,6 +47,7 @@ h1 {
   padding: 0 0.15em;
 	white-space: nowrap;
 	background: var(--headingBackground);
+	filter: brightness(1.31);
 }
 h1 a {
 	color: var(--colorBlack);

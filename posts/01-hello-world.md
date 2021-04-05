@@ -4,7 +4,8 @@ title: Hello world
 description: In which your hosts explain what they think this podcast will be about.
 audio: /sound/WM001-hello-world.mp3
 audiolength: 28523289 #mandatory, size in bytes! No idea how to do this in Eleventy )-:
-date: 2021-03-29
+duration: 00:29:43 #mandatory, duration in hh:mm:ss
+date: 2021-04-05
 # You can add (multiple) urls to stylesheets with 'csslinks'. (Use spaces, not tabs here)
 csslinks: 
  - /css/css.css

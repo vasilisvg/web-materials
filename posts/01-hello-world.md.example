@@ -3,6 +3,7 @@ episode: 1
 title: Hello world.
 description: In which your hosts explain what they think this podcast will be about. 
 audio: https://astridenvasilis.nl/praten-makkelijk/episodes/AVPM004-charlie-mulholland.mp3
+audiolength: 28523289 #mandatory, size in bytes! No idea how to do this in Eleventy )-:
 # yyyy-mm-dd
 date: 2018-09-30
 # You can add (multiple) urls to stylesheets with 'csslinks'. (Use spaces, not tabs here)

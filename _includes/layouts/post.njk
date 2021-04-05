@@ -4,12 +4,12 @@ templateClass: tmpl-post
 ---
 
 <section class="episode-intro">
-  <h4>
+  <footer>
     Episode {{ episode }} –
     <time datetime="{{ page.date | htmlDateString }}">{{
       page.date | readableDate
     }}</time>
-  </h4>
+  </footer>
   <h1>
     {{ title }}
   </h1>

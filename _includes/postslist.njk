@@ -1,7 +1,7 @@
 <ol reversed class="postlist">
 {% for post in postslist | reverse %}
   <li{% if post.url == url %}  class="postlist-item-active"{% endif %}>
-    <h4>Episode {{ post.data.episode }} – <time datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate }}</time></h4>
+    <footer>Episode {{ post.data.episode }} – <time datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate }}</time></footer>
     <h2><a href="{{ post.url | url }}">{% if post.data.title %}{{ post.data.title }}{% else %}<code>{{ post.url }}</code>{% endif %}</a></h2>
 	<p>{{post.data.description}}</p>
     {% for tag in post.data.tags | filterTagList %}

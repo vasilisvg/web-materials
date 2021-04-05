@@ -268,3 +268,8 @@ audio:focus-within {
 .logo path {
   fill: var(--colorBlack);
 }
+
+abbr {
+	font-family: "Nara Sans Regular 10";
+	font-variant-caps: all-small-caps;
+}

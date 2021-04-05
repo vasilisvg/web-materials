@@ -1,0 +1,36 @@
+body {
+  grid-template-columns: minmax(5vw,1fr) auto 5vw;
+	grid-template-areas: 
+		"header header header"
+		"left center right"
+		"footer footer footer";
+  background-color: khaki;
+}
+
+
+
+/* .episode-intro {
+  background: white;
+  padding: 2vw;
+} */
+
+.episode-intro h1 {
+  background-color: white;
+  
+}
+
+.nav li a {
+  background-color: white;
+}
+
+.nav li a:hover {
+  background-color: coral; 
+}
+
+.direct-link {
+  color: slateblue;
+}
+
+.direct-link:hover {
+  color: darkslateblue;
+}

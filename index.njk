@@ -4,11 +4,21 @@ eleventyNavigation:
   key: Home
   order: 1
 ---
-{% set maxPosts = collections.posts.length | min(42) %}
-{% if maxPosts == 1 %}{% else %}{{ maxPosts }}<h2>Our list of episodes</h2>{% endif %}
 
-{% set postslist = collections.posts | head(-42) %}
-{% set postslistCounter = collections.posts | length %}
-{% include "postslist.njk" %}
+<h1>Web Materials</h1>
+<p class="para-big">
+  A podcast about design, code, and the state of the web industry – hosted by
+  <a href="http://espen.design">Espen Brunborg</a> and
+  <a href="http://vasilis.nl">Vasilis Van Gemert</a>. Listen in to hear us
+  fundamentally question how we make things on the web, and hopefully learn
+  something in the process.
+</p>
+
+<!-- <h2>Episodes</h2> -->
+{% set maxPosts = collections.posts.length | min(42) %} {% if maxPosts == 1 %}{%
+else %}{{ maxPosts }}
+
+{% endif %} {% set postslist = collections.posts | head(-42) %} {% set
+postslistCounter = collections.posts | length %} {% include "postslist.njk" %}
 
 <!-- <p>More posts can be found in <a href="{{ '/posts/' | url }}">the archive</a>.</p> -->

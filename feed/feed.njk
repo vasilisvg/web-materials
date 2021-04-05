@@ -18,10 +18,12 @@ eleventyExcludeFromCollections: true
 		<atom:name>{{ metadata.author.name }}</atom:name>
 		<atom:email>{{ metadata.author.email }}</atom:email>
 	</atom:author>
+	<itunes:author>{{ metadata.author.name }}</itunes:author>
 	<itunes:owner>
 		<itunes:name>{{ metadata.author.name }}</itunes:name>
 		<itunes:email>{{ metadata.author.email }}</itunes:email>
 	</itunes:owner>
+	<image><url>https://webmaterials.design/img/logo.png</url><title>{{ metadata.title }}</title><link>{{ metadata.url }}/</link></image>
 	<itunes:image href="https://webmaterials.design/img/logo.png"/>
 	<itunes:category text="Arts"><itunes:category text="Design"></itunes:category></itunes:category>
 	<itunes:explicit>no</itunes:explicit>

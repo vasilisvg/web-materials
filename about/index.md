@@ -6,7 +6,7 @@ csslinks:
  - /css/css.css
 ---
 
-In the summer of 2020, during the first corona virus lockdown we — [Espen Brunborg](https://espen.design/) and [Vasilis van Gemert](https://vasilis.nl/) — started writing long emails to each other. Large parts of these emails were about the web, and more specifically what we call *the materials of the web:* the stuff we use to make our websites look and behave the way they do. CSS for instance. And browsers. And viewports. But also the tools we use. And less visible stuff like *HTML semantics* and accessibility. 
+In the summer of 2020, during the first corona virus lockdown we — [Espen Brunborg](https://espen.design/) and [Vasilis van Gemert](https://vasilis.nl/) — started writing long emails to each other. Large parts of these emails were about the web, and more specifically what we call *the materials of the web:* the stuff we use to make our websites look and behave the way they do. CSS for instance. And browsers. And viewports. But also the tools we use. And less visible stuff like *<abbr>HTML</abbr> semantics* and accessibility. 
 
 This correspondence just kept on going. After a few weeks we thought that the things we had written to each other might be interesting as well for other people who work with the web.
 

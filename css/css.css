@@ -49,6 +49,9 @@ h1 {
 	background: var(--headingBackground);
 	filter: brightness(1.31);
 }
+.tmpl-page h1 {
+	white-space: normal;
+}
 h1 a {
 	color: var(--colorBlack);
 	text-decoration: none;

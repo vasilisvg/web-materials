@@ -117,7 +117,8 @@ audio {
 	width: 100%;
 	transition: .3s;
 	display: block;
-	background-color: white;
+	background: white;
+	border-radius: 2em;
 }
 
 audio:focus,

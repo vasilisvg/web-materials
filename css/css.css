@@ -197,7 +197,8 @@ audio:focus-within {
   list-style-type: none;
   padding: 1em;
   padding: 2vw;
-  
+  display: flex;
+  gap: .5em;
 }
 
 .nav li {

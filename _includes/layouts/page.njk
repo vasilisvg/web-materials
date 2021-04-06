@@ -1,0 +1,41 @@
+---
+layout: layouts/base.njk
+templateClass: tmpl-page
+---
+
+<section class="episode-intro">
+  <h1>
+    {{ title }}
+  </h1>
+  <div class="tags">
+    {%- for tag in tags | filterTagList -%} {%- set tagUrl %}/tags/{{
+      tag | slug
+    }}/{% endset -%}
+    <!-- <a href="{{ tagUrl | url }}">{{ tag }}</a> -->
+    {%- endfor %}
+  </div>
+  <p class="para-big">{{ intro | safe }}</p>
+</section>
+{%- if audio %}
+<div class="player"><audio src="{{ audio }}" controls></audio></div>
+{%- endif %}
+
+{{ content | safe }}
+
+{%- set nextPost = collections.posts | getNextCollectionItem(page) %} {%- set
+previousPost = collections.posts | getPreviousCollectionItem(page) %} {%- if
+nextPost or previousPost %}
+
+<ul>
+  {%- if nextPost %}
+  <li>
+    Next: <a href="{{ nextPost.url | url }}">{{ nextPost.data.title }}</a>
+  </li>
+  {% endif %} {%- if previousPost %}
+  <li>
+    Previous:
+    <a href="{{ previousPost.url | url }}">{{ previousPost.data.title }}</a>
+  </li>
+  {% endif %}
+</ul>
+{%- endif %}

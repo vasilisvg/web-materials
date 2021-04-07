@@ -10,6 +10,8 @@ eleventyExcludeFromCollections: true
   "home_page_url": "{{ metadata.url }}",
   "feed_url": "{{ metadata.jsonfeed.url }}",
   "description": "{{ metadata.description }}",
+  "icon": "{{metadata.url}}/img/logo.png",
+  "favicon": "{{metadata.url}}/img/icon.png",
   "author": {
     "name": "{{ metadata.author.name }}",
     "url": "{{ metadata.author.url }}"
@@ -21,8 +23,17 @@ eleventyExcludeFromCollections: true
       "id": "{{ absolutePostUrl }}",
       "url": "{{ absolutePostUrl }}",
       "title": "{{ post.data.title }}",
-      "content_html": {% if post.templateContent %}{{ post.templateContent | dump | safe }}{% else %}""{% endif %},
-      "date_published": "{{ post.date | rssDate }}"
+	  "summary": "{{ post.data.intro }}",
+      "content_html": "<p>{{post.data.intro}}</p><p><a href=\"{{absolutePostUrl}}\">See the website for full audio and a complete transcript</a>.</p>",
+      "date_published": "{{ post.date | rssDate }}",
+	  "attachments": [
+		  {
+			  "url": "{{metadata.url}}{{post.data.audio}}",
+			  "mime_type": "audio/mpeg",
+			  "size_in_bytes": "{{post.data.audiolength}}",
+			  "duration_in_seconds": "{{post.data.duration}}"
+		  }
+	  ]
     }
     {%- if not loop.last -%}
     ,

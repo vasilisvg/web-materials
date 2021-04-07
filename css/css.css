@@ -221,6 +221,9 @@ audio:focus-within {
 .nav li a:hover {
   background-color: coral; 
 }
+.nav abbr {
+	font-variant-caps: normal;
+}
 
 .logo {
   display: block;

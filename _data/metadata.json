@@ -11,11 +11,11 @@
   },
   "jsonfeed": {
     "path": "/feed/feed.json",
-    "url": "https://webmaterials.designfeed/feed.json"
+    "url": "https://webmaterials.design/feed/feed.json"
   },
   "author": {
     "name": "Vasilis van Gemert and Espen Brunborg",
     "email": "webmaterials@vasilis.nl",
-    "url": "https://webmaterials.designabout-me/"
+    "url": "https://webmaterials.design/about/"
   }
 }

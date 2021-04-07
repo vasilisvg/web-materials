@@ -10,8 +10,7 @@ eleventyExcludeFromCollections: true
 	<description>{{ metadata.feed.subtitle }}</description>
 	{% set absoluteUrl %}{{ metadata.feed.path | url | absoluteUrl(metadata.url) }}{% endset %}
 	<link>{{ metadata.url }}</link>
-	<atom:link href="{{ absoluteUrl }}" rel="self"/>
-	<atom:link href="{{ metadata.url }}"/>
+	<atom:link href="{{ absoluteUrl }}" rel="self" />
 	<atom:updated>{{ collections.posts | rssLastUpdatedDate }}</atom:updated>
 	<atom:id>{{ metadata.feed.id }}/</atom:id>
 	<atom:author>
@@ -23,8 +22,8 @@ eleventyExcludeFromCollections: true
 		<itunes:name>{{ metadata.author.name }}</itunes:name>
 		<itunes:email>{{ metadata.author.email }}</itunes:email>
 	</itunes:owner>
-	<image><url>https://webmaterials.design/img/logo.png</url><title>{{ metadata.title }}</title><link>{{ metadata.url }}/</link></image>
-	<itunes:image href="https://webmaterials.design/img/logo.png"/>
+	<image><url>{{ metadata.url }}/img/logo.png</url><title>{{ metadata.title }}</title><link>{{ metadata.url }}</link></image>
+	<itunes:image href="{{ metadata.url }}/img/logo.png"/>
 	<itunes:category text="Arts"><itunes:category text="Design"></itunes:category></itunes:category>
 	<itunes:explicit>no</itunes:explicit>
 	<language>en-UK</language>
@@ -40,9 +39,13 @@ eleventyExcludeFromCollections: true
 		<itunes:episode>{{post.data.episode}}</itunes:episode>
 		<itunes:episodeType>full</itunes:episodeType>
 		<guid isPermaLink="true">{{ absolutePostUrl }}</guid>
-		<link rel="enclosure" href="https://webmaterials.design{{post.data.audio}}"/>
-		<enclosure url="https://webmaterials.design{{post.data.audio}}" length="{{post.data.audiolength}}" type="audio/mpeg"/>
-		<atom:content type="html">&lt;p&gt;{{post.data.intro}}&lt;/p&gt; &lt;p&gt;&lt;audio src=&quot;https://webmaterials.design{{post.data.audio}}&quot; controls&gt;&lt;a href=&quot;{{ absolutePostUrl }}&quot;&gt;Visit our website to listen to the podcast&lt;/a&gt;&lt;/audio&gt;&lt;/p&gt; {{ post.templateContent | htmlToAbsoluteUrls(absolutePostUrl) }}</atom:content>
+		<atom:link rel="enclosure" href="{{ metadata.url }}{{post.data.audio}}"/>
+		<enclosure url="{{ metadata.url }}{{post.data.audio}}" length="{{post.data.audiolength}}" type="audio/mpeg"/>
+		<description><![CDATA[{{post.data.intro}} See the website for a complete transcript.]]></description>
+		<content:encoded><![CDATA[
+			<p>{{post.data.intro}}</p>
+			<p><a href="{{absolutePostUrl}}">See the website for full audio and a complete transcript</a>.</p>
+			]]></content:encoded>
 	</item>
 	{%- endfor %}
 	</channel>

@@ -74,6 +74,7 @@ header {
 	}
 }
 
+
 .nav li a {
 	background-color: white;
 }
@@ -112,20 +113,66 @@ p.closed-caption {
 }
 [for="letmeread"] {
   position: sticky;
-  color: white;
+  color: whitesmoke;
   mix-blend-mode: difference;
   z-index: 2;
   top: 0;
   text-align: right;
   top: 0.2em;
 	text-align: right;
-	margin-top: 1em;
+	margin-top: 14.8em;
+  margin-bottom: -16.8em;
 	display: block;
+}
+@media (min-width: 54em) {
+  [for="letmeread"] {
+    margin-top: 12.6em;
+    margin-bottom: -13.3em;
+  }
+}
+@media (max-width: 44em) {
+  [for="letmeread"] {
+    margin-top: 0;
+    margin-bottom: -1.2em;
+  }
+}
+@media (max-width: 40em) {
+  [for="letmeread"] {
+    margin-top: 2em;
+    margin-bottom: -1.3em;
+  }
+}
+@media (max-width: 24em) {
+  [for="letmeread"] {
+    margin-top: 0;
+    margin-bottom: .75em;
+  }
 }
 @media (max-width: 30em) {
 	[for="letmeread"] {
 		font-size: .9em;
 	}
+}
+.para-big {
+  font-size: 1.3em;
+}
+@media (min-width: 60em) {
+  .para-big {
+    font-size: 1.5em;
+  }
+  [for="letmeread"] {
+    margin-top: 13.6em;
+    margin-bottom: -14.7em;
+  }
+}
+@media (min-width: 70em) {
+  .para-big {
+    font-size: 1.8em;
+  }
+  [for="letmeread"] {
+    margin-top: 15em;
+    margin-bottom: -16.7em;
+  }
 }
 
 input:checked ~ p,

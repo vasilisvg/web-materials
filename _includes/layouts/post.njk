@@ -3,8 +3,8 @@ layout: layouts/base.njk
 templateClass: tmpl-post
 ---
 {%- if styletoggle %}
-<input type="checkbox" id="letmeread">
-<label for="letmeread">{{styletoggle}}</label>
+<input aria-hidden="true" type="checkbox" id="letmeread">
+<label aria-hidden="true" for="letmeread">{{styletoggle}}</label>
 {%- endif %}
 <section class="episode-intro">
   <footer>

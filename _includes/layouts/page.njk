@@ -4,9 +4,7 @@ templateClass: tmpl-page
 ---
 
 <section class="episode-intro">
-  <h1>
-    {{ title }}
-  </h1>
+  <h1>{{ title }}</h1>
   <div class="tags">
     {%- for tag in tags | filterTagList -%} {%- set tagUrl %}/tags/{{
       tag | slug

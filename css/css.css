@@ -114,7 +114,10 @@ a:focus-visible {
 p strong {
   background: white;
 }
-
+p code {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: inherit;
+}
 main {
 	grid-area: center;
 	max-width: minmax(50em, 50vw);

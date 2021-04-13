@@ -2,7 +2,10 @@
 layout: layouts/base.njk
 templateClass: tmpl-post
 ---
-
+{%- if styletoggle %}
+<input type="checkbox" id="letmeread">
+<label for="letmeread">{{styletoggle}}</label>
+{%- endif %}
 <section class="episode-intro">
   <footer>
     Episode {{ episode }} –
@@ -10,9 +13,7 @@ templateClass: tmpl-post
       page.date | readableDate
     }}</time>
   </footer>
-  <h1>
-    {{ title }}
-  </h1>
+  <h1>{{ title }}</h1>
   <div class="tags">
     {%- for tag in tags | filterTagList -%} {%- set tagUrl %}/tags/{{
       tag | slug
@@ -20,8 +21,8 @@ templateClass: tmpl-post
     <!-- <a href="{{ tagUrl | url }}">{{ tag }}</a> -->
     {%- endfor %}
   </div>
-  <p class="para-big">{{ intro | safe }}</p>
 </section>
+<p class="para-big">{{ intro | safe }}</p>
 {%- if audio %}
 <div class="player"><audio src="{{ audio }}" controls></audio></div>
 {%- endif %}

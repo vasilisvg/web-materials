@@ -74,8 +74,12 @@ h2 {
   text-transform: uppercase;
   font-style: normal;
 }
-
-p {
+[id="shownotes"] + ul {
+  margin: 0;
+  padding: 0;
+}
+p,
+[id="shownotes"] + ul li {
   font-size: 1em;
   font-size: clamp(1.1em, 1.6vw, 1.3em);
   line-height: 1.6em;
@@ -89,13 +93,15 @@ p {
   max-width: 42ch;
 }
 
-p a {
+p a,
+[id="shownotes"] + ul li a {
   color: var(--colorBlack);
   background: powderblue;
   transition: 0.5s;
 }
 
-p a:hover {
+p a:hover,
+[id="shownotes"] + ul li a:hover {
   background: aquamarine;
   transition: 0.1s;
 }

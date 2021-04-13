@@ -97,7 +97,7 @@ p {
 	text-decoration-line: underline;
 	text-decoration-style: solid;
 	text-decoration-thickness: 1em;
-	-webkit-text-decoration-skip: none;
+	-webkit-text-decoration-skip: auto;
 	text-decoration-skip-ink: none;
 }
 p:nth-of-type(odd) { text-decoration-color: khaki; }
@@ -108,7 +108,10 @@ p.closed-caption {
 	text-decoration-color: powderblue;
 }
 [id="why-does-this-page-look-like-this%3F"] ~ p {
-  text-decoration-color: plum;
+  text-decoration-color: powderblue;
+  text-decoration-style: double;
+  -webkit-text-decoration-skip: auto;
+  text-decoration-skip-ink: auto;
   font-style: italic;
 }
 [id="letmeread"] {
@@ -187,4 +190,7 @@ p.closed-caption {
 input:checked ~ p,
 input:checked ~ .episode-intro h1 {
   text-decoration-color: hsla(0,0%,100%,0);
+}
+p code {
+  font-style: normal;
 }

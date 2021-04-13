@@ -144,9 +144,14 @@ p.closed-caption {
 }
 @media (max-width: 24em) {
   [for="letmeread"] {
-    margin-top: 0;
+    margin-top: -1.25em;
     margin-bottom: .75em;
   }
+  header {
+		position: relative;
+    height: 3em;
+    background-color: white;
+	}
 }
 @media (max-width: 30em) {
 	[for="letmeread"] {

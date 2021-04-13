@@ -25,6 +25,13 @@ intro: In the second episode of Web Materials, we wonder if webdesign has mature
 styletoggle: Underlines are for links.
 ---
 
+## Shownotes
+
+- [Daan Rongen](https://daan.website/)
+- [Donald Trump Votewiser](https://www.volkskrant.nl/kijkverder/2016/trump/)
+- [Music by xyce](https://xyce.nl/)
+- [About this episode’s art direction](https://webmaterials.design/posts/02-are-we-done-yet/#why-does-this-page-look-like-this%3F)
+
 ## Transcript
 
 <p class="closed-caption">[Intro music by xyce]</p>
@@ -151,4 +158,6 @@ styletoggle: Underlines are for links.
 
 ## Why does this page look like this?
 
-For this podcast, we want to visually – and technically – play with the themes we're discussing, meaning we're leaving the door open to art direct each post individually. In this episode, we're only really introducing the basic concept of the podast, i.e. the material of the web, so I (Espen) have kept things extremely simple, using only default <abbr>CSS</abbr> colours, default fonts, and, with the exception of the logo, no images.
+For this podcast, we want to visually – and technically – play with the themes we're discussing, meaning we're leaving the door open to art direct each post individually. In this episode we talked about artistic approaches to web design. The nice thing about an artistic approach, if you ask me — Vasilis van Gemert — is that the result may feel or look off, or even wrong. It is not necessarily about creating the perfectly usable design, it is about exploring, and stretching the possibilities.
+
+I used the Espen’s first design as a starting point, and I accepted the constraints he chose: only <abbr>CSS</abbr> colour names, default fonts, and, with the exception of the logo, no images. I used his colour pallete and only added the colour `plum`. I used `writing-mode`, for a more efficient use of space on wider screens. And I played with the rather new `text-decoration` properties. They are wonderfully unpredictable when you blow them up to ridiculous sizes. But the thing I like most about these new properties is that every browser implements them differently. `Text-decoration-style: wavy` with `text-decoration-thickness: 1.2em` looks entirely different on Firefox, Brave and Safari. Most designers still want their websites to look the same in every browser. In this design I tried to do the opposite: it is a celebration of the differences between browsers.

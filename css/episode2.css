@@ -107,6 +107,10 @@ p.closed-caption {
 	text-decoration-style: dotted;
 	text-decoration-color: powderblue;
 }
+[id="why-does-this-page-look-like-this%3F"] ~ p {
+  text-decoration-color: plum;
+  font-style: italic;
+}
 [id="letmeread"] {
   position: fixed;
   left: -1000em;

@@ -194,3 +194,13 @@ input:checked ~ .episode-intro h1 {
 p code {
   font-style: normal;
 }
+input + label::before {
+  content: '⨻ ';
+  line-height: 1;
+}
+input:checked + label::before {
+  content: '✓ ';
+}
+input[type="checkbox"]:focus + label {
+  outline: dashed red;
+}

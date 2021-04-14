@@ -94,14 +94,16 @@ p,
 }
 
 p a,
-[id="shownotes"] + ul li a {
+[id="shownotes"] + ul li a,
+.prevnext li a {
   color: var(--colorBlack);
   background: powderblue;
   transition: 0.5s;
 }
 
 p a:hover,
-[id="shownotes"] + ul li a:hover {
+[id="shownotes"] + ul li a:hover,
+.prevnext li a:hover{
   background: aquamarine;
   transition: 0.1s;
 }
@@ -257,3 +259,14 @@ abbr {
 	font-variant-caps: all-small-caps;
 }
 
+.prevnext {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.prevnext li::before {
+  content: "← ";
+}
+.prevnext li.next::before {
+  content: "→ ";
+}

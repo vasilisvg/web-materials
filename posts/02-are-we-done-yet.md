@@ -22,7 +22,7 @@ csslinks:
 # <script>var hoi;</script>
 layout: layouts/post.njk
 intro: In the second episode of Web Materials, we wonder if webdesign has matured so much that we can decide that it is done. If that’s the case, this second episode is also our final episode!
-styletoggle: Underlines are for links.
+styletoggle: I can’t read it.
 ---
 
 ## Shownotes

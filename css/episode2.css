@@ -194,6 +194,12 @@ input:checked ~ .episode-intro h1 {
 p code {
   font-style: normal;
 }
+label {
+  cursor: pointer;
+}
+label:hover {
+  color: powderblue;
+}
 input + label::before {
   content: '⨻ ';
   line-height: 1;

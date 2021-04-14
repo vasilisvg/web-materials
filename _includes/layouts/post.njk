@@ -36,11 +36,11 @@ nextPost or previousPost %}
 <ul class="prevnext">
   {%- if nextPost %}
   <li class="next">
-    <a href="{{ nextPost.url | url }}">Episode {{nextPost.data.episode}}: {{ nextPost.data.title }}</a>
+    <a href="{{ nextPost.url | url }}" accesskey="j">Episode {{nextPost.data.episode}}: {{ nextPost.data.title }}</a>
   </li>
   {% endif %} {%- if previousPost %}
   <li>
-    <a href="{{ previousPost.url | url }}">Episode {{previousPost.data.episode}}: {{ previousPost.data.title }}</a>
+    <a href="{{ previousPost.url | url }}" accesskey="k">Episode {{previousPost.data.episode}}: {{ previousPost.data.title }}</a>
   </li>
   {% endif %}
 </ul>

@@ -1,7 +1,7 @@
 ---
 episode: 3
-title: Are there truths in webdesign?
-description: In which waste an hour before making an obvious conclusion.
+title: Are there truths in web design?
+description: In which we waste an hour before coming to an obvious conclusion.
 audio: /sound/WM003-design-truths.mp3
 audiolength: 28523289 #mandatory, size in bytes! No idea how to do this in Eleventy )-:
 duration: 00:35:43 #mandatory, duration in hh:mm:ss
@@ -21,9 +21,8 @@ csslinks:
 # <script>var hoi;</script>
 # <script>var hoi;</script>
 layout: layouts/post.njk
-intro: In the third episode of Web Materials, we ask whether there are truths in web design. We quickly answer "no", before spending an hour making, well, more or less the same conclusion.
+intro: In the third episode of Web Materials, we ask whether there are truths in web design. We quickly answer "no", before spending an hour coming to more or less the same conclusion.
 
-# styletoggle: I can’t read it.
 ---
 
 ## Shownotes

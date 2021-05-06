@@ -3,13 +3,13 @@ episode: 3
 title: Are there truths in web design?
 description: In which we waste an hour before coming to an obvious conclusion.
 audio: /sound/WM003-design-truths.mp3
-audiolength: 28523289 #mandatory, size in bytes! No idea how to do this in Eleventy )-:
-duration: 00:35:43 #mandatory, duration in hh:mm:ss
-date: 2021-04-12
+audiolength: 57362525 #mandatory, size in bytes! No idea how to do this in Eleventy )-:
+duration: 00:59:42 #mandatory, duration in hh:mm:ss
+date: 2021-05-07
 # You can add (multiple) urls to stylesheets with 'csslinks'. (Use spaces, not tabs here)
 csslinks:
- - /css/css.css
- - /css/episode3.css
+  - /css/css.css
+  - /css/episode3.css
 # If you want to add a block of preformatted code to the head you can use 'head'
 # Beware: use spaces, not tabs.
 #head: |
@@ -22,16 +22,17 @@ csslinks:
 # <script>var hoi;</script>
 layout: layouts/post.njk
 intro: In the third episode of Web Materials, we ask whether there are truths in web design. We quickly answer "no", before spending an hour coming to more or less the same conclusion.
-
 ---
 
-## Shownotes
+### Shownotes
 
 - [About this episode’s art direction](https://webmaterials.design/posts/03-are-there-truths-in-webdesign/#why-does-this-page-look-like-this%3F)
 
 ## Transcript
 
 <p class="closed-caption">[Intro music by xyce]</p>
+
+<section class="conversation">
 
 **Espen:** So is there such a thing as truth in web design?
 
@@ -61,7 +62,7 @@ intro: In the third episode of Web Materials, we ask whether there are truths in
 
 **V:** Yeah, yeah. Yeah. So and that's no, that's even HTTP or TCP. Those things change really, really, really slowly or don't change at all. So, you could look at some things that maybe are not true, but they they just change so slowly that you could consider them to be true. And I think there are a few things. So for instance, and maybe there are even truths. So for instance, how do we perceive colour? This is just, this is... just how people how our eyes, how it works. So there are certain colour combinations that just you cannot use them for readability. So if you design something that needs to be readable, you cannot use orange on blue, I guess.
 
-**E:** Yes. And similarly, you can't use really, really, really faint grey on white, or a really, really, really dark grey on black. There is a certain point for all human beings where the contrast is too slight, and you can't see anything. 
+**E:** Yes. And similarly, you can't use really, really, really faint grey on white, or a really, really, really dark grey on black. There is a certain point for all human beings where the contrast is too slight, and you can't see anything.
 
 **V:** Yeah.
 
@@ -71,9 +72,9 @@ intro: In the third episode of Web Materials, we ask whether there are truths in
 
 **E:** By the industry accepted standard, we shouldn't do that. Yeah, I also have only anecdotal issues with this standard that we've set for ourselves, in that it's very limited to, you know, there are certain criteria that are being fulfilled via an algorithm, which probably works for most people, right. But at a certain, I've noticed that, there's there's definition for small and large text. And anything above 24 pixels cancels as large text. Now for me, it would... it would, it would seem unnatural that the scale stops at 24 pixels. And something that maybe does not have enough contrast at that size would have enough contrast, if you blew it up to 100 pixels, a single word on a on a background and the word fills your screen, it's going to be more easily understood then a small word in a bunch of ,in amongst a bunch of other words in the paragraph, for example. So maybe the issue here is that contrast is not only subjective, but but context specific as well.
 
-**V:** But that's something that I think of all the rules that it could come up with. Yeah, they apply unless, I mean, or until you start testing or until you meet somebody who says no, it doesn't work for me. 
+**V:** But that's something that I think of all the rules that it could come up with. Yeah, they apply unless, I mean, or until you start testing or until you meet somebody who says no, it doesn't work for me.
 
-**E:** Yeah. 
+**E:** Yeah.
 
 **V:** Yeah.
 
@@ -93,9 +94,9 @@ intro: In the third episode of Web Materials, we ask whether there are truths in
 
 **V:** Yeah. So this could definitely be done. Well, not for everybody. But a large large sum of people could read some stuff.
 
-**E:** Yeah. I saw on Twitter, Vasilis, you also mentioned, measure or the line length as a potential truth. 
+**E:** Yeah. I saw on Twitter, Vasilis, you also mentioned, measure or the line length as a potential truth.
 
-**V:** Yeah. 
+**V:** Yeah.
 
 **E:** Is that universal? Or or do people have different preferences or different—
 
@@ -117,15 +118,11 @@ intro: In the third episode of Web Materials, we ask whether there are truths in
 
 **V:** I think it also, it has to do – I mean, the reason why the measure works? I mean, that's interesting, of course. So, I mean, you can just follow the rules. But why are those rules there? And the reason is simple, because you don't want to move your head too much. Right? So you don't want to move your eyes too much. You don't want to have to search for the next line. Yeah, just want to be able to read quickly. And in a book, it was it almost, you almost don't have to think about it because a book has a size. And I mean, you just read the end, you just reach the end of the paper, and you go to the next line. So it's there's just a physical limit to how wide you can make a measure. But on the web, of course, and you see that still, I think on Wikipedia, there is no such limits. The lines, just, if you don't give a max width to a paragraph, it'll just keep on growing.
 
-
-**E:** Exactly. I actually wonder if this is, you know, back in the day, this is part of the reason why, you know, your typical print designers would violate the fluidity of the web, because we sat down and we thought, oh my God, I can't have the text run from completely on the left hand side of the screen to the right hand side of the screen. That's not how typography works. Whereas maybe the more hardcore web community, especially in the early days, were a bit like, well, no, the web is a fluid medium. It's... you should just leave it like that. And you can always adjust the size of your browser window, I suppose. 
-
+**E:** Exactly. I actually wonder if this is, you know, back in the day, this is part of the reason why, you know, your typical print designers would violate the fluidity of the web, because we sat down and we thought, oh my God, I can't have the text run from completely on the left hand side of the screen to the right hand side of the screen. That's not how typography works. Whereas maybe the more hardcore web community, especially in the early days, were a bit like, well, no, the web is a fluid medium. It's... you should just leave it like that. And you can always adjust the size of your browser window, I suppose.
 
 **V:** Yeah. I think yeah, that came later. I mean, in the beginning, the web's the screens were 480 pixels wide. So we didn't have the measure problem then yet. 640 still not really a problem. 800 by then we had a sub navigation on the left, so wasn't really a problem.
 
-
-**E:** Yeah, yeah. 
-
+**E:** Yeah, yeah.
 
 **V:** But now with a very, very big screens it of course, you need a max width. And and these are just, they're the fine numbers just don't go over 40 em, and it's okay. I actually usually sit somewhere around 30 em, and it's nice to read. And sometimes I use the international measure slider, will link to it in the show notes.
 
@@ -133,7 +130,7 @@ intro: In the third episode of Web Materials, we ask whether there are truths in
 
 **V:** Use it somewhere. Sometimes I use words.
 
-**E:** Right. So we can say— 
+**E:** Right. So we can say—
 
 **V:** yeah, no, go on, we can say...
 
@@ -141,9 +138,9 @@ intro: In the third episode of Web Materials, we ask whether there are truths in
 
 **V:** And context, of course, I mean, if you look at somebody like David Carson, I mean, he used an extreme measure every now and then. And he used Wingdings as a font. When he said, "well this article isn't interesting anyway, so I'll just make it visually interesting". I mean, sometimes you just really have to break the rules all the way, which is, I think, very interesting as well. And that, this maybe brings us to font size, this is something that we could discuss a little bit. I mean, these are the classic things that are considered truths. Font size, you can see if a print designer designed a website, because they'll use a very small font size. And they like small fonts, and they don't like bigger fonts. And I think they forget why fonts are actually small on paper. And this is just an economic thing. It's, it's a concession between economics and readability. I mean, from an economic point of view, from a financial point of view, you want your letters to be as small as possible, because otherwise it's much too expensive to print a book. From a readability point of view, you want larger fonts, because then you don't need to put on your reading glasses. And this is nicer for people.
 
-**E:** Yes, up to a certain point. Of course. If the font is large, you would have to turn the page like way too often. 
+**E:** Yes, up to a certain point. Of course. If the font is large, you would have to turn the page like way too often.
 
-**V:** Yeah, yeah. 
+**V:** Yeah, yeah.
 
 **E:** Yeah.
 
@@ -157,7 +154,7 @@ intro: In the third episode of Web Materials, we ask whether there are truths in
 
 **V:** Yeah. But it makes sense. It is about what's the diff, what's the distance, that you'll probably be using this device? Yeah. So for instance, a television is probably at at least two arm's length from your eye. So there a pixel should be twice as big as on your laptop. And this is also something. Yeah, so and it's actually how it works. So a telephone is probably used a bit closer to your eyes. So here pixels are smaller. So this is about the physical size of a pixel. So you could say that, yes, these device makers probably put some thought in it.
 
-**E:** Kind of, but then when did they put this thought into it? The monitors that we see things on nowadays are much bigger than what they were when these, this.. this default size was defined? Are they not? 
+**E:** Kind of, but then when did they put this thought into it? The monitors that we see things on nowadays are much bigger than what they were when these, this.. this default size was defined? Are they not?
 
 **V:** Yeah but then it's it's about the CSS pixel, which is different than the physical picture pixels. So for instance, I look at a retina screen. And every CSS pixel is, I think, on my screen for physical picture, big pixels.
 
@@ -171,29 +168,29 @@ intro: In the third episode of Web Materials, we ask whether there are truths in
 
 **V:** Then, and it's also what's the, what's the text for so for instance, you have the small text, write the disclaimers, in and in books that used to be printed in real small font, and that's because it's not really something that anybody reads, but it should be there. And it takes up lots of space if you use a big font. So there, all the good typography rules suddenly don't apply anymore. And it's just put as much text as possible, on as little paper as possible. But I would say I would argue that on the web, we should use, we should call it not small font, or small text, but large text, we should actually print it in larger font, because it's always jargon. It's hard to read complicated sentences. So it really should be laid out in a way that is easier to read to make that makes it easier for people to read.
 
-**E:**  Yeah, so we don't have the restriction of, of economy of paper and print. Yeah. What we do have, though, I would argue, at least on smaller devices, is the economy of viewports. And, you know, wanting to show a certain amount of content above the fold. And this is maybe more relevant in product design, or apps, like, I don't know, like YouTube, for example, you maybe want to show three or four, previews of a video. And there are going to be elements there, such as the view count, or the date or the, you know, likes things like these peripheral elements, that would eat up a lot of space, if it was all large type.
+**E:** Yeah, so we don't have the restriction of, of economy of paper and print. Yeah. What we do have, though, I would argue, at least on smaller devices, is the economy of viewports. And, you know, wanting to show a certain amount of content above the fold. And this is maybe more relevant in product design, or apps, like, I don't know, like YouTube, for example, you maybe want to show three or four, previews of a video. And there are going to be elements there, such as the view count, or the date or the, you know, likes things like these peripheral elements, that would eat up a lot of space, if it was all large type.
 
-**V:** I think this is one of the great things that mobile design brought us that is that all of a sudden, we had to think about space. And we had to think about what's really important. And if you look at web design, before responsive design, and after responsive design, I think the biggest change is that we don't fill up all the whitespace with stuff anymore. We just leave the whitespace as it is and only show what's really necessary. I mean, it's not that's not a really a rule. You don't see that everywhere. But it makes it so much easier to make a responsive design if you have fewer things. 
+**V:** I think this is one of the great things that mobile design brought us that is that all of a sudden, we had to think about space. And we had to think about what's really important. And if you look at web design, before responsive design, and after responsive design, I think the biggest change is that we don't fill up all the whitespace with stuff anymore. We just leave the whitespace as it is and only show what's really necessary. I mean, it's not that's not a really a rule. You don't see that everywhere. But it makes it so much easier to make a responsive design if you have fewer things.
 
-**E:** Yeah. 
+**E:** Yeah.
 
 **V:** Right. So definitely, yeah.
 
-**E:** I wonder if that's also come out of this acceptance that people actually scroll on a website, there certainly was a time in my career where everything had to be crammed into this, you know, 600 pixels height or something like that. Which of course makes it very difficult to create anything with contrast in size, anything that is airy, or anything that's open. So at least now there's an acceptance that yep, we know how to scroll things. Maybe that's a— 
+**E:** I wonder if that's also come out of this acceptance that people actually scroll on a website, there certainly was a time in my career where everything had to be crammed into this, you know, 600 pixels height or something like that. Which of course makes it very difficult to create anything with contrast in size, anything that is airy, or anything that's open. So at least now there's an acceptance that yep, we know how to scroll things. Maybe that's a—
 
 **V:** I used to work for KLM long time ago. And back then the homepage was crammed into, I think 900 pixels, 960 pixels. And I think it was even something like 500 pixels height because they counted all kinds of possible bars at the top and the bottom of the browser. And there were these endless discussions about who would get some space on this.. really just just tiny postcard. And – incredible – so at one point, I just sent them a screenshot of, we back then we had these enormous iMacs and I sent them a screenshot of this tiny website, somewhere in the middle of this huge blank screen. Maybe we should discuss this idea, that people have this small, viewport. And then indeed, they accepted the fact that people scroll and if you design things correctly, you can even show people that there's more beyond the fold.
 
-**E:** Yes, the whole scroll thing is, of course people scroll, but it's still challenging I think for for, especially people like KLM or, or larger organisations where the website is not only it's not just, you know, here's what we do take a look at our stuff. It's absolutely crucial to their business model. And a tiny change here or there could actually, you know, can make a difference of 1000s of euros or 1000s of pounds. Yeah, yeah. And I wonder if then this mindset of it all has to fit there. Obviously, after that we saw the carousel pattern of  – obviously some smart designer, said don't worry about it, we can put everything you want on this postcard because the postcard has multiple pages!
+**E:** Yes, the whole scroll thing is, of course people scroll, but it's still challenging I think for for, especially people like KLM or, or larger organisations where the website is not only it's not just, you know, here's what we do take a look at our stuff. It's absolutely crucial to their business model. And a tiny change here or there could actually, you know, can make a difference of 1000s of euros or 1000s of pounds. Yeah, yeah. And I wonder if then this mindset of it all has to fit there. Obviously, after that we saw the carousel pattern of – obviously some smart designer, said don't worry about it, we can put everything you want on this postcard because the postcard has multiple pages!
 
 **V:** This is actually the most, the silly thing about carousels of course, is that you don't show everything you hide most of it.
 
 **E:** Yes. And you hide it behind the mechanism that is way less intuitive than scrolling.
 
-**V:** Yeah, yeah. I mean, how often have you miss clicked something because the character carousel start flipping When you wanted to click on something, this is of course a usability problem. Yep. So that's it. A carousel is not a rule and fitting everything into the fold is not a rule. 
+**V:** Yeah, yeah. I mean, how often have you miss clicked something because the character carousel start flipping When you wanted to click on something, this is of course a usability problem. Yep. So that's it. A carousel is not a rule and fitting everything into the fold is not a rule.
 
-**E:** It's not a rule. Yeah, I think at least there's some subset of our industry would think that not including a carousel is a rule. Yeah. To which to which I would say, iPhone interfaces are essentially carousels. But you know, that's, that's, I think that's a context specific as well. 
+**E:** It's not a rule. Yeah, I think at least there's some subset of our industry would think that not including a carousel is a rule. Yeah. To which to which I would say, iPhone interfaces are essentially carousels. But you know, that's, that's, I think that's a context specific as well.
 
-**V:** Yeah. Yeah. 
+**V:** Yeah. Yeah.
 
 **E:** Semantics is another thing that you mentioned. We've talked so far, we've talked about a lot of typography, a lot of very, very basic design principles that I would argue are true, whether it's design as design for print, or design for web, that the context is slightly different, but the underlying principle stays the same. But on the web, we have, you know, web specific things like semantics and structure of the page that you also consider to be true, in some sense.
 
@@ -211,7 +208,7 @@ intro: In the third episode of Web Materials, we ask whether there are truths in
 
 **V:** But this is something that I mean, and this is also something that I think you should... For me, the only truth nowadays in design is that you should test with real people all the way along the design process. So not just, at the end, do one usability test, to validate your design decisions, but no, all the time keep on working with people. And when I mean working with really work with them, involve them. Then I would also say not designers or developers, but real people. I mean, these are the people that have to use your stuff. And these are the people who don't look at a computer screen all day. So that will be my only real rule would be that just know the rules. No, they're the the basics. But then test them and break them when necessary.
 
-**E:**  When necessary. 
+**E:** When necessary.
 
 **V:** Yeah.
 
@@ -223,15 +220,15 @@ intro: In the third episode of Web Materials, we ask whether there are truths in
 
 **V:** So I mean, of course, also, I created this website with no semantics in it at all only paragraphs. And I tested it with somebody who uses a screen reader, but he's a real power user. And he hated it. Of course, he said, there's no way for me to navigate over this page, there's no way for me to get an overview or a hierarchy of what's on it. So this was for him, it was broken. Well, for the person that I designed it for it was really good. And I think, of course, you can end up somewhere in the middle that should be there are things that work. Yeah, reasonably well for for more people. So I designed a really extreme example here, it was, of course, some way a provocative to, to look at, okay, what can we make on the opposite side of the spectrum? But then if you look at SEO, I mean, yeah. But I think they have a similar. If you look, what what does Google wants, they actually want, well written content content for people. So they're all the time working on the algorithm to say, if you write it well for people, then we will give you a bonus. If you design your website for people, but still search engine optimization, people will keep on optimising for a robots, which is weird if this robot really wants you to optimise for people. So if instead these people started focusing on people, then it would be I think there's just there's so much common ground there between what Google wants and what people want.
 
-**E:** Yeah, I think I think part of the history is the interface in between Google and and people is that Google have to use a robot to define what what your thing does. So as long as the robot is the thing that assesses whether you've written it well, for people, well, essentially, what you're doing is writing for the robots to make the right conclusions. 
+**E:** Yeah, I think I think part of the history is the interface in between Google and and people is that Google have to use a robot to define what what your thing does. So as long as the robot is the thing that assesses whether you've written it well, for people, well, essentially, what you're doing is writing for the robots to make the right conclusions.
 
-**V:** Yeah. 
+**V:** Yeah.
 
 **E:** You mentioned something just there to do with structure of a page. And if there's no semantics, power users on screen readers and Google and even even normal people might struggle to find their way on a web page. And the way we design web pages now is that we open with a navigation. We have a logo, a bunch of links, you know, we have a search field if their search on the page is a very, very, very well established pattern of putting your navigation up front and centre. There's even advocates that say not only should it be at the top, but it should be completely visible, not hidden. No... you should not have to click anything to see it or scroll down to it. It should always be there at the top, front right and centre. But I do know that you have your, your thoughts on this as well.
 
 **V:** So, yeah, well, what I've seen on many websites is that the navigation is overrated. And if I go to a, if I follow a link, for instance, on Twitter, I think this is how I access most websites by clicking a link on Twitter. And this is probably most people end up on a website by clicking a link on Twitter. And this is usually accompanied by somebody who says, this is a very interesting article, read it, or here are some very beautiful animations of cats. Right? And then you click on it. And I'm really only interested in this article. In the beginning. I mean, if the article is really interesting, then I might be interested in what else is on this website. But it's not the first thing that I'm interested in. Definitely not. I'm not interested in what else is on this website. No, I'm here for the article. So don't bother me with what else. Because I have no context. I have don't have any yet. So a navigation for me, it makes sense on the homepage. So if I enter a website on the homepage, then it makes sense to tell me what's on this website. And then the navigation should be probably even bigger. If you ask me, it should be explained. Right? every element in the navigation could have a small paragraph, which explains what you can find there. So on the homepage, make it bigger if you ask me. But um, all and maybe you could even say on the first visit, you could make the navigation pretty big. But on next visits, you could just hide it because we know where it is. Or we know it's there. And we could use something like cookies for those make useful use of cookies,
 
-**E:** Actual good use of cookies. Yeah, I think that's super interesting. I have I've had similar thoughts over over time. I've never, for example, I've never understood this, this real hatred towards the hamburger menu. Not not that I'm its biggest advocate. Because I think a lot of people see with nav items visible – and as we've seen in the last whatever few years on mobile, how these nav elements have been, I've shrunk down into icons that sit along the bottom of your mobile screen... 
+**E:** Actual good use of cookies. Yeah, I think that's super interesting. I have I've had similar thoughts over over time. I've never, for example, I've never understood this, this real hatred towards the hamburger menu. Not not that I'm its biggest advocate. Because I think a lot of people see with nav items visible – and as we've seen in the last whatever few years on mobile, how these nav elements have been, I've shrunk down into icons that sit along the bottom of your mobile screen...
 
 **V:** Yeah
 
@@ -295,10 +292,16 @@ intro: In the third episode of Web Materials, we ask whether there are truths in
 
 **V:** Sorry about that, everybody.
 
+</section>
+
 <p class="closed-caption">[Outro music by xyce]</p>
 
 ## Why does this page look like this?
 
-For this podcast, we want to visually – and technically – play with the themes we're discussing, meaning we're leaving the door open to art direct each post individually. In this episode we talked about artistic approaches to web design. The nice thing about an artistic approach, if you ask me — Vasilis van Gemert — is that the result may feel or look off, or even wrong. It is not necessarily about creating the perfectly usable design, it is about exploring, and stretching the possibilities of the material, <abbr>CSS</abbr>.
+In this episode, we talk a lot about measure and legibility. I've paired everything back – given Vasilis' penchant for the experimental I guess I'll be doing a lot of that going forward – and emphasised the conversational nature of the transcript. Between you and me, I'm also starting to feel the restraints of default colours, and I can't help but feel the urge to upgrade the fonts.
 
-I used Espen’s first design as a starting point, and I accepted the constraints he chose: only <abbr>CSS</abbr> colour names, default fonts, and, with the exception of the logo, no images. I used his colour pallete and only added the colour `plum`. I used `writing-mode`, for a more efficient use of space on wider screens. And I played with the rather new `text-decoration` properties. They are wonderfully unpredictable when you blow them up to ridiculous sizes. But the thing I like most about these new properties is that every browser implements them differently. `Text-decoration-style: wavy` with `text-decoration-thickness: 1.2em` looks entirely different on Firefox, Brave and Safari. Most designers still live by the strange idea that their websites should look the same in every browser. In this design I tried to do the opposite: it is a celebration of the differences.
+But that'll have to be for another episode.
+
+<!-- For this podcast, we want to visually – and technically – play with the themes we're discussing, meaning we're leaving the door open to art direct each post individually. In this episode we talked about artistic approaches to web design. The nice thing about an artistic approach, if you ask me — Vasilis van Gemert — is that the result may feel or look off, or even wrong. It is not necessarily about creating the perfectly usable design, it is about exploring, and stretching the possibilities of the material, <abbr>CSS</abbr>.
+
+I used Espen’s first design as a starting point, and I accepted the constraints he chose: only <abbr>CSS</abbr> colour names, default fonts, and, with the exception of the logo, no images. I used his colour pallete and only added the colour `plum`. I used `writing-mode`, for a more efficient use of space on wider screens. And I played with the rather new `text-decoration` properties. They are wonderfully unpredictable when you blow them up to ridiculous sizes. But the thing I like most about these new properties is that every browser implements them differently. `Text-decoration-style: wavy` with `text-decoration-thickness: 1.2em` looks entirely different on Firefox, Brave and Safari. Most designers still live by the strange idea that their websites should look the same in every browser. In this design I tried to do the opposite: it is a celebration of the differences. -->

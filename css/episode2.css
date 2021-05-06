@@ -16,8 +16,8 @@ header {
 }
 .episode-intro h1 {
 	background-color: white;
-	font-size: clamp(1em,12.2vh,20vh);
-	display: block;
+	white-space: initial;
+	display: inline;
 	position: fixed;
   left: 0;
   top: 0;

@@ -68,6 +68,15 @@ h2:target {
   padding-top: 4em;
 }
 
+h3 {
+  font-family: var(--headingFont);
+	font-size: 0.8em;
+  font-size: clamp(0.8em,2vw,1em);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 0.5em;
+}
+
 
 
 .episode-intro footer,
@@ -79,7 +88,7 @@ h2:target {
   font-style: normal;
 }
 [id="shownotes"] + ul {
-  margin: 0;
+  margin: 0 0 5em; 
   padding: 0;
 }
 p,
@@ -89,6 +98,7 @@ p,
   line-height: 1.6em;
   color: var(--colorBlack);
   max-width: 50ch;
+  list-style: none;
 }
 
 .para-big {
@@ -163,13 +173,14 @@ audio:focus-within {
 
 .postlist {
   list-style-type: none;
-  margin-top: 10vh;
+  margin: 10vh 0;
 }
 @media (min-width: 44em) {
 	.postlist {
 		padding: 0;
 		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(15em, 1fr));
+		grid-template-columns: repeat(auto-fit, minmax(40em, 1fr));
+    grid-row-gap: clamp(1em, 3vh, 2em);
 	}
 }
 .postlist li {
@@ -195,8 +206,9 @@ audio:focus-within {
 }
 
 .postlist p {
-  font-style: italic;
-  max-width: 30ch;
+  /* font-style: italic; */
+  margin-top: 0.5em;
+  max-width: 60ch;
 }
 .postlist a::after {
 	content:'';
@@ -204,19 +216,26 @@ audio:focus-within {
 	left: -10px;
 	right: -10px;
 	bottom: 0px;
-	top: 0px;
+	top: -20px;
 	opacity: 0;
   background-color: khaki;
 	background-color: var(--postlistItem);
   mix-blend-mode: darken;
   transition: 0.5s;
+  transform: rotate(0deg);
 }
 .postlist li:nth-last-of-type(2) {
 	--postlistItem: Plum;
 }
+
+.postlist li:nth-last-of-type(3) {
+	--postlistItem: powderblue  ;
+}
+
 .postlist a:hover::after {
 	opacity: 1;
   transition: 0.1s;
+  transform: rotate(-1.5deg);
 }
 
 .nav {

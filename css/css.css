@@ -88,7 +88,7 @@ h3 {
   font-style: normal;
 }
 [id="shownotes"] + ul {
-  margin: 0 0 5em; 
+  /* margin: 0 0 5em;  */
   padding: 0;
 }
 p,

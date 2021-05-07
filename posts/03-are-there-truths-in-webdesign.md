@@ -17,22 +17,48 @@ csslinks:
 # <link rel="stylesheet" href="https://fonts.typotheque.com/WF-023273-011456.css">
 # If you want to add a block of preformatted code to the end of the document you can use 'foot'
 # Beware: use spaces, not tabs.
-#foot: |
-# <script>var hoi;</script>
-# <script>var hoi;</script>
+foot: |
+  <script src="/js/js.js"></script>
+
 layout: layouts/post.njk
 intro: In the third episode of Web Materials, we ask whether there are truths in web design. We quickly answer "no", before spending an hour coming to more or less the same conclusion.
 ---
 
+<section class="shownotes">
+
 ### Shownotes
 
 - [About this episode’s art direction](https://webmaterials.design/posts/03-are-there-truths-in-webdesign/#why-does-this-page-look-like-this%3F)
+</section>
+
+<section class="measure-measurer">
+
+### Measure measurer
+
+Pick the measure that measures best for you
+
+<form action="">
+  <label class="measure-radio" for="measure-20em">
+      <input id="measure-20em" name="measure-select" type="radio"/>
+      20em
+  </label>
+  <label class="measure-radio" for="measure-30em">
+      <input id="measure-30em" name="measure-select" type="radio"/>
+      30em
+  </label>
+  <label class="measure-radio" for="measure-40em">
+      <input id="measure-40em" name="measure-select" type="radio"/>
+      40em
+  </label>
+</form>
+
+</section>
 
 ## Transcript
 
 <p class="closed-caption">[Intro music by xyce]</p>
 
-<section class="conversation">
+<section id="conversation">
 
 **Espen:** So is there such a thing as truth in web design?
 
@@ -298,10 +324,28 @@ intro: In the third episode of Web Materials, we ask whether there are truths in
 
 ## Why does this page look like this?
 
-In this episode, we talk a lot about measure and legibility. I've paired everything back – given Vasilis' penchant for the experimental I guess I'll be doing a lot of that going forward – and emphasised the conversational nature of the transcript. Between you and me, I'm also starting to feel the restraints of default colours, and I can't help but feel the urge to upgrade the fonts.
+In this episode, we talk a lot about measure and legibility. I've paired everything back – given Vasilis' penchant for the experimental I guess I'll be doing a lot of that going forward – and emphasised the conversational nature of the transcript. The great thing about Vasilis' experimentation is that I'm learning about attributes I never new existed – like the breadth of 'text-decoration' available.
 
-But that'll have to be for another episode.
+Between you and me, I'm also starting to feel the restraints of default colours, and I can't help but feel the urge to upgrade the fonts. But that'll have to be for another episode.
 
-<!-- For this podcast, we want to visually – and technically – play with the themes we're discussing, meaning we're leaving the door open to art direct each post individually. In this episode we talked about artistic approaches to web design. The nice thing about an artistic approach, if you ask me — Vasilis van Gemert — is that the result may feel or look off, or even wrong. It is not necessarily about creating the perfectly usable design, it is about exploring, and stretching the possibilities of the material, <abbr>CSS</abbr>.
+<script>
 
-I used Espen’s first design as a starting point, and I accepted the constraints he chose: only <abbr>CSS</abbr> colour names, default fonts, and, with the exception of the logo, no images. I used his colour pallete and only added the colour `plum`. I used `writing-mode`, for a more efficient use of space on wider screens. And I played with the rather new `text-decoration` properties. They are wonderfully unpredictable when you blow them up to ridiculous sizes. But the thing I like most about these new properties is that every browser implements them differently. `Text-decoration-style: wavy` with `text-decoration-thickness: 1.2em` looks entirely different on Firefox, Brave and Safari. Most designers still live by the strange idea that their websites should look the same in every browser. In this design I tried to do the opposite: it is a celebration of the differences. -->
+// Measure measurer
+var measure20 = document.getElementById('measure-20em');
+var measure30 = document.getElementById('measure-30em');
+var measure40 = document.getElementById('measure-40em');
+
+var conversation = document.getElementById('conversation');
+
+measure20.addEventListener('click', function () {
+  conversation.className = 'measure20';
+});
+
+measure30.addEventListener('click', function () {
+  conversation.className = 'measure30';
+});
+
+measure40.addEventListener('click', function () {
+  conversation.className = 'measure40';
+});
+</script>

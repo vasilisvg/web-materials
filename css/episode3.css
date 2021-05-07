@@ -31,8 +31,10 @@ header {
   padding: 0;
   filter: brightness(1);
   text-decoration-line: underline;
-  text-decoration-style: wavy;
-  text-decoration-color: powderblue;
+  text-decoration-style: solid;
+  text-decoration-thickness: 0.5em;
+  text-underline-offset: -0.5em;
+  text-decoration-color: paleturquoise;
   text-decoration-skip-ink: none;
 }
 
@@ -40,6 +42,15 @@ header {
 h2 {
   font-size: clamp(2em, 6vw, 2.5em);
   max-width: 15ch;
+}
+
+h3 {
+  text-decoration-line: underline;
+  text-decoration-style: solid;
+  text-decoration-thickness: 0.5em;
+  text-underline-offset: -0.5em;
+  text-decoration-color: paleturquoise;
+  text-decoration-skip-ink: none;
 }
 
 
@@ -81,19 +92,58 @@ p strong {
   background: none;
 }
 
-.conversation {
+.shownotes, .measure-measurer {
+  background: whitesmoke;
+  padding: 1em 2em 1em;
+  margin-bottom: 1em;
+  border-radius: 0.5em;
+}
+
+.shownotes .direct-link, .measure-measurer .direct-link {
+  display: none;
+}
+
+.measure-radio {
+  background: white;
+  display: inline-block;
+  padding: 0.4em 1em 0.6em 0.5em;
+  margin-bottom: 1em;
+  border-radius: 0.3em;
+  font-size: 1.1em;
+  color: black;
+  border: 2px solid white;
+}
+
+.measure-radio:hover {
+  color: black;
+  border-color: slategray;
+}
+
+#conversation {
   display: flex;
   flex-direction: column;
 }
 
-.conversation p {
+#conversation p {
   padding: 1em;
   border-radius: 1em;
 }
 
-.conversation p:nth-of-type(odd) { background-color: lavender; }
+#conversation p:nth-of-type(odd) { background-color: lavender; align-self: flex-start; margin-right: 4em;}
 
-.conversation p:nth-of-type(even) { background-color: beige; align-self: flex-end; }
+#conversation p:nth-of-type(even) { background-color: paleturquoise; align-self: flex-end; margin-left: 4em; }
+
+.measure20 p {
+  max-width: 20em;
+}
+
+.measure30 p {
+  max-width: 30em;
+} 
+
+.measure40 p {
+  max-width: 40em;
+} 
 
 .para-big {
   background-color: transparent !important;

@@ -59,7 +59,7 @@ h3 {
   border-radius: 1em;
   background: rgba(0,0,0,0.8)
 }
- 
+
 
 .nav li a:hover {
 	background-color: thistle;
@@ -133,17 +133,39 @@ p strong {
 
 #conversation p:nth-of-type(even) { background-color: paleturquoise; align-self: flex-end; margin-left: 4em; }
 
-.measure20 p {
+input[id^="measure"] {
+  position: absolute;
+  left: -1000em;
+}
+
+.measure20 p,
+input[id="measure-20em"]:checked ~ #conversation p
+ {
   max-width: 20em;
 }
 
-.measure30 p {
+.measure30 p,
+input[id="measure-30em"]:checked ~ #conversation p {
   max-width: 30em;
-} 
+}
 
-.measure40 p {
+.measure40 p,
+input[id="measure-40em"]:checked ~ #conversation p {
   max-width: 40em;
-} 
+}
+.measure-measurer label::before {
+  content: "☐";
+}
+input[id="measure-20em"]:checked ~ .measure-measurer label[for="measure-20em"]::before,
+input[id="measure-30em"]:checked ~ .measure-measurer label[for="measure-30em"]::before,
+input[id="measure-40em"]:checked ~ .measure-measurer label[for="measure-40em"]::before {
+  content: "☑";
+}
+input[id="measure-20em"]:focus ~ .measure-measurer label[for="measure-20em"],
+input[id="measure-30em"]:focus ~ .measure-measurer label[for="measure-30em"],
+input[id="measure-40em"]:focus ~ .measure-measurer label[for="measure-40em"] {
+  outline: 1px solid;
+}
 
 .para-big {
   background-color: transparent !important;
@@ -154,7 +176,7 @@ p.closed-caption {
 	text-decoration-color: powderblue;
 }
 [id="why-does-this-page-look-like-this%3F"] ~ p {
-  
+
 }
 
 

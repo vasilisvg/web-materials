@@ -17,9 +17,7 @@ csslinks:
 # <link rel="stylesheet" href="https://fonts.typotheque.com/WF-023273-011456.css">
 # If you want to add a block of preformatted code to the end of the document you can use 'foot'
 # Beware: use spaces, not tabs.
-foot: |
-  <script src="/js/js.js"></script>
-
+foot: #<script src="/js/js.js"></script>
 layout: layouts/post.njk
 intro: In the third episode of Web Materials, we ask whether there are truths in web design. We quickly answer "no", before spending an hour coming to more or less the same conclusion.
 ---
@@ -29,8 +27,14 @@ intro: In the third episode of Web Materials, we ask whether there are truths in
 ### Shownotes
 
 - [About this episode’s art direction](https://webmaterials.design/posts/03-are-there-truths-in-webdesign/#why-does-this-page-look-like-this%3F)
-</section>
+- [Jeremy Keith: The layers of the web](https://beyondtellerrand.com/events/berlin-2019/speakers/jeremy-keith)
+- [The international measure slider](https://vasilis.nl/nerd/code/measure-help/)
 
+
+</section>
+<input id="measure-20em" name="measure-select" type="radio" checked/>
+<input id="measure-30em" name="measure-select" type="radio"/>
+<input id="measure-40em" name="measure-select" type="radio"/>
 <section class="measure-measurer">
 
 ### Measure measurer
@@ -39,15 +43,12 @@ Pick the measure that measures best for you
 
 <form action="">
   <label class="measure-radio" for="measure-20em">
-      <input id="measure-20em" name="measure-select" type="radio"/>
       20em
   </label>
   <label class="measure-radio" for="measure-30em">
-      <input id="measure-30em" name="measure-select" type="radio"/>
       30em
   </label>
   <label class="measure-radio" for="measure-40em">
-      <input id="measure-40em" name="measure-select" type="radio"/>
       40em
   </label>
 </form>
@@ -328,24 +329,3 @@ In this episode, we talk a lot about measure and legibility. I've paired everyth
 
 Between you and me, I'm also starting to feel the restraints of default colours, and I can't help but feel the urge to upgrade the fonts. But that'll have to be for another episode.
 
-<script>
-
-// Measure measurer
-var measure20 = document.getElementById('measure-20em');
-var measure30 = document.getElementById('measure-30em');
-var measure40 = document.getElementById('measure-40em');
-
-var conversation = document.getElementById('conversation');
-
-measure20.addEventListener('click', function () {
-  conversation.className = 'measure20';
-});
-
-measure30.addEventListener('click', function () {
-  conversation.className = 'measure30';
-});
-
-measure40.addEventListener('click', function () {
-  conversation.className = 'measure40';
-});
-</script>

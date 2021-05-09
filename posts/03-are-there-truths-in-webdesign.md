@@ -31,6 +31,8 @@ intro: In the third episode of Web Materials, we ask whether there are truths in
 - [The international measure slider](https://vasilis.nl/nerd/code/measure-help/)
 - [An arm’s length regarding the pixel](https://developer.mozilla.org/en-US/docs/Glossary/CSS_pixel)
 - [About semantics and screen readers](https://exclusive-design.vasilis.nl/design-like-its-1999/)
+- [Podcast episode with Peter Biľak](https://vasilis.nl/gbi/2018/02/11/peter-bilak/)
+
 
 </section>
 <input id="measure-20em" name="measure-select" type="radio" checked/>

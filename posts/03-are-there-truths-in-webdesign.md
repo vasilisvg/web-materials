@@ -29,7 +29,8 @@ intro: In the third episode of Web Materials, we ask whether there are truths in
 - [About this episode’s art direction](https://webmaterials.design/posts/03-are-there-truths-in-webdesign/#why-does-this-page-look-like-this%3F)
 - [Jeremy Keith: The layers of the web](https://beyondtellerrand.com/events/berlin-2019/speakers/jeremy-keith)
 - [The international measure slider](https://vasilis.nl/nerd/code/measure-help/)
-
+- [An arm’s length regarding the pixel](https://developer.mozilla.org/en-US/docs/Glossary/CSS_pixel)
+- [About semantics and screen readers](https://exclusive-design.vasilis.nl/design-like-its-1999/)
 
 </section>
 <input id="measure-20em" name="measure-select" type="radio" checked/>
@@ -189,9 +190,7 @@ Pick the measure that measures best for you
 
 **V:** Yeah. So I guess you could say 16 pixels is not the rule for all screens, but it should be a minimum size. It should probably not be smaller than 16 pixels.
 
-**E:** For for body text, at least. Maybe on a on a phone in some interface elements, the small details here and there. I think you would struggle if everything was 16 pixels.
-
-**E:** Okay, well, yeah, we can say that there's definitely something as being too small. And there's probably at some end of the scale, something is too big as well. At least for body text. Yeah.
+**E:** For for body text, at least. Maybe on a on a phone in some interface elements, the small details here and there. I think you would struggle if everything was 16 pixels. Okay, well, yeah, we can say that there's definitely something as being too small. And there's probably at some end of the scale, something is too big as well. At least for body text. Yeah.
 
 **V:** Then, and it's also what's the, what's the text for so for instance, you have the small text, write the disclaimers, in and in books that used to be printed in real small font, and that's because it's not really something that anybody reads, but it should be there. And it takes up lots of space if you use a big font. So there, all the good typography rules suddenly don't apply anymore. And it's just put as much text as possible, on as little paper as possible. But I would say I would argue that on the web, we should use, we should call it not small font, or small text, but large text, we should actually print it in larger font, because it's always jargon. It's hard to read complicated sentences. So it really should be laid out in a way that is easier to read to make that makes it easier for people to read.
 

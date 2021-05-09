@@ -161,11 +161,20 @@ input[id="measure-30em"]:checked ~ .measure-measurer label[for="measure-30em"]::
 input[id="measure-40em"]:checked ~ .measure-measurer label[for="measure-40em"]::before {
   content: "☑";
 }
+
+input[id="measure-20em"]:checked ~ .measure-measurer label[for="measure-20em"],
+input[id="measure-30em"]:checked ~ .measure-measurer label[for="measure-30em"],
+input[id="measure-40em"]:checked ~ .measure-measurer label[for="measure-40em"] {
+  border-color: slategray;
+}
+
 input[id="measure-20em"]:focus ~ .measure-measurer label[for="measure-20em"],
 input[id="measure-30em"]:focus ~ .measure-measurer label[for="measure-30em"],
 input[id="measure-40em"]:focus ~ .measure-measurer label[for="measure-40em"] {
   outline: 1px solid;
 }
+
+
 
 .para-big {
   background-color: transparent !important;

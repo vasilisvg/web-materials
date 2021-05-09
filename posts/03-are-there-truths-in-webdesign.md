@@ -328,5 +328,6 @@ Pick the measure that measures best for you
 
 In this episode, we talk a lot about measure and legibility. I've paired everything back – given Vasilis' penchant for the experimental I guess I'll be doing a lot of that going forward – and emphasised the conversational nature of the transcript. The great thing about Vasilis' experimentation is that I'm learning about attributes I never new existed – like the breadth of 'text-decoration' available.
 
-Between you and me, I'm also starting to feel the restraints of default colours, and I can't help but feel the urge to upgrade the fonts. But that'll have to be for another episode.
+You may also notice the "measure measurer" just above the transcript. It's just for fun. Which measure works best for you?
 
+Between you and me, I'm also starting to feel the restraints of default colours, and I can't help but feel the urge to upgrade the fonts. But that'll have to be for another episode.

@@ -276,7 +276,7 @@ Pick the measure that measures best for you
 
 **V:** But to be honest, there's really nothing to navigate to.
 
-**E:** No, and we won't we won't lose any money if people struggle. Because you know, if people want the next episode, I'm sure they'll be able to find that. Oh, I actually, you know, if you're a KLM or a hotels.com, or whomever you are even smaller businesses, it directly ties into your revenue if people even have to think an extra three seconds to find something. So I do understand the reluctance to change things up. And of course, when there's reluctance, you create this, you know, feedback loop of a it's like a self fulfilling thing where it becomes incredibly risky to, to break out and try something different.
+**E:** No, and we won't we won't lose any money if people struggle. Because you know, if people want the next episode, I'm sure they'll be able to find that. Oh, I actually, you know, if you're a KLM or a <span>hotels.com</span>, or whomever you are even smaller businesses, it directly ties into your revenue if people even have to think an extra three seconds to find something. So I do understand the reluctance to change things up. And of course, when there's reluctance, you create this, you know, feedback loop of a it's like a self fulfilling thing where it becomes incredibly risky to, to break out and try something different.
 
 **V:** Yeah. Yeah. Okay. So I agree navigation, we could probably talk a whole episode about navigation. Maybe we—
 

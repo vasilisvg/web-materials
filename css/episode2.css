@@ -32,6 +32,7 @@ header {
   z-index: -1;
   padding: .3em 0 0;
   filter: brightness(1);
+  font-size: clamp(1em,12vh,20vh);
  }
 @media (max-height: 30em) {
   .episode-intro h1 {

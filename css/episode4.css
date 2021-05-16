@@ -249,7 +249,7 @@ h2[id="why-does-this-page-look-like-this%3F"]:target {
   scroll-behavior: smooth;
 }
 [href="#body"] {
-  color: hsl(var(--hue),70%,50%);
+  color: hsl(var(--hue),70%,var(--lightness));
   background-color: inherit;
 }
 

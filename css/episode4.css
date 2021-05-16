@@ -63,8 +63,11 @@ h3 {
   content: "Whoah! Focus-within FTW!";
   position: absolute;
   transform: rotate(-10deg);
-  background: hsla(0,100%,50%,0.8);
-  margin: -1em -3em;
+  background: darkmagenta;
+  color: white;
+  margin: -2em -3em;
+  padding: .5em;
+  border-radius: .3em;
 }
 
 
@@ -286,4 +289,7 @@ body:target #conversation  {
 
 .sig {
   font-style: italic;
+}
+script {
+  display: none !important;
 }

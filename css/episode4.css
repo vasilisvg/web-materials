@@ -235,19 +235,21 @@ h2[id="why-does-this-page-look-like-this%3F"]:target {
   color: black;
   -webkit-text-decoration-skip: none;
 }
-@supports (text-decoration-skip-ink) {
+
+@supports (text-decoration-skip-ink: none) {
   h2[id="why-does-this-page-look-like-this%3F"]:target {
     text-decoration-thickness: 0.9em;
     text-underline-offset: -0.8em;
     text-decoration-color: palevioletred;
-    color: white;
+    color: black;
+    text-decoration-style: wavy;
   }
 }
 * {
   scroll-behavior: smooth;
 }
 [href="#body"] {
-  color: hsl(var(--hue),70%,var(--lightness));
+  color: hsl(var(--hue),70%,50%);
   background-color: inherit;
 }
 
@@ -262,6 +264,20 @@ body:target * {
   transform: rotate(18deg);
   display: block;
   transform-origin: 50% 0%;
+}
+@media (max-width: 40em) {
+  body:target * {
+    transform: rotate(4deg);
+    transform-origin: 50% 70%;
+  }
+  body:target *:hover {
+    transform: rotate(0deg);
+    transition: 2s;
+  }
+}
+body:target *:hover {
+  transform: rotate(0deg);
+  transition: 2s;
 }
 body:target main,
 body:target #conversation  {

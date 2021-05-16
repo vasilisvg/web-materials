@@ -99,27 +99,17 @@ p strong {
   background: none;
 }
 
-.shownotes, .measure-measurer {
+.shownotes {
   background: whitesmoke;
   padding: 1em 2em 1em;
   margin-bottom: 1em;
   border-radius: 0.5em;
 }
 
-.shownotes .direct-link, .measure-measurer .direct-link {
+.shownotes .direct-link {
   display: none;
 }
 
-.measure-radio {
-  background: white;
-  display: inline-block;
-  padding: 0.4em 1em 0.6em 0.5em;
-  margin-bottom: 1em;
-  border-radius: 0.3em;
-  font-size: 1.1em;
-  color: black;
-  border: 2px solid white;
-}
 
 .measure-radio:hover {
   color: black;
@@ -140,118 +130,12 @@ p strong {
 
 #conversation p:nth-of-type(even) { background-color: paleturquoise; align-self: flex-end; margin-left: 4em; }
 
-input[id^="measure"] {
-  position: absolute;
-  left: -1000em;
-}
-
-.measure20 p,
-input[id="measure-20em"]:checked ~ #conversation p
- {
-  max-width: 20em;
-}
-
-.measure30 p,
-input[id="measure-30em"]:checked ~ #conversation p {
-  max-width: 30em;
-}
-
-.measure40 p,
-input[id="measure-40em"]:checked ~ #conversation p {
-  max-width: 40em;
-}
-.measure-measurer label::before {
-  content: "☐";
-}
-input[id="measure-20em"]:checked ~ .measure-measurer label[for="measure-20em"]::before,
-input[id="measure-30em"]:checked ~ .measure-measurer label[for="measure-30em"]::before,
-input[id="measure-40em"]:checked ~ .measure-measurer label[for="measure-40em"]::before {
-  content: "☑";
-}
-
-input[id="measure-20em"]:checked ~ .measure-measurer label[for="measure-20em"],
-input[id="measure-30em"]:checked ~ .measure-measurer label[for="measure-30em"],
-input[id="measure-40em"]:checked ~ .measure-measurer label[for="measure-40em"] {
-  border-color: slategray;
-}
-
-input[id="measure-20em"]:focus ~ .measure-measurer label[for="measure-20em"],
-input[id="measure-30em"]:focus ~ .measure-measurer label[for="measure-30em"],
-input[id="measure-40em"]:focus ~ .measure-measurer label[for="measure-40em"] {
-  outline: 1px solid;
-}
-
 
 
 .para-big {
   background-color: transparent !important;
 }
 
-p.closed-caption {
-	text-decoration-style: dotted;
-	text-decoration-color: powderblue;
-}
-[id="why-does-this-page-look-like-this%3F"] ~ p {
-
-}
-
-
-
-
-
-input:checked ~ p,
-input:checked ~ .episode-intro h1 {
-  text-decoration-color: hsla(0,0%,100%,0);
-}
-p code {
-  font-style: normal;
-}
-label {
-  cursor: pointer;
-}
-label:hover {
-  color: powderblue;
-}
-input + label::before {
-  content: '⨻ ';
-  line-height: 1;
-}
-input:checked + label::before {
-  content: '✓ ';
-}
-input[type="checkbox"]:focus + label {
-  outline: dashed red;
-}
-
-/* MEDIA  */
-
-@media (max-width: 44em) {
-
-	header {
-		position: relative;
-	}
-	.episode-intro footer {
-		position: relative;
-		left: 0;
-		margin: 0;
-	}
-
-  .episode-intro h1 {
-    margin-top: 0.5em;
-  }
-}
-
-@media (max-width: 24em) {
-
-  header {
-    position: relative;
-    height: 3em;
-    background-color: white;
-	}
-}
-@media (max-width: 30em) {
-
-}
 .para-big {
   font-size: 1.3em;
 }
@@ -266,4 +150,120 @@ input[type="checkbox"]:focus + label {
   .para-big {
     font-size: 1.8em;
   }
+}
+
+/* Interaction */
+
+body {
+  --hue: 0;
+  --lightness: 100%;
+  transition: background-color 5s cubic-bezier(0,1,.5,1);
+  background-color: hsl(var(--hue),70%,var(--lightness));
+}
+main {
+	--hue: 90;
+	--lightness: 100%;
+  transition: background-color 3s cubic-bezier(0,1,.5,1);
+  background-color: hsl(var(--hue),70%,var(--lightness));
+  padding: 0 1em 1em;
+}
+/* HOVERS */
+
+body:hover {
+	--lightness: 85%;
+}
+body:hover main {
+	--hue: 30;
+	--lightness: inherit;
+}
+body main:hover {
+	--hue: 60;
+}
+header:hover + main {
+	--hue: 90;
+}
+
+/* Focus-withins */
+body:focus-within {
+	--lightness: 85%;
+  --hue: -30;
+}
+body:focus-within main {
+	--lightness: inherit;
+  --hue: 120;
+}
+body main:focus-within {
+	--hue: 150;
+}
+header:focus-within + main {
+	--hue: 180;
+}
+
+/* hover and focus within */
+body:focus-within:hover {
+  --hue: -60;
+}
+body:focus-within:hover main {
+	--hue: 210;
+}
+body main:focus-within:hover {
+	--hue: 240;
+}
+header:focus-within:hover + main {
+	--hue: 270;
+}
+header:focus-within + main:hover {
+	--hue: 300;
+}
+header:hover + main:focus-within {
+	--hue: 330;
+}
+h2[id="why-does-this-page-look-like-this%3F"] {
+  text-decoration-line: underline;
+  text-decoration-style: solid;
+  text-decoration-thickness: 0.01em;
+  text-underline-offset: -0em;
+  text-decoration-color: transparent;
+  text-decoration-skip-ink: none;
+  transition: 1s .7s;
+}
+
+h2[id="why-does-this-page-look-like-this%3F"]:target {
+  text-decoration-thickness: 0.9em;
+  text-underline-offset: 0;
+  text-decoration-color: palevioletred;
+  color: black;
+  -webkit-text-decoration-skip: none;
+}
+@supports (text-decoration-skip-ink) {
+  h2[id="why-does-this-page-look-like-this%3F"]:target {
+    text-decoration-thickness: 0.9em;
+    text-underline-offset: -0.8em;
+    text-decoration-color: palevioletred;
+    color: white;
+  }
+}
+* {
+  scroll-behavior: smooth;
+}
+[href="#body"] {
+  color: hsl(var(--hue),70%,var(--lightness));
+  background-color: inherit;
+}
+
+[href="#body"]:hover,
+[href="#body"]:focus {
+  color: black;
+}
+
+body:target * {
+  transition: 3s 1s,
+    transform-origin 0s 0s;
+  transform: rotate(18deg);
+  display: block;
+  transform-origin: 50% 0%;
+}
+body:target main,
+body:target #conversation  {
+  transform: rotate(0deg)
 }

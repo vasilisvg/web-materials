@@ -267,6 +267,6 @@ intro: In the fourth episode of Web Materials, we talk about the lack of attenti
 
 ## Why does this page look like this?
 
-In CSS we hardly focus on interaction. So when art directing this episode I played with some forms of interaction that you can design with CSS. I played a lot with `:hover` states in combination with `:focus-within`. That combination is responsible for the ridiculous colour-changes you see when you move your mouse over the screen, and when you interact with the interactive things. Of course I also added a few `:target` selectors. Curious to see if you can find them all.
+When I worked on the art direction of this episode I obviously played with some forms of interaction that you can design and style with CSS. I played a lot with `:hover` states in combination with `:focus-within`. That combination is responsible for the ridiculous colour-changes. These changes are triggered by a combination of moving your mouse over different parts of the screen, and by setting focus on the interactive things. Of course I did some silly stuff with a few `:target` selectors. Curious to see if you can find them all.
 
 <a href="#body">Flip flip flip</a>

@@ -27,11 +27,10 @@ intro: In the fourth episode of Web Materials, we talk about the lack of attenti
 ### Shownotes
 
 - [About this episode’s art direction](https://webmaterials.design/posts/04-what-about-interaction/#why-does-this-page-look-like-this%3F)
-- [Jeremy Keith: The layers of the web](https://beyondtellerrand.com/events/berlin-2019/speakers/jeremy-keith)
-- [The international measure slider](https://vasilis.nl/nerd/code/measure-help/)
-- [An arm’s length regarding the pixel](https://developer.mozilla.org/en-US/docs/Glossary/CSS_pixel)
-- [About semantics and screen readers](https://exclusive-design.vasilis.nl/design-like-its-1999/)
-- [Podcast episode with Peter Biľak](https://vasilis.nl/gbi/2018/02/11/peter-bilak/)
+- [The defaults suck](https://exclusive-design.vasilis.nl/the-defaults-suck/)
+- [Accessible design experiments by Vasilis’ students (mostly in Dutch)](https://cmda-minor-web.github.io/human-centered-design-2021/)
+- [Alan Trotter’s website](https://alantrotter.com/)
+- [Mark Rober on Youtube](https://www.youtube.com/c/MarkRober/videos)
 
 
 </section>

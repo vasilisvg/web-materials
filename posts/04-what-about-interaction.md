@@ -26,8 +26,7 @@ intro: In the fourth episode of Web Materials, we talk about the lack of attenti
 
 ### Shownotes
 
-- [About this episode’s art direction](https://webmaterials.design/posts/03-are-there-truths-in-webdesign/#why-does-this-page-look-like-this%3F)
-- [About this episode’s art direction](#why-does-this-page-look-like-this%3F)
+- [About this episode’s art direction](https://webmaterials.design/posts/04-what-about-interaction/#why-does-this-page-look-like-this%3F)
 - [Jeremy Keith: The layers of the web](https://beyondtellerrand.com/events/berlin-2019/speakers/jeremy-keith)
 - [The international measure slider](https://vasilis.nl/nerd/code/measure-help/)
 - [An arm’s length regarding the pixel](https://developer.mozilla.org/en-US/docs/Glossary/CSS_pixel)

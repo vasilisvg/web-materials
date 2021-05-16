@@ -1,9 +1,9 @@
 ---
-episode: 3
-title: Should we design interaction?
+episode: 4
+title: What about interaction?
 description: Where we talk about states, tools, screen readers and Nintendo games.
-audio: /sound/WM004-design-interaction.mp3
-audiolength: 41686214 #mandatory, size in bytes! No idea how to do this in Eleventy )-:
+audio: /sound/WM004-what-about-interaction.mp3
+audiolength: 41729163 #mandatory, size in bytes! No idea how to do this in Eleventy )-:
 duration: 00:43:22 #mandatory, duration in hh:mm:ss
 date: 2021-05-10
 # You can add (multiple) urls to stylesheets with 'csslinks'. (Use spaces, not tabs here)
@@ -27,34 +27,13 @@ intro: In the fourth episode of Web Materials, we talk about the lack of attenti
 ### Shownotes
 
 - [About this episode’s art direction](https://webmaterials.design/posts/03-are-there-truths-in-webdesign/#why-does-this-page-look-like-this%3F)
+- [About this episode’s art direction](#why-does-this-page-look-like-this%3F)
 - [Jeremy Keith: The layers of the web](https://beyondtellerrand.com/events/berlin-2019/speakers/jeremy-keith)
 - [The international measure slider](https://vasilis.nl/nerd/code/measure-help/)
 - [An arm’s length regarding the pixel](https://developer.mozilla.org/en-US/docs/Glossary/CSS_pixel)
 - [About semantics and screen readers](https://exclusive-design.vasilis.nl/design-like-its-1999/)
 - [Podcast episode with Peter Biľak](https://vasilis.nl/gbi/2018/02/11/peter-bilak/)
 
-
-</section>
-<input id="measure-20em" name="measure-select" type="radio" checked/>
-<input id="measure-30em" name="measure-select" type="radio"/>
-<input id="measure-40em" name="measure-select" type="radio"/>
-<section class="measure-measurer">
-
-### Measure measurer
-
-Pick the measure that measures best for you
-
-<form action="">
-  <label class="measure-radio" for="measure-20em">
-      20em
-  </label>
-  <label class="measure-radio" for="measure-30em">
-      30em
-  </label>
-  <label class="measure-radio" for="measure-40em">
-      40em
-  </label>
-</form>
 
 </section>
 
@@ -64,261 +43,223 @@ Pick the measure that measures best for you
 
 <section id="conversation">
 
-**Espen:** So is there such a thing as truth in web design?
+**Vasilis:** Hi Espen,
 
-**Vasilis:** If you break the rules, you'll go to jail.
+**Espen:** Hi Vasilis. This is a bit of an exciting episode for me, I know roughly what we're talking about but I'm going in blind.
 
-**E:** Last week we spoke about we ... spoke about whether we're done with internet. Fairly quickly, we answered, No, we're not done. There's plenty to discover. There's plenty to explore. But, I still wonder, I think is related to this, that if we're not, if we're not completely done, is there any part of our industry, of the stuff that we've created over the last, you know, few decades, that can be considered truth? So, so is there such a thing as truth in web design? Are there elements of what we do that are defined already, that are done?
+**V:** Good, good, good. I really, really enjoy what we're doing, actually. So if I look at what I made last episode, and then that you took some of the elements of what I did, and turned it into something that's actually usable. It's fantastic. So I actually talked about this with a few friends of mine about how usually what I create is just artistic. And I don't really care if it works or not. If it works for me, it's fine. But but I like to experiment. And I like to play with CSS. And what I really love is that you took what I made and turned it into something. Yeah, that's, that can be called a design that's thought about, that's actually usable. So I really enjoy this. Just playing with what you made. And then I'll take that again and turn it into something weird, probably. And then I'm really looking forward to what you will make from it.
 
-**V:** Very interesting question, I think. I think again, we could do a quick answer, and say, No. That will be a very boring podcast.
+**E:** Yeah, I agree. It's, it's funny already feels like there's a pattern emerging where you break stuff, and then I try and and fix it. But in that process, I learned not only do I learn some CSS that I never seen before, obviously, I'm a I'm a novice when it comes to code. But it's fun to see, maybe you will use in this case, some some text decoration, and it looks broken in certain browsers, and it's inaccessible in others. But the basic idea, for example of colouring every other paragraph a different colour, because you know, we're, this is a two way conversation. I like that concept. And then hopefully, I made it a little bit more legible.
 
-**E:** Absolutely.
-
-**V:** Yeah.
-
-**E:** Maybe, maybe, a good start is to talk about truth itself that in in this context, what do we mean by that? Obviously, some people might argue that there's no truth other than mathematical truths. And you know, if, if anything is offered for discussion, it can't be a truth. And I know you have some thoughts about truth, because your father was a scientist.
-
-**V:** Yeah. So I live by... So he always taught me that there is no such thing as truth. There are hypotheses. So you can just find something that you may consider to be true. And then you live by this truth until you find a better hypothesis or a counter argument. And then it's not true anymore. And you just live by the next truth.
+**V:** You definitely did. But also you used actually these huge text decorations, but only in the headings, right?
 
 **E:** Yes.
 
-**V:** I really like this attitude. And I think this is a attitude that. I mean, you see it all the time. I mean, it happens everywhere. There are no truths. I mean, if there were real truths, then we will be living like, I mean, people lived 20,000 years ago, but we don't.
-
-**E:** That's a very, very good point. At the same time, the way, the way you describe truth there or the absence of truth, it means that you have these temporary truths. If something has been proven to work or not proven not to work, especially over a long period of time, I guess you can say, we consider this to be true. It's so far. So far, there's nothing to say that this isn't true. So we're going to just stick with it.
-
-**V:** Yeah, completely agree. Have you seen that the last talk that Jeremy Keith did? Or, I don't know if it's the last one. But it's where he talks about, what did he call it? Let me see, I made a note. He said that the layers of the web. So he said there are, more than one layer and some layers, they move slowly, and others move faster. So for instance, the protocol that sends data over the internet, that's a very slow moving layer. And this could be considered a truth. Or if you want a slow moving truth, a slow changing truth. And things like HTML or CSS, they move faster, so they don't take decades to change, they take years to change. And then there's something like JavaScript, it changes all the time.
-
-**E:** There's something about the fact that we use HTML has not changed. I guess that's where you're talking about the protocol of actually transferring the data.
-
-**V:** Yeah, yeah. Yeah. So and that's no, that's even HTTP or TCP. Those things change really, really, really slowly or don't change at all. So, you could look at some things that maybe are not true, but they they just change so slowly that you could consider them to be true. And I think there are a few things. So for instance, and maybe there are even truths. So for instance, how do we perceive colour? This is just, this is... just how people how our eyes, how it works. So there are certain colour combinations that just you cannot use them for readability. So if you design something that needs to be readable, you cannot use orange on blue, I guess.
-
-**E:** Yes. And similarly, you can't use really, really, really faint grey on white, or a really, really, really dark grey on black. There is a certain point for all human beings where the contrast is too slight, and you can't see anything.
-
 **V:** Yeah.
 
-**E:** So in order to, there needs to be sufficient contrast for people to read.
+**E:** And then I was terribly disappointed that it didn't look right in Safari. But you know, in the spirit of the podcast, I think we just, we just publish, and then we move on.
 
-**V:** I guess so, but then, of course, it's complicated to define sufficient. So it could be a rule to say this should be sufficient. But then we need research that says: What is sufficient. So for instance, you could use the contrast checker and it tells you this is AA or AAA according to the WCAC rules. But then a student of mine, last week, she did some testing with a real person with macular degeneration. So this means that in the centre of his eyes, there are these dots, and they are growing. So he, his eyesight is deteriorating. And he only has some eyesight on the left side of his left eye I think left. So it's in the periphery of his eye, he can still oversight, he can still see something. And for him, high contrasts they hurt, right. And the things that actually work for him are contrast that are not allowed, according to WCAG. So the things that work best for him. So for instance, I think red on black works really well for him. He just enjoys it, he really likes it. But this is something that you—
+**V:** I was actually really, really happy that there were such big differences between these browsers. I really like that. So I'll try to find some differences in browsers again.
 
-**E:** By the industry accepted standard, we shouldn't do that. Yeah, I also have only anecdotal issues with this standard that we've set for ourselves, in that it's very limited to, you know, there are certain criteria that are being fulfilled via an algorithm, which probably works for most people, right. But at a certain, I've noticed that, there's there's definition for small and large text. And anything above 24 pixels cancels as large text. Now for me, it would... it would, it would seem unnatural that the scale stops at 24 pixels. And something that maybe does not have enough contrast at that size would have enough contrast, if you blew it up to 100 pixels, a single word on a on a background and the word fills your screen, it's going to be more easily understood then a small word in a bunch of ,in amongst a bunch of other words in the paragraph, for example. So maybe the issue here is that contrast is not only subjective, but but context specific as well.
+**E:** Excellent. Excellent.
 
-**V:** But that's something that I think of all the rules that it could come up with. Yeah, they apply unless, I mean, or until you start testing or until you meet somebody who says no, it doesn't work for me.
+**V:** So this episode, we're going to talk about designing interaction we're going to look at the so is not really about interaction design. If it's up to me, but it's about the, the, in my eyes, the lack of design when it comes to interaction. So this, and it's something that I've been wondering about, so why are there so few articles or so few talks on on conferences about interactivity. Because it is pretty strange because the web isn't... pages, it isn't something to only look at, it's something that you can actually interact with, you can do stuff with it. But then, if I look at the design tools, or if I look at the designs, it's usually about layout. Maybe a little bit about contrast, about typography, but it's not that much about how do you interact with this stuff, and what should it behave like. And then when there is when there are discussions about what it should behave like it's mostly about adding lots and lots of layers of JavaScript to make it behave incredibly amazing.
 
-**E:** Yeah.
+**E:** Yeah
 
-**V:** Yeah.
+**V:** Basics of interaction. This is probably what I'm talking about. This is something that when I look at, for instance, at my students, these are third year students they've been studying digital design, they've been studying interaction for three years. And they don't know the default state. So for instance, links or for instance, form fields, and there are, of course, default states, and not everybody knows them. And I suspect that after I teach the states to my students that they know more than most digital designers It might be right yeah Yeah
 
-**E:** What about... what about things like—
+**E:** I think I, I'm coming at this from a pure design perspective, in that I studied magazine design, then I kind of stumbled into web design. We worked in Photoshop for years and years. And you know, Photoshop was never designed to make websites, somehow it ended up being the default. And obviously, Photoshop is extremely static. And it's just about making pictures that look like websites, and then someone else implements them. And throughout my career, up until maybe recently, the only real interaction consideration is that you know, designers should or go or usually care about to some degree is hover states. And that's, that's designers like me that are not digital natives, I would say, I think there's a new generation. And there's certainly other web designers that are more code savvy, that do care and do naturally build these things into the process. But yeah, coming from Photoshop, Illustrator, even Sketch, at least in the early days, it's certainly making flat pictures that someone else turns into code rather than making something interactive from the from the get go. Now, I would say with prototyping, especially in Figma, there's there's new technology coming out in this static image makers, that at least opened the door to making more interaction, you know, beyond hover states, even click states, or transitions or, you know, there's there's stuff built in to these tools now, where it's at least possible.
 
-**V:** I always tell my students that they are not rules. But they're good to understand. And they are good starting points. And if you're not a good designer, then they're pretty good rules to live by. I mean, then you, you'll know that it's not ugly, and it's usable, if you just follow those rules. But you should always – and they're not rules in the sense that if you break the rules, you'll go to jail.
+**V:** Okay, that's good to hear. So I didn't really know that. But yeah, I think it is, in part, of course, a tooling issue. We've been using the wrong tools for ages now. So I think, I mean, Sketch is obviously, a step in the right direction was, obviously, but there was there a lack of interaction. So. And I think tools could in this case, be maybe even opinionated that they tell you, hey, you forgot to add a hover state to this interactive element, or you forgot to add an active state, you have got to add a focus state or you added a focus state, but the focus state is not, it doesn't look like a focus state. You can reco—
 
-**E:** This is very true
+**E:** Yeah. I think this is really interesting in that right now, in figma, which I think a lot of sketch designers jumped on the figma bandwagon in the last two years. Recently, they released something called very variables or something variants in components. So So basically, if you don't know figma, well, you can make components there. So you make a button, for example, you make it into a component. And now you can reuse that component anywhere else in your design, and you have one source of truth, you can update it, and it's reflected everywhere. Well, this new thing is you can inside your component, you can make variations on that component, and dif different states essentially. So if you made the button, you can now click, you know, you can make a duplicate and make the hover state and the click state and the focus state and whatever state you want to make. And then you can link those together. So that when you play your prototype, the hover states actually function as they should, and they click states work, etc. This is great. However, what you're saying there, wouldn't it be nice then is figma just said: Look, when you click this button to create a variation of your components, maybe there should be a drop down that says, make this into a button. And then you have all the states listed at just just having them presented to me as a designer would make me at least consider that maybe I ignore them. But as you know, it will be such an easy, small step just to expose designers to all the different states that we could consider.
 
-**V:** So on the contrary, I would say, if you know the rules, you know how you can break them and how you can bend them to make something more interesting or something better.
+**V:** Yeah, agreed there. And I think to do that, of course, I mean, they give you options anyway. So why not give you options? Oh, I think the "you, this looks like a button...", where's the disabled state? what would that look like? And if you don't design those states, I mean, those states, they do exist. So if you don't design them, but if they're needed in the application, then the front end developer or maybe even the back end developer will design them. And this is probably not what you want. Right?
 
-**E:** Yeah, sure. And also, if you were to design a website that works really, really well, for this particular person with the deteriorating eyesight, where contrast is an issue in the opposite way to a lot of other people were you're always going to upset the other side of that particular issue.
+**E:** Yeah. Yeah, it's a bit like, if you don't include a bold font in your font setup, the browser will just make one for you. And that's usually not what you want.
 
-**V:** Yeah, or you could say there's some more research needed, and then you could probably come up with a few contrasts that work for everybody.
+**V:** Yeah. Yeah. So and then, if we look at the different states, we've got hover. Hover is designed, usually. But if you look at focus states. So, we, my students, a group of students of mine, they designed applications of small prototypes for a friend of mine who's severely motor disabled. And the first time they designed for him, they assumed that he uses the tab key to tab, to focus from focus, small element to focus more elements. So they created the whole application, and they just designed the focus states to be easily recognised as something that is has focused. And then it turned out that he never uses the tab key. Just never. So even if you have all these, and then they asked him, of course, why don't you use it. And then he told me that he doesn't use it because focus is broken. I don't know if you ever tried to just tab through, for instance, The Guardian or something, just use the tab key to go from—
 
-**E:** Potentially, yes.
+**E:** Every now and then I'm forced to, of course, because I'm working on a Mac. And I don't know, if you're aware of the Magic Mouse charging problem, where the the port to charge your mouse is on the underside of the mouse. So obviously, if you run on a battery, you don't have a mouse. So in those few rare cases, I do have to use the tab key, but I usually avoid browsing the internet during that period. But he said that focus is broken.
 
-**V:** Yeah. So this could definitely be done. Well, not for everybody. But a large large sum of people could read some stuff.
+**V:** Yeah—
 
-**E:** Yeah. I saw on Twitter, Vasilis, you also mentioned, measure or the line length as a potential truth.
+**E:** I'm assuming that means go goes beyond the visual state of focus.
 
-**V:** Yeah.
+**V:** Yeah, but but if you look at the default state of focus, then it's I think, even then it's broken. So if you try to tap through a just plain HTML page, it looks ugly. On Firefox, it's really hard to find the focus state, it's just a few dots. There's on Firefox has this weird issue where the focused element can actually disappear behind the status bar at the bottom of the page. Right? In Chrome, I'm not sure if they fixed that. But there's things like, large parts of the element that are focused can actually be under the fault. So it can be unreadable. So it has been broken for forever.
 
-**E:** Is that universal? Or or do people have different preferences or different—
+**E:** Yeah, the actually limitation of it.
 
-**V:** That's very interesting again, So, the measure, of course, it's the width of the line over, the width of a paragraph, you could say, so. And so I read a few books about, about layout and about typography. And there are different ways to define the the best measure. So if you look at, for instance, Müller-Brockmann, he was I think a Swiss designer, he looked at words, so he looked at word length. So he said, if you have 10 to 12 words on a line, then it's easily readable. Now, this is, of course, very interesting, because this would mean that an English layout would be considerably smaller than a German layout. Which, words in German are just probably three times as wide as English words. I actually discussed this once with with KLM, the Dutch.. What do you call them? Airplane... airline? And so I said, should we make a different layout for every language? Whoah, whoah, whoah, different devices are hard enough. We don't need languages as well. So I think, from a practical point of view, so it really works. So if you if I made an international measure slider once where you can just based in your own text in there, and you can just slide until it reaches 12 words on average. And this is a nice measure, it really reads nice, nicely. But when we don't have the word unit in CSS, so it's it's hard to, say, max-width 12 words—
+**V:** Yeah, the actual implementation of it. And then there's the other problem that these default focus states, they are ugly. So for instance, the on Chrome, I think there's a blue, some sort of a shiny, outline. And many designers and art directors don't like it. So the front end developer remove it. And then the front end developer, they just remove the focus state. So on many websites, there is no focus state. So you can just tab through the whole thing, but it's just invisible, where the focus is. And this, I think, is a lack of understanding what the focus state is, right? what it what it's for, and what why you need it and who needs it. So I teach my students use the focus state, but or if the art director tells you to remove the focus state reply that you you cannot remove it, but you can make it better.
 
-**E:** 12 words exactly, yeah
+**E:** You can make it help. Yeah,
 
-**V:** Yeah. So it's, it's it's not very practical to use that as a unit. But then Robert Bringhurst, he wrote, of course, the famous book "The Elements of Typographic Style", and this is an inspiration to many typographers, and designers on the web. I read it as well. And there's just one, I think, or two paragraphs about the measure. And at the end of that paragraph, he says, somewhere between 20 and 40 times the font size, that's the ideal measure. So that's not a rule, of course, because it's somewhere between, but there's somewhere between is very interesting from a responsive design point of view, of course, because the web is fluid, we don't know the exact size of the screen. So somewhere between 20 and 40 em, or 20, or 40 em, I mean, font size is em, so this is actually something that we can use in CSS, we can say, max width 30 em, and it will read well. And if you're German, you can just make it bigger than 40 and go to 40 em, and yes, be nice in German as well.
+**V:** Yeah. You can. Yeah—
 
-**E:** I've also I've also heard and the numbers that I tend to stick to are between 45 and 75 characters, I think it is, or 45 to 70, something like that. And I wonder if that probably correlates roughly to, you know, 20 to 40 em.
+**E:** I think you're right, that is super ugly. And I've been guilty of removing it, too. I remember, I don't know if it's, this is still the case. But there's been times where, you know, you click a link on a webpage, and he gets a dotted line around the link. And as a designer, I go, Oh, my God, we can't have that. Let's just remove that. And then of course, yeah, then you break the experience for for someone else.
 
-**V:** This is actually in the same paragraph. The thing is that that many designers, they only read the beginning of the paragraph. And then they start, they say, okay, 75 characters, how do we do that? Then we have the ch unit in CSS, but this is not really a character. So how do you count characters? Then at the end of that same paragraph, he says, this is roughly somewhere between 20 and 40 times the size of the font, which is the em, which is perfectly translatable to CSS.
+**V:** Yeah. The good thing is that they created a new thing called focus visible, which is when you want focus, then the focus outline becomes or then you can style it. So that's this, this this clicking thing that if you click it, you probably don't want the focus ring to appear. So you can now style only when somebody uses the keyboard. So it's a silver focus intent.
 
-**E:** Yes, it as if it's... it's designed to work with CSS and the em unit.
+**E:** Yeah, that makes a lot of sense.
 
-**V:** Yeah, almost. The problem is 20 em. Because the iPhone, the the older iPhones, they were the screens were 20 em wide. So this would mean that you cannot follow the rule on a smaller iPhone. Because it needs some whitespace left and right. Yeah.
+**V:** That so and then there's other really nice stuff like the focus within another focus within.
 
-**E:** Yeah, I also find that the lower end of those numbers, say 50 characters, 40 characters, even down into the 30s works way better for headlines, than, than for paragraphs. So if I'm setting a big paragraph of text, and it's quite a quite a lot of text on the page, you know, I tend to use the upper end of the scale, whereas if it's a headline, I'll use lower range, I think, even in the same layout, maybe the same number wouldn't apply to the different sizes of text that you have there.
+**E:** No?
 
-**V:** I think it also, it has to do – I mean, the reason why the measure works? I mean, that's interesting, of course. So, I mean, you can just follow the rules. But why are those rules there? And the reason is simple, because you don't want to move your head too much. Right? So you don't want to move your eyes too much. You don't want to have to search for the next line. Yeah, just want to be able to read quickly. And in a book, it was it almost, you almost don't have to think about it because a book has a size. And I mean, you just read the end, you just reach the end of the paper, and you go to the next line. So it's there's just a physical limit to how wide you can make a measure. But on the web, of course, and you see that still, I think on Wikipedia, there is no such limits. The lines, just, if you don't give a max width to a paragraph, it'll just keep on growing.
+**V:** Focus within is really great. You can, this is some sort of a magic thing. So if a form has something, in the form has focus, you can style the form.
 
-**E:** Exactly. I actually wonder if this is, you know, back in the day, this is part of the reason why, you know, your typical print designers would violate the fluidity of the web, because we sat down and we thought, oh my God, I can't have the text run from completely on the left hand side of the screen to the right hand side of the screen. That's not how typography works. Whereas maybe the more hardcore web community, especially in the early days, were a bit like, well, no, the web is a fluid medium. It's... you should just leave it like that. And you can always adjust the size of your browser window, I suppose.
+**E:** I see. So if there's a field that has focus inside of the bigger form, you can tap to the form itself or highlight the form itself.
 
-**V:** Yeah. I think yeah, that came later. I mean, in the beginning, the web's the screens were 480 pixels wide. So we didn't have the measure problem then yet. 640 still not really a problem. 800 by then we had a sub navigation on the left, so wasn't really a problem.
+**V:** Yeah,
 
-**E:** Yeah, yeah.
+**E:** Right.
 
-**V:** But now with a very, very big screens it of course, you need a max width. And and these are just, they're the fine numbers just don't go over 40 em, and it's okay. I actually usually sit somewhere around 30 em, and it's nice to read. And sometimes I use the international measure slider, will link to it in the show notes.
+**V:** Yeah. And this way, you can, for instance, grow a form when it receives focus or change the colour. Some real nice things are possible there. This is something I think we haven't explored yet. Because this is something that you can use it's but can easily abused it as well. You can. If something receives focus, you can basically hide it. Or—
 
-**E:** Yeah. Excellent.
+**E:** Yeah
 
-**V:** Use it somewhere. Sometimes I use words.
+**V:** ...hide your whole body.
 
-**E:** Right. So we can say—
+**E:** Yeah  You can do anything you want. This will be a very interesting design for a next episode.
 
-**V:** yeah, no, go on, we can say...
+**V:** You should probably take a look at the webpage because there will be stuff like that.
 
-**E:** Oh we can say that there's, there is such a thing as bad contrast. And there is such a thing as too short or too long a line of text, although exactly where those, what the numbers would be, are subject to individual preference and context.
+**E:** Yeah, no, I had no idea about focus inside. I mean, it's, it, to be honest, the latest, the last episode, the design on the website, I made this little measure measure thing where you could change the measure of the of the paragraphs. Now, I hacked it together the way Google told me to because you know, I'm not an expert in these things. But then there's this issue of wrapping a radio button in the label, because you want the whole thing to be clickable, and maybe also focus bubble and hover bubble and all these things. And that's to me strikes me as a perfect mini example of being able to just style the containing element if you're focusing on what's inside it.
 
-**V:** And context, of course, I mean, if you look at somebody like David Carson, I mean, he used an extreme measure every now and then. And he used Wingdings as a font. When he said, "well this article isn't interesting anyway, so I'll just make it visually interesting". I mean, sometimes you just really have to break the rules all the way, which is, I think, very interesting as well. And that, this maybe brings us to font size, this is something that we could discuss a little bit. I mean, these are the classic things that are considered truths. Font size, you can see if a print designer designed a website, because they'll use a very small font size. And they like small fonts, and they don't like bigger fonts. And I think they forget why fonts are actually small on paper. And this is just an economic thing. It's, it's a concession between economics and readability. I mean, from an economic point of view, from a financial point of view, you want your letters to be as small as possible, because otherwise it's much too expensive to print a book. From a readability point of view, you want larger fonts, because then you don't need to put on your reading glasses. And this is nicer for people.
+**V:** Okay, yeah, yeah. So with a label and the input inside it.
 
-**E:** Yes, up to a certain point. Of course. If the font is large, you would have to turn the page like way too often.
+**E:** Well, if I want to know if I want a box in my radio buttons, if I select or focus on one of those radio buttons, I want the whole box to do something.
 
-**V:** Yeah, yeah.
+**V:** Yeah, exactly. Yeah. And this is what the focus within is probably meant for. But you can also style the complete body if something has focused.
 
-**E:** Yeah.
+**E:** Of course, yeah. Any any parents can be any experiment.
 
-**V:** Yeah. So there is a it's, it makes sense to keep it as small as possible on paper. And they came, I think, a 12 point, which I think is somewhere around 10 pixels. So that's why print is often so small. But on the web there is this, we don't have this limitation. So it doesn't make any sense to use small text, we can go much larger. And luckily, we see that in recent years, but still, sometimes you see print designers who say, No, we need smaller text. Yeah.
+**V:** And this is strange, because we don't have the parent selector in in CSS. But with this we do, with interaction you do have the parents selector. Yeah.
 
-**E:** And then the where's the truth in this? Are you saying that there is no ideal font size as well?
+**E:** All right, let's focus.
 
-**V:** Well, there is, of course, the default font size of your browser. Which mean, then we have to assume that browser makers thought about it. Or designed. And there is actually in the spec, there is this thing about how big should a pixel be? This is a really weird, this is, I think, probably the most weird thing in the definition of the web, or where it's decided decided how it works. So the pixel is, I think, 1/97 of an inch. At an arm's length. An arm's length! I mean, this is mediaeval measure, right? The size of your foot, the length of your arm.
+**V:** Yeah, focus. And then there's other. Then we, another group of students of mine, they worked with somebody who is slowly turning blind. And he has to get used to a screen reader. But he really, really hates the way his screen reader works. I don't know. Have you ever tried to use a screen reader?
 
-**E:** It's a very accurate fraction of an inch, measured against a very inaccurate measurement of the arms.
+**E:** No, no.
 
-**V:** Yeah. But it makes sense. It is about what's the diff, what's the distance, that you'll probably be using this device? Yeah. So for instance, a television is probably at at least two arm's length from your eye. So there a pixel should be twice as big as on your laptop. And this is also something. Yeah, so and it's actually how it works. So a telephone is probably used a bit closer to your eyes. So here pixels are smaller. So this is about the physical size of a pixel. So you could say that, yes, these device makers probably put some thought in it.
+**V:** This is also something I think is a bit weird that most designers never tried to screen reader. While many of our users will actually use our websites with a screen reader. Screen readers a horrible horrible things. But they're it's fantastic that they exist because they open up the web, and they open up computers to people who cannot see but the the way they work. Do you know VI, the text editor, or vim?
 
-**E:** Kind of, but then when did they put this thought into it? The monitors that we see things on nowadays are much bigger than what they were when these, this.. this default size was defined? Are they not?
+**E:** Yes. Sadly, yes.
 
-**V:** Yeah but then it's it's about the CSS pixel, which is different than the physical picture pixels. So for instance, I look at a retina screen. And every CSS pixel is, I think, on my screen for physical picture, big pixels.
+**V:** Screen readers, they work like Vim. They are fantastic if you really understand how that work, and if you manage to remember every shortcut, but if you don't remember every shortcut, then they're horrible. I mean, you're done with them. You don't know how to save or to clean.
 
-**E:** Yes, but what I mean is, let's, let's say the standard font size would be 16 pixels, obviously, that... that should appear roughly the same size, whether you're on a.. on a standard def or a high def, retina screen. However, the space that you have available is much bigger. So if we, if we still use 16 pixel as the ideal base font size, you would end up with paragraphs that are, you know, at the ideal measure, they only utilise a tiny, tiny amount of the screen available. And you see more and more now with fluid typography. We actually, once you get to larger desktop devices, you scale up the typography so that you have a much – you can almost sit back a bit in your chair to take it all in because the font size becomes larger ... I wonder if the original definition is tied to or at least influenced by smaller viewports that were, you know, dominant at the time.
+**E:** I think there's a perfect example. I have nightmares of Vim, and when it pops up. When I don't want it to appear I get all flustered. My old colleague in primate Bart he is he's a boy used to be a Vim fanatic and that's that was his editor of choice. But yeah, I can I can relate to the feeling of your whole interface just disappearing.
 
-**V:** Yeah. So I guess you could say 16 pixels is not the rule for all screens, but it should be a minimum size. It should probably not be smaller than 16 pixels.
+**V:** Yeah. And the so the problem there with with there's a few problems with screen readers. But we actually expect people who are not very fluent with computers, but who just well, they're slowly turning blind. So they have to learn a new way to use a computer, we forced them to use Vim as an interface. And all of a sudden, every key on their keyboard, it has a new function, and it behaves differently in. And if I look at these people, everything works just doesn't work as they expect it to work. And it's it's so frustrating to look at. And one of my students, she was really ambitious. This is just a three week course. It's really, really short. And when I graded her, she said, Yeah, I made a new screen reader, but then the way it should work. She did that. Three weeks. Excellent. Of course, this was a prototype, but what she basically tapped through the whole thing. So she asked this guy that we're working for. So what, how would you want it to work. And he said, I just want to tap through the whole thing. And because now everything has different functions. And if you want to read out all the heading elements, you have to remember the shortcut key to do that. And you cannot expect people who don't use their computer that often to remember all those settings. So I think this is something that, well, screen reader makers should start working on to that maybe they should be redesigned. Another problem with screen readers is that you cannot actually design for them, or it's very hard to design for them. So the so what my students will try is to add shortcuts to keys to make it more accessible with keystrokes and things like that. But then every key already has a function. So you cannot do that. You cannot change the way of works.
 
-**E:** For for body text, at least. Maybe on a on a phone in some interface elements, the small details here and there. I think you would struggle if everything was 16 pixels. Okay, well, yeah, we can say that there's definitely something as being too small. And there's probably at some end of the scale, something is too big as well. At least for body text. Yeah.
+**E:** Yeah, I mean, if you did, you wouldn't have to teach the user this new interface that you created.
 
-**V:** Then, and it's also what's the, what's the text for so for instance, you have the small text, write the disclaimers, in and in books that used to be printed in real small font, and that's because it's not really something that anybody reads, but it should be there. And it takes up lots of space if you use a big font. So there, all the good typography rules suddenly don't apply anymore. And it's just put as much text as possible, on as little paper as possible. But I would say I would argue that on the web, we should use, we should call it not small font, or small text, but large text, we should actually print it in larger font, because it's always jargon. It's hard to read complicated sentences. So it really should be laid out in a way that is easier to read to make that makes it easier for people to read.
+**V:** yeah, it's true. Yeah. So it's probably not even a good idea. But it's, it's worth trying, of course. Yeah. So designing interaction for screen readers is probably the most horrible thing ever. So So how do you design interaction? So you said a little bit about figma, or things like that?
 
-**E:** Yeah, so we don't have the restriction of, of economy of paper and print. Yeah. What we do have, though, I would argue, at least on smaller devices, is the economy of viewports. And, you know, wanting to show a certain amount of content above the fold. And this is maybe more relevant in product design, or apps, like, I don't know, like YouTube, for example, you maybe want to show three or four, previews of a video. And there are going to be elements there, such as the view count, or the date or the, you know, likes things like these peripheral elements, that would eat up a lot of space, if it was all large type.
+**E:** Yes. So I have no idea of the average designer out there, I can tell from my conversations with you that I'm well below the bar in terms of what I should be doing with interaction. I generally I don't care or think about focus, I didn't even know about, you know, some of the focus states. So depending on what I do, if I'm working with other developers, you have to be quite prescriptive in figma. And if there isn't a hover state, well, they'll make one or they'll even worse, they'll just not include one. So so it's generally with figma now you can you can set up fairly complex interactions, which means hover states are a piece of cake to do. And that could be hover states, or links or buttons, but also whole elements, you can zoom in or out or, you know, any sort of basic CSS transition, you can now make a fairly rudimentary prototype of in figma. But of course, working in codes would be better. As a designer, I almost never do because I'm all I'm hired to be the designer of the project, not the not the developer. So as mainly if I work on my own projects, I will I will dig into the code and actually make things for the web materials  I look at basic things like overstates there but you've seen my codes, you know, it stops shorts of focus and click states. I don't I don't worry about click states. And also, with with mobile design being such a big thing, I mean, we talk about designing for screen readers or people with disabilities. These are important use cases but but they are edge they're fringe cases, whereas mobile is huge. And of course, on mobile, there's no there's no hover states. There's no tabbing through or or you know, there's focus but in a different way and also on mobile do you have this weird thing of the hover state becomes your click states? If you don't do anything about that? Yeah. So it's it's, I think the answer to your question is, I don't consider it enough. I do some stuff and make the obvious things appear clickable. I think that's also a very important factor in this the default state of links or buttons or anything it needs to communicate that it is indeed clickable, or interactable. And then, if the hover state helps on on desktop, I'll do that. If the clicked state helps. I'll do that. From now on, I should also consider focus. But yeah, that's it. It's I think, I think it's fairly common. And I say that based on my own experience, to kind of do the basic stuff, where it where you where it hits your own experience, if you think all this hover state looks awful, or this is impossible to see that this is clickable, I need to do something, you fix it. But generally speaking, I think most of the edge and fringe cases are just dropped, they fizzle out, no one really looks looks at them. Because the I guess, because the use case is so far removed from our own experience. And also the, you know, the, there's not much feedback on the average website. So out of 1000 visitors, if you get one blind person, maybe that person will just walk away from your website and never, never returned. But how, you know, usually, you wouldn't know that unless you specifically test for it or target that audience and seek out feedback.
 
-**V:** I think this is one of the great things that mobile design brought us that is that all of a sudden, we had to think about space. And we had to think about what's really important. And if you look at web design, before responsive design, and after responsive design, I think the biggest change is that we don't fill up all the whitespace with stuff anymore. We just leave the whitespace as it is and only show what's really necessary. I mean, it's not that's not a really a rule. You don't see that everywhere. But it makes it so much easier to make a responsive design if you have fewer things.
+**V:** It's actually pretty easy to test. Just open up a screen reader and try it. And you'll be shocked at how hard it is.
 
-**E:** Yeah.
+**E:** So maybe maybe for for my certainly for my pleasure, but also the listeners, how does it work when you open up the average web page and in the screen is what happens.
 
-**V:** Right. So definitely, yeah.
+**V:** So there are a few ways that they're different screen readers, and they all behave differently. So on a Mac, there's voiceover and it works pretty okay. It's what I hear from from for sure, for from people who are turning blind, so are new to screen readers. They like voiceover best. So what it basically does, it starts reading the web... well there are two settings, you can say read the whole web page. Or you can tab from, let's say, paragraph to paragraph. Not really tabbing. But but focus from paragraph to paragraph, and it will get read out loud.
 
-**E:** I wonder if that's also come out of this acceptance that people actually scroll on a website, there certainly was a time in my career where everything had to be crammed into this, you know, 600 pixels height or something like that. Which of course makes it very difficult to create anything with contrast in size, anything that is airy, or anything that's open. So at least now there's an acceptance that yep, we know how to scroll things. Maybe that's a—
+**E:** But that requires interaction from the user. The second example.
 
-**V:** I used to work for KLM long time ago. And back then the homepage was crammed into, I think 900 pixels, 960 pixels. And I think it was even something like 500 pixels height because they counted all kinds of possible bars at the top and the bottom of the browser. And there were these endless discussions about who would get some space on this.. really just just tiny postcard. And – incredible – so at one point, I just sent them a screenshot of, we back then we had these enormous iMacs and I sent them a screenshot of this tiny website, somewhere in the middle of this huge blank screen. Maybe we should discuss this idea, that people have this small, viewport. And then indeed, they accepted the fact that people scroll and if you design things correctly, you can even show people that there's more beyond the fold.
+**V:** Yep
 
-**E:** Yes, the whole scroll thing is, of course people scroll, but it's still challenging I think for for, especially people like KLM or, or larger organisations where the website is not only it's not just, you know, here's what we do take a look at our stuff. It's absolutely crucial to their business model. And a tiny change here or there could actually, you know, can make a difference of 1000s of euros or 1000s of pounds. Yeah, yeah. And I wonder if then this mindset of it all has to fit there. Obviously, after that we saw the carousel pattern of – obviously some smart designer, said don't worry about it, we can put everything you want on this postcard because the postcard has multiple pages!
+**E:** Yeah
 
-**V:** This is actually the most, the silly thing about carousels of course, is that you don't show everything you hide most of it.
+**V:** Yeah, yeah, yeah. And then there's more settings. So for instance, you can say, read out all the headings on the page. And this will give you an overview of what's on this website. So and it will read out the heading levels. So you can hear some sort of, you can get an image of the of the hierarchy of the page. If of course, the heading levels are used correctly. And yeah, mostly they're not. And but it's true. It's just most websites, but even really large websites. They just use heading levels at random.
 
-**E:** Yes. And you hide it behind the mechanism that is way less intuitive than scrolling.
+**E:** Yeah, so honestly, talking about designers needing to sort of know, the possibilities, restrictions and the and the material that they're working with. It took me a long time before I kind of got why we have H1 to six. Do you know what I mean? This this connection with what the tagging a certain type of content with this header means, other than just purely visual, the H1 is bigger than H6. It's, it's not something that you see in figma. It's you know, it's not also it's not taught to us through the tools. It's just something that you relate to on a varying basis through the code.
 
-**V:** Yeah, yeah. I mean, how often have you miss clicked something because the character carousel start flipping When you wanted to click on something, this is of course a usability problem. Yep. So that's it. A carousel is not a rule and fitting everything into the fold is not a rule.
+**V:** And then you could say, well, we should teach every web designer about this. It's pretty complex to actually understand this. About semantics, we should teach them about semantics. You could also say, No, we should teach the tools we should teach the screen readers about visual hierarchy. So then it doesn't read out the heading levels that are actually probably wrongly used. But it should be reading out the intent. So what's the biggest headline? Well, that's probably the heading level one.
 
-**E:** It's not a rule. Yeah, I think at least there's some subset of our industry would think that not including a carousel is a rule. Yeah. To which to which I would say, iPhone interfaces are essentially carousels. But you know, that's, that's, I think that's a context specific as well.
+**E:** Yeah
 
-**V:** Yeah. Yeah.
+**V:** Yeah.  Well, maybe I'm making this too easy. But—
 
-**E:** Semantics is another thing that you mentioned. We've talked so far, we've talked about a lot of typography, a lot of very, very basic design principles that I would argue are true, whether it's design as design for print, or design for web, that the context is slightly different, but the underlying principle stays the same. But on the web, we have, you know, web specific things like semantics and structure of the page that you also consider to be true, in some sense.
+**E:** No, I think if you did something like that, there would be cases where that broke too. But, but obviously, smarter readers would help. I wonder if if, if machine learning and AI will play a part in this, maybe you could get readers that would be able to describe the page for you. You know, it's not just here's the text on the page. But all this is a, you know, is, is a Yellow Page with huge typography. And there's some cool animations or you know, there's a big picture, or there's this video playing, and this is what's happening in the video. Currently, a lot of this stuff, we can feed the reader through old text, and, you know, semantics, but maybe readers can at some point be able to assess the visuals of a website.
 
-**V:** Well, I always considered the correct use of semantics to be true. And so I would go far, I would, I would use sectioning elements, like articles, sections, nav, footer, things like that, and use them a lot. So for instance, a homepage, if you look at our homepage, I would, until a few years ago, I would have probably used a few articles there. So every link to an article would be in an article. And every and these will all have their own headings inside them. Because this is what semantically that makes sense. And then I was taught that, why would you use semantics? Well, this is because it helps people with a screen reader. And this is a good reason, of course. So if this helps people, then you should do it. But then, one day, I decided to test with people with screen readers. And I, before that, I had only just assumed that it would be a good idea. And then I started testing. And I didn't really start testing with nerds with screen readers, but I started testing with real people who have to use a screen reader because they turned blind. And this is very different demographics. So these are people that don't really like this screen reader. And there's a lot not to like about screen readers. But so I started testing with this guy, and he said, Okay, I really want to use this website. It has all the Dutch documentaries on it. And it's just for, he is a designer, and he says, yep, for me, as a designer, this is just a great resource. And then we started testing, and the first thing the screen readers said to him, there are 150 headlines on this page and 200 links. This is just... and then this, the screen readers started saying, heading level one, level two, heading level two, heading level three, he was – why do you put all these words in your design? He just couldn't... he thought we actually wrote these words out. So if you look at semantics, semantics get read out aloud to people with a screen reader. So the semantics have to make sense. So it has to make sense. If you would read it out to somebody, you would really have to say this is a heading level here. Right? So in our example of our homepage, I didn't use articles. I didn't use heading levels. I just made it a list with items. And then it says episodes, three items. This is of course, also semantics. But these are designed semantics, I would say. So yes, it's not just use properly, but you really designed properly.
+**V:** Yeah, then they can. I mean, student of mine once made a prototype where they tried to give a first impression of the page. So if we look at a website, we get a first impression, right? We see, this is my little pony website, or this is a death metal website. Right? We—
 
-**E:** Yes, it's it's designed so that the human at the other end, might understand it better. Not so much that tech technology itself will understand it better.
+**E:** Yeah, exactly.
 
-**V:** Yep. Yeah. And it's really, and this is, I mean, I designed a website for this person specifically. And it doesn't have any semantics. It's just paragraphs and links. And he loves it. It's just so sometimes,
+**V:** immediately see that. But a screen reader will use the same voice to tell them this is a My Little Pony website. But it takes it takes ages to understand that this is a kid's website, and this is
 
-**E:** some things will be read out loud and and others won't. So heading will be read as headings but paragraphs won't for example, or list items won't be read as list items.
+**E:** Yeah
 
-**V:** While there will be so it will say unordered list five items.
+**V:** a different type of website. So I, or I, my student, he made this tool where he, I don't really remember how he did it. But he just looked at the the overall. Some things like, what colour is the main colour, what contrast is there and things like that. And then they used other tools to try to give some sort of a first impression. And describe that first impression. This was really interesting. This kind of research is interesting, of course
 
-**E:** And right and then you just start. Yeah. Yeah, well, yeah, yeah.
+**E:** Definitely.
 
-**V:** But this is something that I mean, and this is also something that I think you should... For me, the only truth nowadays in design is that you should test with real people all the way along the design process. So not just, at the end, do one usability test, to validate your design decisions, but no, all the time keep on working with people. And when I mean working with really work with them, involve them. Then I would also say not designers or developers, but real people. I mean, these are the people that have to use your stuff. And these are the people who don't look at a computer screen all day. So that will be my only real rule would be that just know the rules. No, they're the the basics. But then test them and break them when necessary.
+**V:** Yeah. I think we're hovering away from our subject of interaction.
 
-**E:** When necessary.
-
-**V:** Yeah.
-
-**E:** That that sounds like a perfect ending to this podcast Vasilis. But I have I have more stuff on my list that I want to ask you about.
-
-**V:** I have more as well.
-
-**E:** Good. If we if we briefly go back to this thing about semantics, I just want to add a point there as well that what might be super annoying for someone who's reliant on screen readers is super valuable for someone who relies on SEO and Google search results to display their page. So I guess, again, as with all the other stuff, we decided that these rules are or truths are context and user specific, it depends on what what do you want to get out of it. And maybe often, oftentimes, something that works for something will will break for something else or someone else. Yeah.
-
-**V:** So I mean, of course, also, I created this website with no semantics in it at all only paragraphs. And I tested it with somebody who uses a screen reader, but he's a real power user. And he hated it. Of course, he said, there's no way for me to navigate over this page, there's no way for me to get an overview or a hierarchy of what's on it. So this was for him, it was broken. Well, for the person that I designed it for it was really good. And I think, of course, you can end up somewhere in the middle that should be there are things that work. Yeah, reasonably well for for more people. So I designed a really extreme example here, it was, of course, some way a provocative to, to look at, okay, what can we make on the opposite side of the spectrum? But then if you look at SEO, I mean, yeah. But I think they have a similar. If you look, what what does Google wants, they actually want, well written content content for people. So they're all the time working on the algorithm to say, if you write it well for people, then we will give you a bonus. If you design your website for people, but still search engine optimization, people will keep on optimising for a robots, which is weird if this robot really wants you to optimise for people. So if instead these people started focusing on people, then it would be I think there's just there's so much common ground there between what Google wants and what people want.
-
-**E:** Yeah, I think I think part of the history is the interface in between Google and and people is that Google have to use a robot to define what what your thing does. So as long as the robot is the thing that assesses whether you've written it well, for people, well, essentially, what you're doing is writing for the robots to make the right conclusions.
-
-**V:** Yeah.
-
-**E:** You mentioned something just there to do with structure of a page. And if there's no semantics, power users on screen readers and Google and even even normal people might struggle to find their way on a web page. And the way we design web pages now is that we open with a navigation. We have a logo, a bunch of links, you know, we have a search field if their search on the page is a very, very, very well established pattern of putting your navigation up front and centre. There's even advocates that say not only should it be at the top, but it should be completely visible, not hidden. No... you should not have to click anything to see it or scroll down to it. It should always be there at the top, front right and centre. But I do know that you have your, your thoughts on this as well.
-
-**V:** So, yeah, well, what I've seen on many websites is that the navigation is overrated. And if I go to a, if I follow a link, for instance, on Twitter, I think this is how I access most websites by clicking a link on Twitter. And this is probably most people end up on a website by clicking a link on Twitter. And this is usually accompanied by somebody who says, this is a very interesting article, read it, or here are some very beautiful animations of cats. Right? And then you click on it. And I'm really only interested in this article. In the beginning. I mean, if the article is really interesting, then I might be interested in what else is on this website. But it's not the first thing that I'm interested in. Definitely not. I'm not interested in what else is on this website. No, I'm here for the article. So don't bother me with what else. Because I have no context. I have don't have any yet. So a navigation for me, it makes sense on the homepage. So if I enter a website on the homepage, then it makes sense to tell me what's on this website. And then the navigation should be probably even bigger. If you ask me, it should be explained. Right? every element in the navigation could have a small paragraph, which explains what you can find there. So on the homepage, make it bigger if you ask me. But um, all and maybe you could even say on the first visit, you could make the navigation pretty big. But on next visits, you could just hide it because we know where it is. Or we know it's there. And we could use something like cookies for those make useful use of cookies,
-
-**E:** Actual good use of cookies. Yeah, I think that's super interesting. I have I've had similar thoughts over over time. I've never, for example, I've never understood this, this real hatred towards the hamburger menu. Not not that I'm its biggest advocate. Because I think a lot of people see with nav items visible – and as we've seen in the last whatever few years on mobile, how these nav elements have been, I've shrunk down into icons that sit along the bottom of your mobile screen...
+**E:** We are we're walking a tightrope here between interaction and just design in general for accessibility.
 
 **V:** Yeah
 
-**E:** ...the data shows these, these biggest the biggest companies, YouTube, Twitter, you know, the big platforms that we use, they see uptick in "engagement", doing quote marks here, when the when the navigation is accessible, and there all the time, and there's plenty of at least anecdotal evidence that with navigation items visible, maybe there's a link to buy tickets or a link to you know, see the latest shows whatever some super, super important piece of your website. If it's written out and visible, you get more people interacting with it than not. Having said that, I really agree with this, this sense that most people end up on your website because they've clicked on something or they found something on Google, which means they've clicked on something as well. And so they're interested in this one thing. And my personal mantra for for designing web pages, or even writing web pages is on that page that people land on if there's other stuff on this website that they might be interested in. You should put that into the content that they're already looking at. You know, if that's ticket sales or the next article or whatever it is, you already have their attention. So that's where you want to put stuff that might be interesting. So in... with that, with that in mind, I feel like yeah, of course the homepage should be – not only have an expanded navigation, maybe the homepage should only be a navigation, just like you know on a, on a... in a magazine, you open up the first pages, the contents is very it's well laid out. There's pictures there, there's previews, you know, you kind of get a feel for the whole magazine. So that could be the homepage or it could be a hamburger – the hamburger could take over and be your one stop shop that just basically shows you everything that this website has to offer, as opposed to being a sort of list of links that are is maybe obscure or hidden somewhere
+**E:** I have a... To pivot the conversation, I have some thoughts on interaction that aren't to do with buttons and usability, but to do with storytelling, because like I said, way, at the beginning of this conversation, you said, you know, the web isn't one way, it's not just showing us pictures and text. It's also something that we interact with. And obviously, this changed with the Web 2.0, you know, when we had blogs, and we got comment fields, and you could really, it's like a two way streets, you could also tell the website, what do you like, and the website will respond in some way. And I feel when it comes to storytelling, we don't use it. As much as we should. Interactivity I mean. There's, there's a very, very good example on this, an author called Alan Trotter, is an example I use all the time in my talks, where his website is just text, but it turns into this click, you know, click the link adventure style thing when you when you It starts with a sentence. And then 10 minutes later, you'll have a whole page full of text, and you've learned about this guy and his books and all this stuff. And there's a wonderful way of using interaction to create a connection with the reader, the reader actually has to engage with the text to to see what happens, you know, it's this, this thing that we don't explore enough, I think, what happens if I interact with this picture, or this animation. Cassie Evans as well, she has a lovely animation at the bottom of her page, where it's an illustration of herself, and it follows the mouse around when you look at it. That's it. It's just It's cute. It's nice, it's personable. And I think these things are becoming so easy to implement implement now that we should we should build it into our process. We should do it more rather than just focusing on layout and style. Let's focus on how can I use interactivity to emphasise a point or to surprise someone or to make this more exciting in some way.
 
-**V:** Or you could even make the hamburger, just read it, read it out is the Table of Contents or something like that and just link back to the homepage. Ah says, Okay, here it is, here's all the or or link to a sitemap or something like that. Why not? Yep, it's so limited, is limited. And it is... I think it's also overrated. And exactly what you say. I mean, there are probably just a few things that people can do on your website. So it doesn't make any sense to have five navigation items at the top of your page on every page, which is actually, it's also the, especially if you look at it from a at what you call landscape mode. So if you look at a desktop browser, it doesn't make any sense to put anything at the top, it should be at the left or at the right. I mean, there's room.
+**V:** Completely agreed. Yeah, yeah. So let's let's try to investigate what came be done with interaction.
 
-**E:** Yeah, we got wider and wider monitors. And instead of building on this sidebar that we had already started going no is all going to be at the top in multi layers, if possible, is interesting.
+**E:** Yeah. Now, we know the infocus states are focused inside states—
 
-**V:** And this is also something that comes from it comes in a way from... Okay, it, I think it's just lazy design, or I would call it conservative design. This is how we do it. So this is how we do it. Right? This is very simple reasoning. We've always done it this way. So we'll keep on doing it. It's also a accessibility point of view. So some people in the accessibility worlds and no, people know where to find the navigation is at the top. So just keep it at the top because then people know where to find it.
+**V:** Focus within yeah yeah
 
-**E:** But I think we have to be able to aknowledge—
+**E:** Yeah, focus within. We'll we'll figure out something.
 
-**V:** that people are used nowadays to finding the navigation at the bottom of their websites on smaller screens or at the bottom of their app on smaller screens. So it's it's not a set in stone thing that people cannot get used to new patterns.
+**V:** Yeah we will. And there's a similar thing on your website as well, right? That you?
 
-**E:** No, I think I think that's also down to some sort of economics at a certain level. Because if you and I, we made the web materials dot design, and we just stuck the navigation at the bottom, there's no arrow or indication it's just there. Most people will probably find it if they look for it.
+**E:** Oh, yeah. I basically stole that from Alan Trotter. Yeah, yeah, I've. So on my website, if you read the opening paragraph, it says something about me. And then it says before that, and if you click that, it says, another paragraph. And then you click before that it's another paragraph, and you go back in history reading about me and my career and my studies, and then my parents, and then Norway's history, and then the Vikings, and then you know, the Big Bang. And for me, it's a fun way of telling people about myself, and then rewarding the people who, who, you know, dig deeper. We also did something similar on the Primate website. On the About section, there's a timeline, where you can scroll through the usual, you know, we won some awards, we hired these people, we've we, you know, we moved to a new office, and we were founded in this in this year, and then there's a big gap, and then the internet was created. And then you you're back into the evolution of the primate, essentially, again, that's just using scroll as interaction, but it's, it's essentially it's, it's hiding some content and rewarding people who engage with it.
 
-**V:** But to be honest, there's really nothing to navigate to.
+**V:** Yeah.
 
-**E:** No, and we won't we won't lose any money if people struggle. Because you know, if people want the next episode, I'm sure they'll be able to find that. Oh, I actually, you know, if you're a KLM or a <span>hotels.com</span>, or whomever you are even smaller businesses, it directly ties into your revenue if people even have to think an extra three seconds to find something. So I do understand the reluctance to change things up. And of course, when there's reluctance, you create this, you know, feedback loop of a it's like a self fulfilling thing where it becomes incredibly risky to, to break out and try something different.
+**E:** I think we should—
 
-**V:** Yeah. Yeah. Okay. So I agree navigation, we could probably talk a whole episode about navigation. Maybe we—
+**V:** That's fantastic. Play, we should play more video games. Don't you think? Because they are actually masters at interaction.
 
-**E:** I think we should. Yeah,
+**E:** Absolutely. Imagine if every video game was showing you the whole story up front, you know, you just wouldn't get invested.
 
-**V:** Yes so interesting. Then I got the... yeah, we'll we'll talk. Yeah, we'll talk about that more in another episode. Then there was a very interesting reaction to... So right before we started this podcast, I asked on Twitter if people had any design rules. And Theo Pleog, he's a colleague of mine, he answered. So I said that, for me, a real truth would be to test with people, right, and to validate, keep on validating all the time with real users and real people who don't use computers all day. I mean, this is the most interesting demographic, I think, to test with. Theo Ploeg goes one step further. He says his designs are sentience based. And I didn't know what that meant, just like you didn't. And so I asked him, and he says, it means that they focus on the impact of the design on all living beings, not only humans. So during the design process, they keep on asking themselves, what's the impact on not just me and not just my users and others, just maybe the rest of the people that we haven't considered yet. So this is the design that they do. So they think about the the consequences of their design decisions, and this this is the basis of their design. Practice. I thought that was very interesting. And this is something we don't go that far usually in our web design articles in our web design talks that we consider. So what's the result of what we make? Does it have...
+**V:** True. Yeah. And ways of interaction, there's this, this clever ways of doing things. with very limited, you just have a few buttons, you don't have a scroll wheel, you don't have all these things that we do have on our laptops. So it's, they're very good at showing where the focus is what you can interact, when. So yeah, we should probably play more games and steal their ideas.
 
-**E:** Yeah, beyond, beyond ... more signups or we sold some more products? Yeah.
+**E:** I absolutely think so. I think the one advantage video games have is usually you sit down. And you're already focused on this game. And it's harder on the web to capture people's attention long enough for them to get engaged or interact with, you know, the opening sequence or whatever.
 
-**V:** Is there any debris? Are there unforeseen effects?
+**V:** Yeah
 
-**E:** Hmm. I mean, to me, the truth there is that whatever you put out there has an effect. It may not have a bad effect or a big effect, but it but has an effect. And and I personally believe that anything that's put together is designed in some sort of way. So if we look at just visuals to start not choosing a font is still choosing a font and not choosing a colour is still choosing colour – all, all the defaults are, that's still a choice if you want to, if you want to do that. So you can follow that same way of thinking all the way to, if I build, launch, attract people to this thing that I put out, it's going to affect the world in some way. And I'm guessing that's what they're saying, what is the wider implication?
+**E:** But not impossible.
 
-**V:** Well, there's one way or another I before we, I used to have a podcast before this one, I'd actually talked with you on that podcast as well. So that was about quality. So I asked designers, what makes a thing good. And I talked to a lot of designers. And one of the answers that I got was from Peter Biľak. Peter Biľak, is a font designer. And he said, a thing is good, if it's good for everybody involved in the product. So it's not just so for instance, if I buy a pair of trousers, it can be good for me because it's cheap. And it could as well be very good for the business owner, because he makes a lot of money from selling lots and lots of cheap product. But it's probably not good for the people who manufacture the the trousers. So in that case, Peter says the product is not good. It's good business. And it's a good deal for me. But it's not a good product. Because in the whole product, the whole thing, there is this problem. And I think this is something that Theo uses as well. So he says it has to be good for literally every sentient based being...
+**V:** No
 
-**E:** that either interface with or or is affected by this product.
+**E:** Maybe in the sea of fairly standard looking average websites, is maybe it's becoming easier to capture people's attention.
 
-**V:** Yeah, yeah. So I saw yesterday, I saw this tweet from... pictures from, I think the these might have even been pictures from space. And you see these fields and fields and fields, enormous, enormous fields filled with bikes. And these are bike sharing bikes have failed bike sharing products in China. So the if you listen to bike sharing, businesses in the Netherlands, they will say we are thinking about the environments. But if I look at these pictures, No, they didn't think about the environment at all. They thought about making money from selling data. So this is I think what Theo means with, think about the consequences, the debris the unforeseen effects, and these are not unforeseen effects. I mean, they definitely knew that in four years time these bikes were done, and they didn't think about what do we do with the bikes then. So these are foreseen effects. And this is a consequence of design, I think.
+**V:** Yeah. So I saw this, a few students of mine who worked for this friend of mine with severe model motor disabilities, they worked on a drag and drop implementation. So he obviously has difficulty with dragging and dropping stuff. So I thought, okay, that's nice to see what they can do with that. And they made a sort of a click and drop thing, so that you click on something and then you can move somewhere else—
 
-**E:** Right? I agree. So So in terms of asking, Is there truth in web design? How do we relate that to that? Are we just saying, design has consequence?
+**E:** then you hold it
 
-**V:** And you should consider it? Yeah, yeah. And then, if you're in the luxurious position to say no, to certain design projects, because you think No, there's too much debris there, then you should say no. And if you're not in a luxurious position, then you should try to end up in this luxurious position. That's something... because I always think it's very easy for me to say, I mean, I work as a lecturer, I am in a very luxurious position, I can say no to everything. And I live in Amsterdam. So even if I wanted to work as a designer or as a developer, I would have worked more than enough here, because this is where in the Netherlands at least the design work just happens. So I could probably rather easily end up in a position where I could say no to assignments. But if you grow up somewhere in rural northern France, no way that you have this luxury, there's just not enough work there. Maybe the only real person that can give you a job is this huge Arms Factory or something like that. Right? So...
+**V:** Yeah. And then when you click again, you drop it. And then they so but still, it was a large movement, you had to move the things. So if, for instance, if you look at Trello boards, sometimes you have to move it three or four rows to the right. So you still, that was pretty hard. So what they did is they brought the columns where you can drop it to the mouse, it was really clever. So you saw these nice animations where you just click on something and then all of a sudden, all these columns just went to the mouse and you could easily drop them there. And then I asked him, oh, this is brilliant. They said, yeah, this is how most computer games work. That's—
 
-**E:** Absolutely, I don't think you need to go as far as the Arms Factory either. I think for most people, it's... it's hard to find something to work with, where there are – where everything is good all the way down the production chain, where there's no negative effects whatsoever. Many people's dream job is working at Facebook. Personally, I could never work there, for what... what, to me are obvious reasons, but I think, literally, you know, if you consider buying your jeans, there's always someone's going to be negatively affected by that process, it will be hard. And there's certainly not enough design jobs to go around in this consumerist based world, to – for all of us to work on products that are 100% good.
+**E:**  Yeah,
 
-**V:** Yeah. But then, of course, you could mean, I have another podcast I'm doing. And this is actually about design ethics. And it's only about this subject. And it's really complicated. So what can you do as a junior designer? Who wants to work as a designer, but ends up at a company where well, some ethics are debatable. And so one of the things you could do is try to change things on a small scale there where you work, just just keep on changing the things on it on your scale. Yep. And if you don't have that choice, and you have to work at Facebook, then you will. But with Facebook, it's different. Most people have a choice. They're not most of them, but lots of them.
+**V:** That's what they do.
 
-**E:** I think, so I don't think many people are forced to work at Facebook.
+**E:** That's very interesting. Just making the the journey from your current position to where you want to go much more smaller.
 
-**V:** No, no.
+**V:** Yeah. There's no just nice for this friend of mine. It's nice for everybody. It's easy to work with him. Yeah.
 
-**E:** Okay, we, we took a bit of a detour there into design ethics. I think we should potentially have an episode on that as well. Is there more? Are there more concrete examples of truths and design that we need to discuss? I'm aware that we're, this is the longest episode to date? Based on our time here now.
+**E:** We can definitely learn from computer games just just for the fact that the interface and the controls are so rudimentary. They have to make all these interactions mega mega simple. And to be honest, it reflects on something was talked about in the last episode as well, or a couple episodes ago with with navigation. This idea that on a web with a mouse on a big screen, you can have everything visible and all the links there and you click on them, but on smaller devices, and in this context on a video game, you can't fill your screen with interface, you have to have some way of, you know, toggling it on and off and use maps and menus and all these things to actually jump around is a very different way to interact with it. And what we're being taught is the way to do it on the web anyway.
 
-**V:** Well, we could of course, talk about the interaction. This, I think there are some truths in interaction. But maybe we should just have another episode about interaction and discuss it there. I think we can conclude that we talked about truths, there are some slow moving ideas that can be considered for a prolonged period of time to be truths. And there are things that people consider to be truths that are not truth and should be reconsidered.
+**V:** Yeah, and I think that video games are very good, very clever at showing an interface when you need it. Well, on the web, we're used to showing it all the time.
 
-**E:** Absolutely. And then there's a something in the middle that you know, there are guidelines available that are true in many contexts, and and not in all contexts. And there are truths that work for subsets of people or users and are truths that don't work for them. So it's it's tricky, isn't it? Maybe the answer is there's no universal truth for everything or for everyone.
+**E:** Yes, exactly.
 
-**V:** I guess that's a very, we could have concluded that at the beginning.
+**V:** Usually, most of the time you don't need it.
 
-**E:** We kind of did, didn't we – we just wasted wasted 45 minutes.
+**E:** Yeah. And not only are we used to you showing it all the time, we're we're actively preaching that that's what we should do, rather than exploring anything else. Yeah, this reminds me of, there's a really good talk by Mark Rober, you know, Mark Rober? No, he's a ex NASA scientist who has a YouTube channel, who does he does a lot of science stuff for, I would say it's maybe geared towards younger people. But it's I find it's my very, very fascinating. For example, he built he built an obstacle course, for squirrels in the back garden, to... Basically he tried to make a bird feeder that was squirrel proof. And he ended up making an obstacle course and falling in love with squirrels as well as well. So they also got food, it was really lovely. But he has a thing about gamification and games and what we can learn from them. And what he says at the beginning is basically, imagine a game where you just have to push a button for X amount of seconds, then you have to push the other button for two seconds. And then you have to push another button for three seconds. And it just goes on and on with this long list of instructions for X amount of seconds, you have to do a certain action. And then it goes on to say this, that's basically what Supermario is, except they've put this wonderful, whimsical, funny, engaging interface on top of it. But the input is just the same. You're just pushing a few very few buttons for exact amount of time to complete levels. And that basically says what we do with the visual interface really has... It relates strongly to the input as well, and we it doesn't have to be boring.
 
-**V:** Sorry about that, everybody.
+**V:** I think that's a very good way to end this episode.
 
 </section>
 
@@ -326,8 +267,6 @@ Pick the measure that measures best for you
 
 ## Why does this page look like this?
 
-In this episode, we talk a lot about measure and legibility. I've paired everything back – given Vasilis' penchant for the experimental I guess I'll be doing a lot of that going forward – and emphasised the conversational nature of the transcript. The great thing about Vasilis' experimentation is that I'm learning about attributes I never new existed – like the breadth of 'text-decoration' available.
+In CSS we hardly focus on interaction. So when art directing this episode I played with some forms of interaction that you can design with CSS. I played a lot with `:hover` states in combination with `:focus-within`. That combination is responsible for the ridiculous colour-changes you see when you move your mouse over the screen, and when you interact with the interactive things. Of course I also added a few `:target` selectors. Curious to see if you can find them all.
 
-You may also notice the "measure measurer" just above the transcript. It's just for fun. Which measure works best for you?
-
-Between you and me, I'm also starting to feel the restraints of default colours, and I can't help but feel the urge to upgrade the fonts. But that'll have to be for another episode.
+<a href="#body">Flip flip flip</a>

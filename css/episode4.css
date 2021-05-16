@@ -283,3 +283,7 @@ body:target main,
 body:target #conversation  {
   transform: rotate(0deg)
 }
+
+.sig {
+  font-style: italic;
+}

@@ -269,4 +269,6 @@ intro: In the fourth episode of Web Materials, we talk about the lack of attenti
 
 When I worked on the art direction of this episode I obviously played with some forms of interaction that you can design and style with CSS. I played a lot with `:hover` states in combination with `:focus-within`. That combination is responsible for the ridiculous colour-changes. These changes are triggered by a combination of moving your mouse over different parts of the screen, and by setting focus on the interactive things. Of course I did some silly stuff with a few `:target` selectors. Curious to see if you can find them all.
 
+<p class="sig">—Vasilis</p>
+
 <a href="#body">Flip flip flip</a>

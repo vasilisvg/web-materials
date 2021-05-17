@@ -17,25 +17,28 @@ csslinks:
 # <link rel="stylesheet" href="https://fonts.typotheque.com/WF-023273-011456.css">
 # If you want to add a block of preformatted code to the end of the document you can use 'foot'
 # Beware: use spaces, not tabs.
-foot: #<script src="/js/js.js"></script>
-layout: layouts/post.njk
+foot: <script src="/js/episode4.js?2"></script>
+layout: layouts/episode4.njk
 intro: In the fourth episode of Web Materials, we talk about the lack of attention for interaction in design tools, and about sucky defaults when it comes to focus states. We talk about things like :focus-within and :focus-visible. Later on we discuss the similarities between Vim and screenreaders, and we end this episode by praising Nintendo games.
 ---
-
+<details>
+<summary>I <span>don’t</span> want to click</summary>
 <section class="shownotes">
 
 ### Shownotes
 
 - [About this episode’s art direction](https://webmaterials.design/posts/04-what-about-interaction/#why-does-this-page-look-like-this%3F)
+- [About this episode’s art direction](#why-does-this-page-look-like-this%3F)
 - [The defaults suck](https://exclusive-design.vasilis.nl/the-defaults-suck/)
 - [Accessible design experiments by Vasilis’ students (mostly in Dutch)](https://cmda-minor-web.github.io/human-centered-design-2021/)
 - [Alan Trotter’s website](https://alantrotter.com/)
 - [Mark Rober on Youtube](https://www.youtube.com/c/MarkRober/videos)
 
-
 </section>
+</details>
 
-## Transcript
+<details>
+<summary>I <span>don’t</span> want to read</summary>
 
 <p class="closed-caption">[Intro music by xyce]</p>
 
@@ -263,10 +266,15 @@ intro: In the fourth episode of Web Materials, we talk about the lack of attenti
 
 <p class="closed-caption">[Outro music by xyce]</p>
 
-## Why does this page look like this?
+</details>
 
+<details>
+<summary>I <span>don’t</span> want an explanation</summary>
+
+## Why does this page look like this?
 When I worked on the art direction of this episode I obviously played with some forms of interaction that you can design and style with CSS. I played a lot with `:hover` states in combination with `:focus-within`. That combination is responsible for the ridiculous colour-changes. These changes are triggered by a combination of moving your mouse over different parts of the screen, and by setting focus on the interactive things. Of course I did some silly stuff with a few `:target` selectors. Curious to see if you can find them all.
 
 <p class="sig">—Vasilis</p>
 
 <a href="#body">Flip flip flip</a>
+</details>

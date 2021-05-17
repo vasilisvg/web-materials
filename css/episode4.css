@@ -10,6 +10,9 @@ header {
 	margin-bottom: 0;
 } */
 
+details.episode-intro {
+  min-height: 100vh;
+}
 .episode-intro footer {
   writing-mode: initial;
 	position: fixed;
@@ -36,6 +39,16 @@ header {
   text-underline-offset: -0.5em;
   text-decoration-color: paleturquoise;
   text-decoration-skip-ink: none;
+}
+.episode-intro > summary::marker {
+  font-size: clamp(3em, 8vw, 5em);
+}
+.episode-intro > summary ~ * {
+  opacity: 0;
+  transition: .8s;
+}
+.episode-intro[open] > summary ~ * {
+  opacity: 1;
 }
 
 
@@ -283,13 +296,50 @@ body:target *:hover {
   transition: 2s;
 }
 body:target main,
-body:target #conversation  {
+body:target #conversation,
+body:target details  {
   transform: rotate(0deg)
 }
+
 
 .sig {
   font-style: italic;
 }
 script {
   display: none !important;
+}
+
+details details {
+  margin: 0 0 1em;
+}
+details details summary {
+  margin-bottom: 1em;
+  font-size: clamp(1.1em, 1.6vw, 1.3em);
+  cursor: pointer;
+}
+details details summary ~ * {
+  opacity: 0;
+  transition: .8s;
+}
+details[open] details[open] summary ~ * {
+  opacity: 1;
+}
+summary span {
+  display: inline-block;
+  max-width: 0;
+  opacity: 0;
+  transition: .3s;
+}
+[open] > summary span {
+  max-width: 4em;
+  opacity: 1;
+}
+[open] > summary,
+[open] > summary span {
+  text-decoration-line: underline;
+  text-decoration-style: wavy;
+  text-decoration-color: red;
+}
+body:target details details summary {
+  display: none;
 }

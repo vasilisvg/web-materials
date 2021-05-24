@@ -28,7 +28,6 @@ intro: In the fourth episode of Web Materials, we talk about the lack of attenti
 ### Shownotes
 
 - [About this episode’s art direction](https://webmaterials.design/posts/04-what-about-interaction/#why-does-this-page-look-like-this%3F)
-- [About this episode’s art direction](#why-does-this-page-look-like-this%3F)
 - [The defaults suck](https://exclusive-design.vasilis.nl/the-defaults-suck/)
 - [Accessible design experiments by Vasilis’ students (mostly in Dutch)](https://cmda-minor-web.github.io/human-centered-design-2021/)
 - [Alan Trotter’s website](https://alantrotter.com/)
@@ -273,6 +272,8 @@ intro: In the fourth episode of Web Materials, we talk about the lack of attenti
 
 ## Why does this page look like this?
 When I worked on the art direction of this episode I obviously played with some forms of interaction that you can design and style with CSS. I played a lot with `:hover` states in combination with `:focus-within`. That combination is responsible for the ridiculous colour-changes. These changes are triggered by a combination of moving your mouse over different parts of the screen, and by setting focus on the interactive things. Of course I did some silly stuff with a few `:target` selectors. Curious to see if you can find them all.
+
+Or course the opening and closing of the different sections of this page isn’t half as good as the interactive stories that Espen talked about. But at least it gives our visitors with a touch device something to do.
 
 <p class="sig">—Vasilis</p>
 

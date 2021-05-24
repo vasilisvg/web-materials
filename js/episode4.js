@@ -2,9 +2,6 @@ var bbody = document.querySelector('body');
 window.onhashchange = function(e){
   openTarget(e);
 }
-window.onload = function(e){
-  openTarget(e);
-}
 
 function openTarget(e){
   if(window.location.hash) {
@@ -23,3 +20,4 @@ function openTarget(e){
     }
   }
 }
+openTarget();

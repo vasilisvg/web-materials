@@ -5,48 +5,51 @@ eleventyExcludeFromCollections: true
 ---
 <?xml version="1.0" encoding="utf-8"?>
 <rss version="2.0" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd"  xmlns:content="http://purl.org/rss/1.0/modules/content/"  xmlns:atom="http://www.w3.org/2005/Atom">
-	<channel>
-	<title>{{ metadata.title }}</title>
-	<description>{{ metadata.feed.subtitle }}</description>
+  <channel>
+    <title>{{ metadata.title }}</title>
+    <description>{{ metadata.feed.subtitle }}</description>
 	{% set absoluteUrl %}{{ metadata.feed.path | url | absoluteUrl(metadata.url) }}{% endset %}
-	<link>{{ metadata.url }}</link>
-	<atom:link href="{{ absoluteUrl }}" rel="self" />
-	<atom:updated>{{ collections.posts | rssLastUpdatedDate }}</atom:updated>
-	<atom:id>{{ metadata.feed.id }}/</atom:id>
-	<atom:author>
-		<atom:name>{{ metadata.author.name }}</atom:name>
-		<atom:email>{{ metadata.author.email }}</atom:email>
-	</atom:author>
-	<itunes:author>{{ metadata.author.name }}</itunes:author>
-	<itunes:owner>
-		<itunes:name>{{ metadata.author.name }}</itunes:name>
-		<itunes:email>{{ metadata.author.email }}</itunes:email>
-	</itunes:owner>
-	<image><url>{{ metadata.url }}/img/logo.png</url><title>{{ metadata.title }}</title><link>{{ metadata.url }}</link></image>
-	<itunes:image href="{{ metadata.url }}/img/logo.png"/>
-	<itunes:category text="Arts"><itunes:category text="Design"></itunes:category></itunes:category>
-	<itunes:explicit>no</itunes:explicit>
-	<language>en-UK</language>
-	<itunes:type>episodic</itunes:type>
+    <link>{{ metadata.url }}</link>
+    <atom:link href="{{ absoluteUrl }}" rel="self" />
+    <atom:updated>{{ collections.posts | rssLastUpdatedDate }}</atom:updated>
+    <pubDate>{{collections.posts | rssLastUpdatedDate }}</pubDate>
+    <atom:id>{{ metadata.feed.id }}/</atom:id>
+    <atom:author>
+	    <atom:name>{{ metadata.author.name }}</atom:name>
+	    <atom:email>{{ metadata.author.email }}</atom:email>
+    </atom:author>
+    <itunes:author>{{ metadata.author.name }}</itunes:author>
+    <itunes:owner>
+      <itunes:name>{{ metadata.author.name }}</itunes:name>
+      <itunes:email>{{ metadata.author.email }}</itunes:email>
+    </itunes:owner>
+    <image><url>{{ metadata.url }}/img/logo.png</url><title>{{ metadata.title }}</title><link>{{ metadata.url }}</link></image>
+    <itunes:image href="{{ metadata.url }}/img/logo.png"/>
+    <itunes:category text="Arts"><itunes:category text="Design"></itunes:category></itunes:category>
+    <itunes:explicit>no</itunes:explicit>
+    <language>en-UK</language>
+    <itunes:type>episodic</itunes:type>
 
 	{%- for post in collections.posts | reverse %}
 	{% set absolutePostUrl %}{{ post.url | url | absoluteUrl(metadata.url) }}{% endset %}
-	<item>
-		<title>{{ post.data.title }}</title>
-		<link>{{ absolutePostUrl }}</link>
-		<atom:updated>{{ post.date | rssDate }}</atom:updated>
-		<itunes:duration>{{post.data.duration}}</itunes:duration>
-		<itunes:episode>{{post.data.episode}}</itunes:episode>
-		<itunes:episodeType>full</itunes:episodeType>
-		<guid isPermaLink="true">{{ absolutePostUrl }}</guid>
-		<atom:link rel="enclosure" href="{{ metadata.url }}{{post.data.audio}}"/>
-		<enclosure url="{{ metadata.url }}{{post.data.audio}}" length="{{post.data.audiolength}}" type="audio/mpeg"/>
-		<description><![CDATA[{{post.data.intro}} See the website for a complete transcript.]]></description>
-		<content:encoded><![CDATA[
-			<p>{{post.data.intro}}</p>
-			<p><a href="{{absolutePostUrl}}">See the website for full audio and a complete transcript</a>.</p>
-			]]></content:encoded>
-	</item>
+    <item>
+      <title>{{ post.data.title }}</title>
+      <link>{{ absolutePostUrl }}</link>
+      <atom:updated>{{ post.date | rssDate }}</atom:updated>
+      <pubDate>{{ post.date.toUTCString() }}</pubDate>
+      <itunes:duration>{{post.data.duration}}</itunes:duration>
+      <itunes:episode>{{post.data.episode}}</itunes:episode>
+      <itunes:episodeType>full</itunes:episodeType>
+      <guid isPermaLink="true">{{ absolutePostUrl }}</guid>
+      <atom:link rel="enclosure" href="{{ metadata.url }}{{post.data.audio}}"/>
+      <enclosure url="{{ metadata.url }}{{post.data.audio}}" length="{{post.data.audiolength}}" type="audio/mpeg"/>
+      <description><![CDATA[{{post.data.intro}} See the website for a complete transcript.]]></description>
+      <content:encoded><![CDATA[
+        <p>{{post.data.intro}}</p>
+        <p><a href="{{absolutePostUrl}}">See the website for full audio and a complete transcript</a>.</p>
+        ]]></content:encoded>
+      <itunes:image href="{{ metadata.url }}/img/logo.png"/>
+    </item>
 	{%- endfor %}
-	</channel>
+  </channel>
 </rss>

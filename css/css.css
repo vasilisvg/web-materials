@@ -232,6 +232,10 @@ audio:focus-within {
 	--postlistItem: powderblue  ;
 }
 
+.postlist li:nth-last-of-type(5) {
+	--postlistItem: tomato  ;
+}
+
 .postlist a:hover::after {
 	opacity: 1;
   transition: 0.1s;

@@ -209,7 +209,7 @@ shownotes:
 
 ### Why does this page look like this?
 
-This page does not have a menu bar, logo, or hamburger menu at the top of the page. This omission enables me to play with layout in a different way than I normally would. With no top menu, I can open like a magazine spread, with sole focus on the content. I can use sticky elements and vertical splits going down the whole page, without worrying about how this interferes with the navigation – or how the navigation might impact it visually.
+This page does not have a menu bar, logo, or hamburger icon at the top of the page. This omission enables me to play with layout in a different way than I normally would. With no top menu, I can design the introduction like I would a magazine spread, with sole focus on the content. I can use sticky elements and vertical splits going down the whole page, without worrying about how this interferes with the navigation – or how the navigation might impact it visually.
 
 I wonder if there should be a menu button somewhere though, or a shortcut to jump down to the links sections (and, to be honest, a link back up to the top).
 

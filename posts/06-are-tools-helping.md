@@ -21,10 +21,6 @@ intro: We talk about the role that visual design tools play. In the past, tools 
 
 shownotes:
   - <a href="#why-does-this-page-look-like-this%3F">About this episode's art direction</a>
-  - <a href="https://www.nngroup.com/articles/hamburger-menus/">Hamburger menus and hidden navigation hurt ux metrics (2016)</a>
-  - <a href="https://www.invisionapp.com/inside-design/pros-and-cons-of-hamburger-menus/">Pros and cons of hamburger menus</a>
-  - <a href="https://medium.muz.li/3-good-reason-why-you-might-want-to-remove-that-hamburger-menu-from-your-product-69b9499ba7e2">3 good reasons why you ight want to remove that hamburger menu from your product</a>
-  - <a href="https://ux.stackexchange.com/questions/120256/if-the-hamburger-menu-is-bad-ux-why-do-google-still-use-it">But Google uses it!</a>
 ---
 
 <section class="episode-transcript">
@@ -420,8 +416,12 @@ shownotes:
 
 ### Why does this page look like this?
 
-This page does not have a menu bar, logo, or hamburger icon at the top of the page. This omission enables me to play with layout in a different way than I normally would. With no top menu, I can design the introduction like I would a magazine spread, with sole focus on the content. I can use sticky elements and vertical splits going down the whole page, without worrying about how this interferes with the navigation – or how the navigation might impact it visually.
+I tried to create a design for this episode that is — I think — impossible to create with the current generation of visual design tools. These tools offer a subset of CSS. So I wonder, do they allow you to combine things like `position: sticky`, `clip-path`, and `mix-blend-mode` in order to create an ever changing scrolly landscape? I really hope they do.
 
-I wonder if there should be a menu button somewhere though, or a shortcut to jump down to the links sections (and, to be honest, a link back up to the top).
+I consider CSS to be a material you can shape. Tools that shape CSS should enable the artist/designer to shape CSS into all forms that CSS is shapeable in. Until then the web needs people like me — hopefully more talented — who can show the world that there is much more possible than what our tools can imagine.
+
+I cannot wait to see what Espen is going to make from this pile of blobs.
+
+<p class="sig">—Vasilis</p>
 
 </section>

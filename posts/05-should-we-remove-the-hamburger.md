@@ -2,10 +2,10 @@
 episode: 5
 title: Should we take the hamburger off the menu?
 description: In which we discuss a certain infamous culinary interface element.
-audio: /sound/WM003-design-truths.mp3
-audiolength: 57362525 #mandatory, size in bytes! No idea how to do this in Eleventy )-:
-duration: 00:59:42 #mandatory, duration in hh:mm:ss
-date: 2021-06-07
+audio: /sound/WM005-hamburger-off-the-menu.mp3
+audiolength: 33231725 #mandatory, size in bytes! No idea how to do this in Eleventy )-:
+duration: 00:34:33 #mandatory, duration in hh:mm:ss
+date: 2021-06-07 #yyyy-mm-dd
 # You can add (multiple) urls to stylesheets with 'csslinks'. (Use spaces, not tabs here)
 csslinks:
   - /css/css.css

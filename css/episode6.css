@@ -282,7 +282,6 @@ p strong {
   top: calc(2em + 4vh);
   background-color: hsla(185, 40%, 73%);
   color: transparent;
-  border-radius: 50% / 20%;
   mix-blend-mode: multiply;
   clip-path: polygon(39% 0, 92% 10%, 100% 43%, 98% 70%, 82% 95%, 32% 100%, 6% 84%, 0% 43%, 9% 8%);
   /* Unfortunately had to switch off animating these polygons
@@ -294,32 +293,47 @@ p strong {
   animation-duration: 37s;
   animation-delay: -13s;
 }
+@@media (prefers-reduced-transparency: reduce) {
+  #bubbles p {
+    mix-blend-mode: normal;
+  }
+}
 #bubbles p:nth-of-type(even) {
   background-color: hsla(200, 40%, 73%);
-  top: calc(2em + 2vh);
   clip-path: polygon(68% 1%, 93% 21%, 95% 44%, 98% 70%, 90% 95%, 53% 95%, 6% 96%, 0 58%, 9% 8%);
   animation-duration: 47s;
   animation-delay: -29s;
 }
 #bubbles p:nth-of-type(3n) {
   background-color: hsla(215, 40%, 73%);
-  top: calc(2em + 6vh);
   clip-path: polygon(55% 3%, 90% 15%, 95% 36%, 100% 75%, 82% 95%, 53% 100%, 0 71%, 3% 40%, 6% 3%);
   animation-duration: 61s;
   animation-delay: -31s;
 }
 #bubbles p:nth-of-type(5n) {
   background-color: hsla(230, 40%, 73%);
-  top: calc(2em + 10vh);
   animation-duration: 73s;
   animation-delay: -37s;
 }
 #bubbles p:nth-of-type(7n) {
   background-color: hsla(245, 40%, 73%);
-  top: calc(2em + 14vh);
 }
 #bubbles p:nth-of-type(11n) {
   background-color: hsla(260, 40%, 73%);
+}
+#bubbles p:nth-last-of-type(even) {
+  top: calc(2em + 2vh);
+}
+#bubbles p:nth-last-of-type(3n) {
+  top: calc(2em + 6vh);
+}
+#bubbles p:nth-last-of-type(5n) {
+  top: calc(2em + 10vh);
+}
+#bubbles p:nth-last-of-type(7n) {
+  top: calc(2em + 14vh);
+}
+#bubbles p:nth-last-of-type(11n) {
   top: calc(2em + 22vh);
 }
 

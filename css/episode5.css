@@ -48,7 +48,7 @@ Episode title (left hand sticky area)
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  position: sticky; 
+  position: sticky;
   top: 0;
   background-color: tomato;
   text-align: center;
@@ -58,7 +58,7 @@ Episode title (left hand sticky area)
 	background-color: initial;
 	white-space: initial;
   max-width: 15ch;
-  
+
   font-size: clamp(2.5em, 7vw, 4em);
   line-height: 1em;
   margin-bottom: 0.4em;
@@ -91,7 +91,7 @@ Episode title (left hand sticky area)
 
 /* //////////////////////////////////////////////////////////////////////////////////////
 
-Episode intro (player and shownotes) 
+Episode intro (player and shownotes)
 
 ////////////////////////////////////////////////////////////////////////////////////// */
 
@@ -157,7 +157,7 @@ Episode intro (player and shownotes)
 
 .episode-shownotes ul li {
   margin-bottom: 1em;
-  
+
 }
 
 .episode-shownotes a {
@@ -171,7 +171,7 @@ Episode intro (player and shownotes)
 
 /* //////////////////////////////////////////////////////////////////////////////////////
 
-Transcript 
+Transcript
 
 ////////////////////////////////////////////////////////////////////////////////////// */
 
@@ -215,16 +215,16 @@ p strong {
   border-radius: 1em;
 }
 
-#conversation p:nth-of-type(odd) { 
+#conversation p:nth-of-type(odd) {
   border-top-left-radius: 0.1em;
-  background-color: linen; 
-  align-self: flex-start; 
+  background-color: linen;
+  align-self: flex-start;
   margin-right: 4em;}
 
-#conversation p:nth-of-type(even) { 
+#conversation p:nth-of-type(even) {
   border-top-right-radius: 0.1em;
-  background-color: moccasin; 
-  align-self: flex-end; 
+  background-color: moccasin;
+  align-self: flex-end;
   margin-left: 4em; }
 
 
@@ -236,14 +236,14 @@ p.closed-caption {
 	text-decoration-style: dotted;
 	text-decoration-color: powderblue;
 }
-[id="why-does-this-page-look-like-this%3F"] ~ p {
-
+[id="why-does-this-page-look-like-this%3F"]:target {
+  padding-top: 6em;
 }
 
 
 /* //////////////////////////////////////////////////////////////////////////////////////
 
-Other 
+Other
 
 ////////////////////////////////////////////////////////////////////////////////////// */
 

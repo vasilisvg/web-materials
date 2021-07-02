@@ -1,0 +1,87 @@
+---
+layout: layouts/base-post.njk
+templateClass: tmpl-post
+---
+
+{%- if styletoggle %}
+<input aria-hidden="true" type="checkbox" id="letmeread" />
+<label aria-hidden="true" for="letmeread">{{ styletoggle }}</label>
+{%- endif %}
+
+<section class="episode-title">
+  <h1>{{ title }}</h1>
+  <div class="meta">
+    <h3><a href="/">Web Materials</a></h3>
+    Episode {{ episode }} /
+    <time datetime="{{ page.date | htmlDateString }}">{{
+      page.date | readableDate
+    }}</time>
+  </div>
+
+  {%- if audio %}
+    <section class="episode-player">
+      <audio src="{{ audio }}" controls></audio>
+    </section>
+  {%- endif %}
+</section>
+
+<div class="episode-content">
+  
+  <section class="episode-intro">
+    <p class="para">{{ intro | safe }}</p>
+    <p class="divider">***</p>
+  </section>
+  
+  <section class="episode-shownotes">
+    <h3>Shownotes</h3>
+    <ul>
+      {% for shownotes in shownotes %}
+      <li>{{ shownotes | safe }}</li>
+      {% endfor %}
+    </ul>
+  </section>
+
+{{ content | safe }}
+
+<section class="episode-links">
+  <div class="tags">
+    {%- for tag in tags | filterTagList -%} {%- set tagUrl %}/tags/{{
+      tag | slug
+    }}/{% endset -%}
+    <!-- <a href="{{ tagUrl | url }}">{{ tag }}</a> -->
+    {%- endfor %}
+  </div>
+
+  {%- set nextPost = collections.posts | getNextCollectionItem(page) %} {%- set
+  previousPost = collections.posts | getPreviousCollectionItem(page) %} {%- if
+  nextPost or previousPost %}
+
+  <ul class="prevnext">
+    {%- if nextPost %}
+    <li class="next">
+      <a href="{{ nextPost.url | url }}" accesskey="j"
+        >Episode {{ nextPost.data.episode }}: {{ nextPost.data.title }}</a
+      >
+    </li>
+    {% endif %} {%- if previousPost %}
+    <li>
+      <h3>Previous episode:</h3>
+      <a href="{{ previousPost.url | url }}" accesskey="k">{{
+        previousPost.data.title
+      }}</a>
+    </li>
+    {% endif %}
+  </ul>
+  {%- endif %}
+</section>
+
+</div>
+
+
+
+
+
+
+
+
+

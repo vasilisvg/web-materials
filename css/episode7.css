@@ -3,7 +3,7 @@
 body {
   background: white;
   display: block;
-  --episode-font: 'American typewriter', serif;
+  --episode-font: 'American typewriter', 'courier new', 'courier', monospace, serif;
 }
 
 main {
@@ -114,7 +114,7 @@ Episode intro (player and shownotes)
 
 .episode-intro p {
   font-weight: 600;
-  font-size: 110%;
+  font-size: 120%;
   line-height: 1.7em;
   margin-bottom: 2em;
   max-width: 30em;
@@ -132,13 +132,13 @@ Episode intro (player and shownotes)
   justify-content: center;
   align-items: center;
   top: 0;
-  padding: 3vh 5vw;
-  background-color: black;
+  /* transform: rotate(-1deg); */
 }
 
 .episode-player audio {
-  max-width: 400px;
-  background-color: dimgray;
+  width: 250px;
+  /* transform: rotate(1deg); */
+  background-color: black;
   /* height: 100px; */
 }
 
@@ -157,7 +157,7 @@ Episode intro (player and shownotes)
 
 .episode-shownotes ul {
   list-style: none;
-  margin: 0;
+  margin: 0 0 5vh;
   padding: 0;
 }
 
@@ -185,6 +185,7 @@ Transcript
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-top: 0;
 }
 
 .episode-transcript h3 {
@@ -216,6 +217,42 @@ p {
 p strong {
   background: none;
 }
+
+#script p {
+  font-size: clamp(0.9em, 1.6vw, 1.1em);
+  line-height: 1.7em;
+  max-width: 35em;
+  margin-bottom: 2em;
+  position: relative;
+}
+
+#script p b {
+  position: relative;
+}
+
+#script p b:before {
+  content:'';
+  position: absolute;
+  display: block;
+  mix-blend-mode: multiply;
+  width: 4.7em;
+  margin-left: -0.5em;
+  transform: rotate(1deg);
+  height: 1.8em;
+  clip-path: polygon(5% 0, 50% 0, 53% 2%, 78% 0, 85% 3%, 100% 0, 95% 90%, 80% 93%, 75% 90%, 13% 95%, 3% 90%);
+  background-image: linear-gradient(45deg, yellow, lemonchiffon);
+}
+
+#script p:nth-of-type(even) b:before {
+  width: 4.3em;
+  transform: rotate(-1deg);
+  clip-path: polygon(0 0, 50% 0, 53% 2%, 78% 0, 85% 3%, 97% 0, 100% 90%, 80% 93%, 75% 90%, 13% 95%, 3% 90%);
+  background-image: linear-gradient(45deg, cyan, paleturquoise);
+}
+
+
+
+/* Bubble styles (left and right) – wrap the conversation in #conversation */
 
 #conversation {
   display: flex;
@@ -275,11 +312,11 @@ Other
 }
 
 .prevnext li a {
-  background-color: khaki;
+  background-color: transparent;
 }
 
 .prevnext li a:hover {
-  background-color: tomato;
+  background-color: transparent;
 }
 
 p code {
@@ -302,11 +339,11 @@ p code {
 
 .episode-footer ul li a {
   color: black;
-  background-color: khaki;
+  /* background-color: khaki; */
 }
 
 .episode-footer ul li a:hover {
-  background-color: tomato;
+  /* background-color: tomato; */
 }
 
 .logo {

@@ -30,7 +30,7 @@ shownotes:
 <p class="closed-caption">[Intro music by xyce]</p>
 
 
-<section id="conversation" class="conversation">
+<section id="script" class="script">
 
 <p data-time="0:05"><b>Vasilis:</b> Today, I thought it would be a good idea to talk about design tools, visual design.</p>
 
@@ -228,12 +228,12 @@ shownotes:
 
 ### Why does this page look like this?
 
-I tried to create a design for this episode that is — I think — impossible to create with the current generation of visual design tools. These tools offer a subset of CSS. So I wonder, do they allow you to combine things like `position: sticky`, `clip-path`, and `mix-blend-mode` in order to create an ever changing scrolly landscape? I really hope they do.
+This episode's design reflects the archetypal expression of writing – a script. Still sticking to system fonts I've put American Typewriter at the top of my font stack, followed by Courier New. I hope that covers most visitors. 
 
-I consider CSS to be a material you can shape. Tools that shape CSS should enable the artist/designer to shape CSS into all forms that CSS is shapeable in. Until then the web needs people like me — hopefully more talented — who can show the world that there is much more possible than what our tools can imagine.
+In terms of the layout I stripped out the text-bubbles from previous iterations and opted instead for a mix of center aligned and left aligned text blocks, the idea being to mimic the output of a non-design tool like script software or a word processor. I also moved the audio player to the left hand side – the cover – which means I don't need to cover the text column with a sticky black bar on larger viewports.
 
-I cannot wait to see what Espen is going to make from this pile of blobs.
+As much as I loved Vasilis' experimental landscape of sticky blobs in the last episode, I didn't keep much of his art direction. That said, `clip-path` proved useful in making organic `::before` elements that look like they've been made with highlighters. Thank you!
 
-<p class="sig">—Vasilis</p>
+<p class="sig">—Espen</p>
 
 </section>

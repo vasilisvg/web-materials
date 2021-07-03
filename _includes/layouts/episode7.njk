@@ -10,6 +10,7 @@ templateClass: tmpl-post
 
 <section class="episode-title">
   <h1>{{ title }}</h1>
+  <p class="divider"><strong>***</strong></p>
   <div class="meta">
     <h3><a href="/">Web Materials</a></h3>
     Episode {{ episode }} /
@@ -18,8 +19,10 @@ templateClass: tmpl-post
     }}</time>
   </div>
 
+  
   {%- if audio %}
     <section class="episode-player">
+     
       <audio src="{{ audio }}" controls></audio>
     </section>
   {%- endif %}
@@ -39,6 +42,7 @@ templateClass: tmpl-post
       <li>{{ shownotes | safe }}</li>
       {% endfor %}
     </ul>
+    <p class="divider"><strong>***</strong></p>
   </section>
 
 {{ content | safe }}

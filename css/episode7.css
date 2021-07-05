@@ -216,7 +216,7 @@ p strong {
 }
 
 #script p {
-  
+
   line-height: 1.7em;
   max-width: 35em;
   margin-bottom: 2em;
@@ -361,9 +361,11 @@ abbr {
   }
 
   .episode-title {
-    position: relative;
+    position: sticky;
     min-height: 60vh;
-    padding: 10vw;
+    padding: 0;
+    top: calc(-100vh + 5em);
+    z-index: 1;
   }
 
   .episode-intro {

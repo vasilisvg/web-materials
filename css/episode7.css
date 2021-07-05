@@ -361,11 +361,9 @@ abbr {
   }
 
   .episode-title {
-    position: sticky;
+    position: relative;
     min-height: 60vh;
-    padding: 0;
-    top: calc(-100vh + 5em);
-    z-index: 1;
+    padding: 10vw;
   }
 
   .episode-intro {

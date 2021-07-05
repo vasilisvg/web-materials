@@ -232,11 +232,18 @@ audio:focus-within {
 	--postlistItem: powderblue  ;
 }
 
+.postlist li:nth-last-of-type(4) {
+	--postlistItem: pink  ;
+}
+
 .postlist li:nth-last-of-type(5) {
 	--postlistItem: tomato  ;
 }
 .postlist li:nth-last-of-type(6) {
 	--postlistItem: hsla(187, 34%, 75%, 1.000);
+}
+.postlist li:nth-last-of-type(7) {
+	--postlistItem: wheat;
 }
 
 .postlist a:hover::after {

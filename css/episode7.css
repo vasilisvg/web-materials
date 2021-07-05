@@ -25,7 +25,8 @@ h2 {
 }
 
 p {
-  font-size: clamp(1em, 1.4vw, 1.2em);
+  font-size: clamp(0.9em, 1.5vw, 1.1em);
+  line-height: 1.7em;
 }
 
 .episode-footer {
@@ -114,8 +115,8 @@ Episode intro (player and shownotes)
 
 .episode-intro p {
   font-weight: 600;
-  font-size: 120%;
-  line-height: 1.7em;
+  font-size: clamp(1.1em, 1.5vw, 1.3em);
+  line-height: 1.6em;
   margin-bottom: 2em;
   max-width: 30em;
 }
@@ -209,17 +210,13 @@ Transcript
 	color: tomato;
 }
 
-p {
-  transition: .2s;
-  line-height: 1.7;
-}
 
 p strong {
   background: none;
 }
 
 #script p {
-  font-size: clamp(0.9em, 1.5vw, 1.1em);
+  
   line-height: 1.7em;
   max-width: 35em;
   margin-bottom: 2em;
@@ -358,7 +355,7 @@ abbr {
 
 @media (max-width: 60em) {
 
-  .episode-title, .episode-intro, .episode-transcript, .episode-meta, .episode-links, .episode-player, .episode-shownotes, .episode-art, .episode-footer {
+  .episode-content, .episode-footer, .episode-title {
     grid-column: 1 / span 2;
     padding: 2vw;
   }
@@ -366,6 +363,7 @@ abbr {
   .episode-title {
     position: relative;
     min-height: 60vh;
+    padding: 10vw;
   }
 
   .episode-intro {

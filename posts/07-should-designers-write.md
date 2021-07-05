@@ -25,7 +25,7 @@ shownotes:
   - <a href="https://abookapart.com/products/designing-for-emotion">Designing for Emotion, by Aaron Walter</a>
   - <a href="https://abookapart.com/products/responsive-web-design">Responsive Web Design, by Ethan Marcotte</a>
   - <a href="https://abookapart.com/products/design-for-real-life">Design for Real Life, by Eric Meyer and Sarah Wacther-Boettcher</a>
-  
+
 ---
 
 <section class="episode-transcript">
@@ -187,7 +187,7 @@ shownotes:
 
 ### Why does this page look like this?
 
-This episode's design reflects the archetypal expression of writing – a script. Still sticking to system fonts I've put American Typewriter at the top of my font stack, followed by Courier New. I hope that covers most visitors. 
+This episode's design reflects the archetypal expression of writing – a script. Still sticking to system fonts I've put American Typewriter at the top of my font stack, followed by Courier New. I hope that covers most visitors.
 
 In terms of the layout I stripped out the text-bubbles from previous iterations and opted instead for a mix of center aligned and left aligned text blocks, the idea being to mimic the output of a non-design tool like script software or a word processor. I also moved the audio player to the left hand side – the cover – which means I don't need to cover the text column with a sticky black bar on larger viewports.
 

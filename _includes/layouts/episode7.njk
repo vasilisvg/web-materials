@@ -19,22 +19,22 @@ templateClass: tmpl-post
     }}</time>
   </div>
 
-  
+
   {%- if audio %}
     <section class="episode-player">
-     
+
       <audio src="{{ audio }}" controls></audio>
     </section>
   {%- endif %}
 </section>
 
 <div class="episode-content">
-  
+
   <section class="episode-intro">
     <p class="para">{{ intro | safe }}</p>
     <p class="divider">***</p>
   </section>
-  
+
   <section class="episode-shownotes">
     <h3>Shownotes</h3>
     <ul>

@@ -1,0 +1,36 @@
+body {
+  font-size: 1.414em;
+  margin: 1em;
+}
+* {
+  font-family: sans-serif;
+  font-size: inherit;
+  font-weight: normal;
+  font-style: normal;
+  margin: 0 0 .414em;
+}
+
+*::before {
+  content: attr(data-tag);
+}
+abbr[title][data-tag-after]::after {
+  content: ' abbreviation: 'attr(data-tag-after);
+}
+[data-tag-block]::before {
+  content: attr(data-tag-block);
+  display: block;
+  margin: 0 0 .414em;
+}
+
+audio {
+  display: block;
+}
+
+ul {
+  margin: inherit;
+  padding: 0;
+  list-style: none;
+}
+svg {
+  display: none;
+}

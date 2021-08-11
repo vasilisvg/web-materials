@@ -16,7 +16,7 @@ while (i < tags.length) {
   if (tName == 'SECTION' || tName == 'MAIN' || tName == 'FOOTER') {
     tChildren = tags[i].querySelectorAll('*');
     tcLength = tChildren.length;
-    tags[i].setAttribute('data-tag-block','group, ' + tcLength + ' items. ');
+    tags[i].setAttribute('data-tag-block','Group, ' + tcLength + ' items. ');
   }
   if (tName == 'NAV') {
     tags[i].setAttribute('data-tag-block','Navigation. ');

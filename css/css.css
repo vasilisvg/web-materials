@@ -242,8 +242,13 @@ audio:focus-within {
 .postlist li:nth-last-of-type(6) {
 	--postlistItem: hsla(187, 34%, 75%, 1.000);
 }
+
 .postlist li:nth-last-of-type(7n) {
 	--postlistItem: wheat;
+}
+
+.postlist li:nth-last-of-type(9n) {
+	--postlistItem: #FF554A;
 }
 
 .postlist a:hover::after {

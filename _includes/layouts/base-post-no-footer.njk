@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+
+<html lang="en" id="html">
+  <head id="head">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{ title or metadata.title }}</title>
+    <meta
+      name="description"
+      content="{{ description or metadata.description }}"
+    />
+    {%- if head %}
+    {{
+      head | safe
+    }}
+    {%- endif %} {%- for href in csslinks -%}
+    <link
+      rel="stylesheet"
+      href="{{ href | url }}?{{ [10000000, 100000000] | getRandom }}"
+    />
+    {%- endfor %}
+    <link
+      rel="alternate"
+      href="{{ metadata.feed.path | url }}"
+      type="application/atom+xml"
+      title="{{ metadata.title }} RSS Feed"
+    />
+    <link
+      rel="alternate"
+      href="{{ metadata.jsonfeed.path | url }}"
+      type="application/json"
+      title="{{ metadata.title }} JSON Feed"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/img/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/img/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/img/favicon-16x16.png"
+    />
+  </head>
+  <body id="body" {% if episode %} class="episode{{ episode }}" {% endif %}>
+    <!-- <h1><a href="{{ '/' | url }}">{{ metadata.title }}</a></h1> -->
+
+    <main {% if templateClass %} class="{{ templateClass }}" {% endif %}>
+      {{ content | safe }}
+
+      
+    </main>
+
+    {%- if foot %}
+    {{ foot | safe }}
+    {%- endif %}
+    <!-- Current page: {{ page.url | url }} -->
+  </body>
+</html>

@@ -2,10 +2,10 @@
 episode: 9
 title: Why do we mimic print grids?
 description: Is there a better, more native way of doing grids on the web?
-audio: /sound/WM008-can-we-design-the-invisible.mp3
-audiolength: 49810956 #mandatory, size in bytes! No idea how to do this in Eleventy )-:
-duration: 00:41:23 #mandatory, duration in hh:mm:ss
-date: 2021-08-24 #yyyy-mm-dd
+audio: /sound/WM009-why-do-we-mimic-paper-grids.mp3
+audiolength: 51778201 #mandatory, size in bytes! No idea how to do this in Eleventy )-:
+duration: 00:43:01 #mandatory, duration in hh:mm:ss
+date: 2021-08-25 #yyyy-mm-dd
 # You can add (multiple) urls to stylesheets with 'csslinks'. (Use spaces, not tabs here)
 csslinks:
   - /css/episode9.css
@@ -20,6 +20,10 @@ intro: Since the dawn of the modern web, designers have been emulating tradition
 
 shownotes:
   - <a href="#why-does-this-page-look-like-this%3F">About this episode's art direction</a>
+  - <a href="https://en.wikipedia.org/wiki/Jan_Tschichold">Jan Tschichold (Wikipedia)</a>
+  - <a href="https://en.wikipedia.org/wiki/Josef_Müller-Brockmann">Josef Müller-Brockmann (Wikipedia)</a>
+  - <a href="https://vasilis.nl">Vasilis' Flexbox homepage</a>
+  
 ---
 
 <section class="episode-transcript">
@@ -252,14 +256,14 @@ shownotes:
 
 ## Why does this page look like this?
 
-This is a simplified visualisation of what a website <em>looks</em> like for someone who uses a screen reader. Screen readers use a neutral voice. This means that every website has exactly the same neutral feel to it, no matter if it is a website about hilarious movies, or if it is a website about depressing histories. Hence the sans-serif font. This means that <a href="https://webmaterials.design/posts/07-should-designers-write/">good content design</a> is necessary to understand the mood of a page.
+For this episode I've created a stark, simple layout inspired by modernist design from the 20th century. I've used Helvetica (or Arial, if you don't have the original!), I've used bold colours and diagonals, but other than that the layout is pretty much the same as before.
 
-A lot of noise is added to each page as well. Heading levels, for instance, are literally announced as heading levels with their number. And the navigation is announced as such. Sections and articles are announced as groups. Which always makes me wonder: do we really expect all our visitors, normal people who visit our website, to have a thorough understanding of web semantics? Then why do we expect all blind people to have this expert knowledge?
+In order to make the grid a visible component of this episode's art direction, I made empty divs with borders on them and manually calculated the height of elements to make things line up. If I was a real front-end developer I probably wouldn't do this—but thankfully, I'm not. If nothing else, hacking things together like this highlights a big difference between print and digital design:
 
-This is not an accurate visualisation of a website read out by a screenreader. If you fully depend on a screenreader you can only hear one item at a time. Which means that to get an overview of the hierarchy of a page, you depend completely on you own memory. Those of us who can see do not have this problem, we can still see the content surrounding the thing we are reading or interacting with. We can clearly see how much content is left, based on the position of the scroll bar. And we can still see each piece of content in a broader context, even if it is designed horribly, like this page.
+In print design software, grids are manipulated at will and switched on and off like a background layer to guide the positioning of elements. In CSS, however, grids are an intrinsic part of your structure. They don't <em>guide</em> placement, they <em>are</em> the placement of elements.
 
-I hope this horryfying design will inspire people to start designing for screen readers. And I hope it will inspire people to start creating a new kind of screenreader, especially designed for normal people, not nerds.
+This difference alone should inspire us to start thinking about CSS grid not as a means of recreating print layouts, but as a powerful tool to structure content on the web in ways only CSS can.
 
-<p class="sig">—Vasilis</p>
+<p class="sig">—Espen</p>
 
 </section>

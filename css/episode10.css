@@ -98,12 +98,14 @@ Episode title (left hand sticky area)
   content: "Is this the right colour? Maybe test 50 shades of aqua?";
   transform: translate(10vw, 20vh) rotate(-.02turn);
 }
-.episode-title::after {
-  content: "Do people understand that they can scroll down? Maybe add an arrow? Or decrease the height to 90%?";
-  transform: rotate(.02turn);
-  right: 5vw;
-  bottom: -2vh;
-  background-color: pink;
+@media (max-width: 80em) {
+  .episode-title::after {
+    content: "Do people understand that they can scroll down? Maybe add an arrow? Or decrease the height to 90%?";
+    transform: rotate(.02turn);
+    right: 5vw;
+    bottom: -2vh;
+    background-color: pink;
+  }
 }
 .episode-player audio{
   position: relative;
@@ -112,9 +114,14 @@ Episode title (left hand sticky area)
 .episode-player::after {
   content: "Has anybody ever tested an audioplayer?";
   transform: rotate(.03turn);
-  left: 10vw;
-  bottom: -1vh;
+  left: 30vw;
+  bottom: 6vh;
   z-index: 0;
+}
+@media (max-width: 80em) {
+  .episode-player::after {
+    left: 10vw;
+  }
 }
 .episode-shownotes::before {
   content: "Does anyone ever click on these?";
@@ -130,8 +137,13 @@ Episode title (left hand sticky area)
 .episode-transcript::before {
   content: "Do (deaf) people actualy read this?";
   transform: rotate(.01turn);
-  right: 15vw;
+  right: 30vw;
   z-index: 0;
+}
+@media (max-width: 80em) {
+  .episode-transcript::before {
+    right: 15vw;
+  }
 }
 [data-time="0:52"]::after {
   content: "Do (deaf) people actualy understand transcripts?";
@@ -227,12 +239,17 @@ Episode title (left hand sticky area)
   max-width: 13.37ch !important;
   margin: 0 0 0.5em;
 
-  font-size: 10vw;
+  font-size: clamp(2em, 4vw, 6em);
   line-height: 1em;
   padding-bottom: 5vh;
   filter: brightness(1);
 
   border-bottom: 1vh solid black;
+}
+@media (max-width: 80em) {
+  .episode-title h1 {
+    font-size: 10vw;
+  }
 }
 
 .episode-title h3 {

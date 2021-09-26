@@ -23,7 +23,7 @@ shownotes:
   - <a href="https://en.wikipedia.org/wiki/Jan_Tschichold">Jan Tschichold (Wikipedia)</a>
   - <a href="https://en.wikipedia.org/wiki/Josef_Müller-Brockmann">Josef Müller-Brockmann (Wikipedia)</a>
   - <a href="https://vasilis.nl">Vasilis' Flexbox homepage</a>
-  
+
 ---
 
 <section class="episode-transcript">

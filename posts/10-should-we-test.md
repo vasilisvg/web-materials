@@ -241,9 +241,9 @@ shownotes:
 
 ## Why does this page look like this?
 
-I think web design is based on assumptions a little too much. And we all assume that these assumptions have been thoroughly been tested by someone before. Many patterns we use everyday may very well not be as friendly or logical for our users.
+I think web design is based on assumptions a little too much. And we all assume that these assumptions have been thoroughly tested by someone before. Are we really sure that the patterns we use everyday are as friendly or logical for our users as&nbsp;we&nbsp;think?
 
-I added a few sticky notes throughout this page. Some of them are based on things we discuss in this episode, like for instance the "rich media footer". Others, for instance the ones about the transcript,  are based on observations. And some are just silly.
+I added a few sticky notes throughout this page. Some of them are based on things we discuss in this episode, like for instance the "rich media footer". Others, for instance the ones about the transcript,  are based on observations. And some are just&nbsp;silly.
 
 And other than that, I just copied <a href="https://webmaterials.design/posts/09-why-do-we-mimic-print-grids/">the design that Espen made for the previous episode</a> and chose a much worse accent colour.
 

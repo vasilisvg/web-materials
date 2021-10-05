@@ -1,24 +1,21 @@
-
-
 body {
   background: white;
   display: block;
-  --episode-font: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
-  --border-color: rgba(0,0,0,0.1);
+  --episode-font: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  --border-color: rgba(0, 0, 0, 0.1);
   margin: 0;
 }
 
 main {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-area:initial;
+  grid-area: initial;
 }
 
 * {
   font-family: var(--episode-font) !important;
   letter-spacing: -0.02em;
 }
-
 
 h2 {
   font-size: clamp(2em, 6vw, 2.5em);
@@ -41,7 +38,6 @@ Episode title (left hand sticky area)
 
 ////////////////////////////////////////////////////////////////////////////////////// */
 
-
 .episode-title {
   grid-column: 1 / span 1;
   display: grid;
@@ -58,7 +54,15 @@ Episode title (left hand sticky area)
   padding: 0 !important;
   margin: 0;
 
-  background-image: linear-gradient(to right bottom, aqua, 50%, aqua, 50%, white, white);
+  background-image: linear-gradient(
+    to right bottom,
+    aqua,
+    50%,
+    aqua,
+    50%,
+    white,
+    white
+  );
   background-size: cover;
 
   /* Doesnt work in safari */
@@ -82,38 +86,37 @@ Episode title (left hand sticky area)
   background-color: yellow;
   width: 12em;
   height: 12em;
-  font-size: .9em;
+  font-size: 0.9em;
   padding: 2em;
   display: flex;
   align-items: center;
   box-sizing: border-box;
-  font-family: Noteworthy ,"Marker Felt", "Bradley Hand", Chalkboard, "Comic Sans", "Comic Sans MS", "serif";
-  box-shadow: .2em .2em .2em silver;
+  font-family: Noteworthy, "Marker Felt", "Bradley Hand", Chalkboard,
+    "Comic Sans", "Comic Sans MS", "serif";
+  box-shadow: 0.2em 0.2em 0.2em silver;
   line-height: 1.337;
 }
 
-
-
 .episode-title::before {
   content: "Is this the right colour? Maybe test 50 shades of aqua?";
-  transform: translate(10vw, 20vh) rotate(-.02turn);
+  transform: translate(10vw, 20vh) rotate(-0.02turn);
 }
 @media (max-width: 80em) {
   .episode-title::after {
     content: "Do people understand that they can scroll down? Maybe add an arrow? Or decrease the height to 90%?";
-    transform: rotate(.02turn);
+    transform: rotate(0.02turn);
     right: 5vw;
     bottom: -2vh;
     background-color: pink;
   }
 }
-.episode-player audio{
+.episode-player audio {
   position: relative;
   z-index: 2;
 }
 .episode-player::after {
   content: "Has anybody ever tested an audioplayer?";
-  transform: rotate(.03turn);
+  transform: rotate(0.03turn);
   left: 30vw;
   bottom: 6vh;
   z-index: 0;
@@ -125,7 +128,7 @@ Episode title (left hand sticky area)
 }
 .episode-shownotes::before {
   content: "Does anyone ever click on these?";
-  transform: rotate(-.03turn);
+  transform: rotate(-0.03turn);
   left: 50%;
   z-index: 0;
   background-color: pink;
@@ -136,7 +139,7 @@ Episode title (left hand sticky area)
 }
 .episode-transcript::before {
   content: "Do (deaf) people actualy read this?";
-  transform: rotate(.01turn);
+  transform: rotate(0.01turn);
   right: 30vw;
   z-index: 0;
 }
@@ -147,20 +150,20 @@ Episode title (left hand sticky area)
 }
 [data-time="0:52"]::after {
   content: "Do (deaf) people actualy understand transcripts?";
-  transform: rotate(.01turn);
+  transform: rotate(0.01turn);
   right: -5vw;
   z-index: 0;
 }
 [data-time="10:30"]::after {
   content: "Are details like emotion, intonation, accent, and rhythm understood?";
-  transform: rotate(-.01turn);
+  transform: rotate(-0.01turn);
   right: -5vw;
   z-index: 0;
   background-color: pink;
 }
 [data-time="24:17"]::after {
   content: "Did anyone notice? The underline colour changed from 'aqua' to 'palegreen'.";
-  transform: rotate(-.01turn);
+  transform: rotate(-0.01turn);
   right: -5vw;
   z-index: 0;
   margin-top: 0em;
@@ -172,7 +175,7 @@ Episode title (left hand sticky area)
 }
 #nav::after {
   content: "Is the footer really the best place for navigation? Has anyone ever tested this?";
-  transform: rotate(-.01turn);
+  transform: rotate(-0.01turn);
   left: 10em;
   z-index: 0;
   margin-top: -12em;
@@ -180,7 +183,7 @@ Episode title (left hand sticky area)
 }
 .logo::after {
   content: "We should probably make the logo bigger.";
-  transform: rotate(.015turn);
+  transform: rotate(0.015turn);
   right: 5vw;
   z-index: 0;
   margin-top: -10em;
@@ -188,13 +191,11 @@ Episode title (left hand sticky area)
 }
 .episode-footer::after {
   content: "We should add a rich media footer right here. For engagement.";
-  transform: rotate(.01turn);
+  transform: rotate(0.01turn);
   right: -5vw;
 }
 
-
 .episode-title .content {
-
   align-self: stretch;
   grid-area: content;
   padding: 0;
@@ -204,7 +205,8 @@ Episode title (left hand sticky area)
   border-color: var(--border-color);
 }
 
-.episode-title .top, .episode-title .bottom {
+.episode-title .top,
+.episode-title .bottom {
   align-self: stretch;
   display: block;
   grid-area: top;
@@ -217,7 +219,8 @@ Episode title (left hand sticky area)
   grid-area: bottom;
 }
 
-.episode-title .left, .episode-title .right {
+.episode-title .left,
+.episode-title .right {
   align-self: stretch;
   display: block;
   grid-area: left;
@@ -233,9 +236,9 @@ Episode title (left hand sticky area)
 .episode-title h1 {
   display: block;
   min-height: 35vh;
-	background-color: initial;
+  background-color: initial;
   font-weight: bold;
-	white-space: initial;
+  white-space: initial;
   max-width: 13.37ch !important;
   margin: 0 0 0.5em;
 
@@ -258,7 +261,6 @@ Episode title (left hand sticky area)
 }
 
 .episode-title .meta {
-
   writing-mode: initial;
   /* text-transform: uppercase; */
   color: black;
@@ -269,12 +271,17 @@ Episode title (left hand sticky area)
   color: black;
 }
 
+.episode-title time:before {
+  content: "/ ";
+}
+
 .episode-title .meta a:hover {
   text-decoration: underline;
 }
 
 .episode-title .episode-player {
-  margin: 2vh 0 0; padding: 0;
+  margin: 2vh 0 0;
+  padding: 0;
   top: 0;
 }
 
@@ -284,7 +291,6 @@ Episode title (left hand sticky area)
   /* background-color: black; */
   /* height: 100px; */
 }
-
 
 /* //////////////////////////////////////////////////////////////////////////////////////
 
@@ -316,7 +322,8 @@ Episode content
   border-color: var(--border-color);
 }
 
-.episode-content .top, .episode-content .bottom {
+.episode-content .top,
+.episode-content .bottom {
   align-self: stretch;
   display: block;
   grid-area: top;
@@ -329,7 +336,8 @@ Episode content
   grid-area: bottom;
 }
 
-.episode-content .left, .episode-content .right {
+.episode-content .left,
+.episode-content .right {
   height: calc(80vh - 2px);
   position: sticky;
   top: 10vh;
@@ -352,7 +360,8 @@ Episode intro (player and shownotes)
 ////////////////////////////////////////////////////////////////////////////////////// */
 
 .episode-intro {
-  margin: 0; padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 .episode-intro p {
@@ -367,15 +376,15 @@ Episode intro (player and shownotes)
   border-top: 1vh solid black;
 }
 
-.episode-intro h3, .episode-shownotes h3 {
+.episode-intro h3,
+.episode-shownotes h3 {
   color: black;
   -webkit-font-smoothing: antialiased;
 }
 
 .episode-shownotes h3 {
-  margin-bottom: 0;
+  margin-bottom: 1em;
 }
-
 
 .episode-shownotes ul {
   list-style: none;
@@ -396,13 +405,11 @@ Episode intro (player and shownotes)
   filter: brightness(0.5);
 }
 
-
 /* //////////////////////////////////////////////////////////////////////////////////////
 
 Transcript
 
 ////////////////////////////////////////////////////////////////////////////////////// */
-
 
 .episode-transcript .closed-caption {
   font-weight: bold;
@@ -411,11 +418,11 @@ Transcript
 }
 
 .direct-link {
-	color: black;
+  color: black;
 }
 
 .direct-link:hover {
-	color: aqua;
+  color: aqua;
 }
 
 p strong {
@@ -446,13 +453,11 @@ p strong {
   text-decoration-color: palegreen;
 }
 
-
 /* //////////////////////////////////////////////////////////////////////////////////////
 
 Other
 
 ////////////////////////////////////////////////////////////////////////////////////// */
-
 
 .episode-art {
   margin-top: 10vh;
@@ -519,8 +524,8 @@ abbr {
 /* MEDIA  */
 
 @media (max-width: 80em) {
-
-  .episode-title, .episode-content {
+  .episode-title,
+  .episode-content {
     grid-column: 1 / span 2;
     grid-template-columns: 10vw 1fr 10vw;
     grid-template-rows: 10vh 1fr 10vh;
@@ -550,8 +555,8 @@ abbr {
     margin-top: 0;
   }
 
-  .episode-title .content *, .episode-content .content * {
+  .episode-title .content *,
+  .episode-content .content * {
     max-width: 640px;
   }
-
 }

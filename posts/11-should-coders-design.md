@@ -3,9 +3,9 @@ episode: 11
 title:
   - Should <span>&lt</span><em>coders</em><span>&gt</span> design?
 description: We gush over Nils Binder, the unicorn.
-audio: /sound/WM010-should-we-test.mp3
-audiolength: 48398893 #mandatory, size in bytes! No idea how to do this in Eleventy )-:
-duration: 00:40:12 #mandatory, duration in hh:mm:ss
+audio: /sound/WM011-should-designers-code.mp3
+audiolength: 48874522 #mandatory, size in bytes! No idea how to do this in Eleventy )-:
+duration: 00:40:43 #mandatory, duration in hh:mm:ss
 date: 2021-10-05 #yyyy-mm-dd
 # You can add (multiple) urls to stylesheets with 'csslinks'. (Use spaces, not tabs here)
 csslinks:
@@ -24,8 +24,6 @@ intro: In this episode we discuss design intention, micro decisions, whether cod
 
 shownotes:
   - <a href="#why-does-this-page-look-like-this%3F">About this episode's art direction</a>
-  - <a href="https://usabilityhub.com/">Usability Hub</a>
-  - <a href="https://exclusive-design.vasilis.nl/more-death-to-more-bullshit/">About testing with blind people</a>
   - <a href="https://xyce.bandcamp.com/">Music, as always, by xyce</a>
 ---
 
@@ -635,9 +633,11 @@ Or just two cranky old men screaming at the world.
 
 ## Why does this page look like this?
 
-Because this page is about coders, I wanted to give the design a bit of text-editor flavour. I've used a monospaced font—though I'm not entirely convinved of its readability (you can't even tell that the dashes surrounding this aside are em-dashes)—and colours inspired from my own editing environment.
+Because this page is about coders, I wanted to give the design a bit of text-editor flavour. I've used a monospaced font—though I'm not entirely convinved of its readability—and colours inspired from my own editing environment.
 
-During this process, I made a bunch of tweaks to the typography and layout in general. Some are visible when you arrive on the page, some are hidden behind a <code>.fixed</code> class. You can apply these tweaks by clicking the prompt above the transcript. Some are relatively noticeable, some less so. You may agree with some and disagree with others. But they're all the kind of micro-decision that's hard to communicate during a standard handover.
+During this process, I made a bunch of tweaks to the typography and layout in general. Some are visible when you arrive on the page, some are hidden behind a <code>.fixed</code> class. You can apply these tweaks by clicking the prompt above the transcript. Some are relatively noticeable, some less so. You may agree with some and disagree with others (for example the downsizing of the intro paragraph, a radical but necessary change in order to emulate the one-size-fits-all text editor environment).
+
+What unites all the tweaks is that they're all the kind of micro-decision that's hard to communicate during a standard handover, and hard to predict in Figma. If more designers worked with code—or more coders worked with design—these kinds of details would be forgotten less often. (I think.)
 
 <p class="sig">—Espen</p>
 

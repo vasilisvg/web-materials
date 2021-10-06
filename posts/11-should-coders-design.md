@@ -1,7 +1,7 @@
 ---
 episode: 11
 title:
-  - Should <coders> design?
+  - Should coders design?
 description: We gush over Nils Binder, the unicorn.
 audio: /sound/WM011-should-designers-code.mp3
 audiolength: 48874522 #mandatory, size in bytes! No idea how to do this in Eleventy )-:

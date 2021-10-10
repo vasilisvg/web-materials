@@ -573,11 +573,11 @@ Likewise. I'll see you next time.
 
 ## Why does this page look like&nbsp;this?
 
-In design it is a common practice to say that you design your websites for 80% of the visitors. The other 20% are edge cases and can be ignored. From a business perspective this <em>could</em> make sense. In the short term this may give you enough profit. And the idea is that the cost of developing the site stays low: it is easier to design something when you don’t have to think about so called <em>edge cases</em>
+It is a common practice to say that you design your websites for 80% of the visitors. The other 20% are edge cases and can be ignored. From a business perspective this <em>could</em> make sense. In the short term this may give you enough profit. And the idea is that the cost of developing the site stays low: it is easier to design something when you don’t have to think about so called <em>edge cases</em>
 
 I took exactly this very common approach when I designed this page. Like all <em>good</em> designers I first picked a persona. And just like all designers I picked a persona that resembles someone I know very well. In this case, the persona resembles me. So I can now scientifically say that 80% of the visitors like lots of bright colours that slowly change. And 80% of the visitors want the logo to be in the footer. And 80% of the visitors agree that the best place for the navigation is also in the footer.
 
-I took this 80% value quite literally when I picked <a href="https://www.typotheque.com/fonts/maro">the font</a>: 20% of each letter is invisible. Which of course, makes it harder to read. But after extensive research with our persona it turns out that 80% of our visitors doesn’t mind.
+I took this 80% value quite literally when I picked <a href="https://www.typotheque.com/fonts/maro">the font</a>: 20% of each letter is invisible. Which of course, makes it harder to read. But after extensive research with our persona it turns out that 80% of our visitors don’t mind.
 
 <p class="sig">—Vasilis</p>
 

@@ -42,20 +42,7 @@ a:focus {
   outline: .2em dotted red;
   color: black;
 }
-ul {
-  padding-left: 0;
-}
-@media (max-width: 35em) {
-  ul {
-    padding-left: 1em;
-  }
-}
-li::marker {
-  content: "☞ ";
-  font-size: 1.414em;
-  margin: 0;
-  padding: 0;
-}
+
 
 /* Main, a bit more specific */
 main,
@@ -69,6 +56,20 @@ nav > * {
   grid-column-start: 2;
   margin: 0;
   padding: 0 0 1em;
+}
+ul {
+  padding-left: 0;
+}
+@media (max-width: 35em) {
+  * > ul {
+    padding-left: 1em;
+  }
+}
+li::marker {
+  content: "☞ ";
+  font-size: 1.414em;
+  margin: 0;
+  padding: 0;
 }
 h1, h2 {
   animation-name: hueRotate;
@@ -156,9 +157,18 @@ h2[id^="trans"] ~ p {
     text-indent: 0;
   }
 }
-h2[id^="trans"] + p,
-h2[id^="why"] ~ p {
+h2[id^="trans"] + p {
   text-indent: 0;
+}
+h2[id^="why"] ~ p {
+  text-indent: 1em;
+  padding: 0;
+}
+
+h2[id^="why"] ~ p:last-of-type {
+  margin: 1em 0 2em;
+  text-indent: 0;
+  font-style: italic;
 }
 
 audio {

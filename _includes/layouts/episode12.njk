@@ -1,0 +1,39 @@
+---
+layout: layouts/base-post-no-main.njk
+templateClass: tmpl-post
+---
+
+{%- if styletoggle %}
+<input aria-hidden="true" type="checkbox" id="letmeread" />
+<label aria-hidden="true" for="letmeread">{{ styletoggle }}</label>
+{%- endif %}
+
+<main>
+  <h1>{{ title | safe }}</h1>
+  <footer>
+    <h2>Episode {{ episode }} of <a href="/">Web Materials</a></h2>
+    <time datetime="{{ page.date | htmlDateString }}">Published on {{
+        page.date | readableDate
+      }}</time>
+  </footer>
+  <p>{{ intro | safe }}</p>
+  {%- if audio %}
+  <audio src="{{ audio }}" controls>
+    <a href="{{ audio }}" download>Download episode 12 of web materials</a>
+  </audio>
+  <p><a href="#transcript">Read the transcript instead</a></p>
+  {%- endif %}
+
+  <section>
+    <h2>Shownotes</h2>
+    <ul>
+      {% for shownotes in shownotes %}
+      <li>{{ shownotes | safe }}</li>
+      {% endfor %}
+    </ul>
+  </section>
+
+    {{ content | safe }}
+
+</main>
+

@@ -1,0 +1,252 @@
+:root {
+  --color3: hsla(229, 84%, 36%, 1.000);
+  --shadow1: hsla(70, 99%, 66%, 1.000);
+  --shadow2: hsla(9, 79%, 70%, 1.000);
+  --shadow3: hsla(42, 90%, 61%, 1.000);
+  --shadow4: hsla(334, 75%, 75%, 1.000);
+  --marginTop: 5.555vh;
+}
+@keyframes hueRotate {
+  100% {
+    filter: hue-rotate(360deg);
+  }
+}
+@keyframes turnLeft {
+  100% {
+    transform: rotate(-2deg);
+  }
+}
+@keyframes turnRight {
+  100% {
+    transform: rotate(2deg);
+  }
+}
+/* General styles */
+body {
+  font-family: "Maro", Georgia, 'Times New Roman', Times, serif;
+  line-height: 1.414;
+  margin: 0;
+  padding: 5.555vh 5.5555vw 11.1111vh;
+  font-size: clamp(1.2em, 2vw, 1.414em);
+  background-color: hsla(328, 69%, 51%, .05);
+}
+a:link,
+a:visited {
+  text-decoration: underline;
+  color: blue;
+}
+a:hover {
+  color: red;
+}
+a:focus {
+  outline: .2em dotted red;
+  color: black;
+}
+ul {
+  padding-left: 0;
+}
+@media (max-width: 35em) {
+  ul {
+    padding-left: 1em;
+  }
+}
+li::marker {
+  content: "☞ ";
+  font-size: 1.414em;
+  margin: 0;
+  padding: 0;
+}
+
+/* Main, a bit more specific */
+main,
+nav {
+  display: grid;
+  grid-template-columns: auto minmax(10em,30em);
+  color: var(--color3);
+}
+main > *,
+nav > * {
+  grid-column-start: 2;
+  margin: 0;
+  padding: 0 0 1em;
+}
+h1, h2 {
+  animation-name: hueRotate;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-duration: 360s;
+  line-height: 1;
+}
+main h1 {
+  font-size: clamp(2em,8.7vw, 10vw);
+  grid-column-start: 1;
+  grid-column-end: -1;
+  margin: 0 0 var(--marginTop);
+  padding: 0;
+  position: relative;
+  background-color: var(--shadow1);
+  box-shadow: 0 0 0 1rem var(--shadow1);
+
+}
+main h1::before,
+main h2::before {
+  content: "";
+  position: absolute;
+  background-color: var(--shadow3);
+  top: -1rem;
+  left: -1rem;
+  right: -1rem;
+  bottom: -1rem;
+  z-index: -1;
+  animation-name: turnLeft;
+  animation-timing-function: ease-out;
+  animation-duration: 4s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+}
+main h2::before {
+  background-color: var(--shadow2);
+  animation-delay: 6s;
+}
+main footer h2::before,
+main h2[id="transcript"]::before {
+  background-color: var(--shadow4);
+  animation-name: turnRight;
+  animation-delay: 2s;
+}
+main h2[id^="why"]:target::before,
+main h2[id^="trans"]:target::before {
+  animation-name: turnRight;
+  animation-delay: 1s;
+}
+main h2[id^="trans"]:target::before {
+  animation-name: turnLeft;
+  animation-delay: 1s;
+}
+
+h2 {
+  font-size: clamp(1.4em,6.8vw,2.5em);
+  margin: 1em 0 0;
+  background-color: var(--shadow1);
+  box-shadow: 0 0 0 1rem var(--shadow1);
+  mix-blend-mode: multiply;
+  position: relative;
+  padding: 0;
+}
+footer h2 {
+  padding: 0 0 1em;
+  animation-delay: -90s;
+}
+h2 + time {
+  margin-top: -1.414em;
+  display: block;
+  font-style: italic;
+}
+h2 + p {
+  margin-top: 1em;
+}
+h2 + ul {
+  margin-top: 2em;
+}
+h2[id^="trans"] ~ p {
+  text-indent: -1em;
+}
+@media (max-width: 35em) {
+  h2[id^="trans"] ~ p {
+    text-indent: 0;
+  }
+}
+h2[id^="trans"] + p,
+h2[id^="why"] ~ p {
+  text-indent: 0;
+}
+
+audio {
+  height: 1.8em;
+  padding: 0;
+  width: 100%;
+  box-shadow: 0 1.5em 0 1rem var(--shadow3),
+    0 0 0 1rem var(--shadow3);
+  margin: 2em 0;
+  background-color: var(--shadow3);
+}
+audio + p {
+  margin-top: -1.5em;
+  font-style: italic;
+  position: relative;
+  z-index: 1;
+}
+
+/* The colours behind our names */
+b {
+  position: relative;
+}
+b::before {
+  content: "";
+  position: absolute;
+  top: -.21rem;
+  left: -.21rem;
+  right: -.21rem;
+  bottom: -.21rem;
+  z-index: -1;
+  background-color: var(--shadow1);
+  animation-name: turnLeft;
+  animation-timing-function: ease-out;
+  animation-duration: 4s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+}
+p:nth-of-type(odd) b::before {
+  background-color: var(--shadow3);
+  animation-name: turnRight;
+  animation-delay: 1s;
+  left: 0;
+}
+p:nth-of-type(3n) b::before {
+  left: -.3em
+}
+p:nth-of-type(5n) b::before {
+  left: .21em
+}
+
+/* The footer */
+nav {
+  position: relative;
+}
+nav a[href="/"]::before {
+  content: '';
+  background-image: url(../img/logo.png);
+  position: absolute;
+  left: calc(-5.555vw + 1em);
+  bottom: calc(-11.111vh + 1em);
+  width: 1.414em;
+  height: 1.414em;
+  background-size: 1.414em 1.414em;
+}
+
+/* Direct links */
+.direct-link {
+  font-size: clamp(1.2rem, 2vw, 1.414rem);
+  vertical-align: super;
+  line-height: 1;
+  font-weight: normal;
+}
+.direct-link:hover::after {
+  content: " Directly link to the transcript";
+  position: absolute;
+  text-decoration: underline;
+  animation: opacity 1s ease 1 forwards;
+  background-color: var(--shadow1);
+}
+.direct-link[href^="#why"]:hover::after {
+  content: " Directly link to this explanation";
+}
+@keyframes opacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    transform: rotate(-2deg);
+  }
+}
